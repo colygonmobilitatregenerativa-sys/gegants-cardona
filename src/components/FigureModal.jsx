@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { X, Ruler, Scale, Calendar, User, Music, MapPin, Sparkles } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function FigureModal({ figure, onClose }) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
@@ -18,112 +21,122 @@ export default function FigureModal({ figure, onClose }) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl border border-cardona-gold/30 flex flex-col md:flex-row overflow-hidden"
+        className="relative w-full max-w-3xl max-h-[92vh] bg-white rounded-3xl shadow-2xl border border-cardona-gold/40 flex flex-col md:flex-row overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
+        {/* Floating Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white/80 hover:bg-white text-gray-800 hover:text-cardona-burgundy transition-all shadow-md"
-          aria-label="Tancar fitxa"
+          className="absolute top-3 right-3 z-30 p-2.5 rounded-full bg-black/60 hover:bg-black text-white hover:text-cardona-gold transition-all shadow-xl"
+          aria-label={t('catalog', 'close') || 'Tancar'}
         >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Image side */}
-        <div className="md:w-5/12 relative min-h-[260px] md:min-h-full bg-cardona-burgundyDark">
+        {/* Image side - Fixed bounded height on mobile so it NEVER covers text */}
+        <div className="relative w-full h-56 sm:h-72 md:h-auto md:w-5/12 shrink-0 bg-cardona-burgundyDark overflow-hidden">
           <img
             src={figure.image}
             alt={figure.name}
-            className="w-full h-full object-cover object-center opacity-90"
+            className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-cardona-burgundyDark via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-white/10" />
-          <div className="absolute bottom-4 left-4 right-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 md:bg-gradient-to-r md:from-transparent md:to-black/30" />
+          
+          {/* Badge */}
+          <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark shadow-md">
-              <Sparkles className="w-3 h-3" />
+              <Sparkles className="w-3.5 h-3.5" />
               {figure.badge}
             </span>
           </div>
         </div>
 
-        {/* Details side */}
-        <div className="md:w-7/12 p-6 sm:p-8 flex flex-col justify-between">
+        {/* Details side - Scrollable and clearly readable */}
+        <div className="flex-1 flex flex-col justify-between overflow-y-auto max-h-[calc(92vh-14rem)] md:max-h-[92vh] p-5 sm:p-7 md:p-8 bg-white">
           <div>
-            <div className="text-xs font-semibold uppercase tracking-widest text-cardona-burgundy mb-1">
+            <span className="text-xs font-bold uppercase tracking-widest text-cardona-burgundy block mb-1">
               {figure.categoryLabel}
-            </div>
-            <h2 className="font-serif text-3xl font-extrabold text-cardona-burgundyDark mb-1">
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-cardona-burgundyDark mb-1">
               {figure.name}
             </h2>
-            <p className="text-sm font-medium text-amber-800 mb-5">
+            <p className="text-xs sm:text-sm font-semibold text-amber-800 mb-5">
               {figure.subtitle}
             </p>
 
             {/* Quick Specs Grid */}
-            <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-cardona-sand border border-cardona-stone">
-              <div className="flex items-center gap-2 text-xs text-gray-700">
+            <div className="grid grid-cols-2 gap-2.5 mb-5 p-3.5 rounded-2xl bg-cardona-sand border border-cardona-stone text-xs text-gray-700">
+              <div className="flex items-center gap-2">
                 <Ruler className="w-4 h-4 text-cardona-goldDark shrink-0" />
-                <span><strong>Alçada:</strong> {figure.height}</span>
+                <span><strong>{t('catalog', 'height')}:</strong> {figure.height}</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-gray-700">
+              <div className="flex items-center gap-2">
                 <Scale className="w-4 h-4 text-cardona-goldDark shrink-0" />
-                <span><strong>Pes:</strong> {figure.weight}</span>
+                <span><strong>{t('catalog', 'weight')}:</strong> {figure.weight}</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-gray-700">
+              <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-cardona-goldDark shrink-0" />
-                <span><strong>Any:</strong> {figure.year}</span>
+                <span><strong>{t('catalog', 'year')}:</strong> {figure.year}</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-gray-700">
+              <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-cardona-goldDark shrink-0" />
                 <span><strong>Lloc:</strong> {figure.location}</span>
               </div>
             </div>
 
-            {/* Description */}
-            <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-6">
-              <p>{figure.description}</p>
+            {/* Description & Details */}
+            <div className="space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed mb-6">
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1">
+                  Història i Significat:
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {figure.description}
+                </p>
+              </div>
               
-              <div className="pt-2 border-t border-gray-100">
+              <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1">
                   Vestimenta i Atributs:
                 </h4>
-                <p className="text-xs text-gray-600 italic">
+                <p className="text-gray-600 italic leading-relaxed">
                   {figure.vestimenta}
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-gray-100">
+              <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1 flex items-center gap-1.5">
-                  <Music className="w-3.5 h-3.5 text-cardona-goldDark" />
-                  Música i Ball propi:
+                  <Music className="w-3.5 h-3.5 text-cardona-goldDark shrink-0" />
+                  <span>Música i Ball propi:</span>
                 </h4>
-                <p className="text-xs text-gray-700 font-medium">
+                <p className="text-gray-700 font-medium">
                   {figure.ball}
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-gray-100">
+              <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1 flex items-center gap-1.5">
-                  <User className="w-3.5 h-3.5 text-cardona-goldDark" />
-                  Mestre Escultor:
+                  <User className="w-3.5 h-3.5 text-cardona-goldDark shrink-0" />
+                  <span>Mestre Escultor / Taller:</span>
                 </h4>
-                <p className="text-xs text-gray-700">
+                <p className="text-gray-700">
                   {figure.sculptor}
                 </p>
               </div>
             </div>
           </div>
 
+          {/* Close button in footer */}
           <div className="pt-4 border-t border-gray-100 flex justify-end">
             <button
               onClick={onClose}
-              className="px-6 py-2.5 rounded-full bg-cardona-burgundy hover:bg-cardona-burgundyDark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow"
+              className="px-6 py-2.5 rounded-full bg-cardona-burgundy hover:bg-cardona-burgundyDark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-md"
             >
-              Tancar Fitxa
+              {t('catalog', 'close')}
             </button>
           </div>
         </div>
