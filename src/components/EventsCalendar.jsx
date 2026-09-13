@@ -1,0 +1,123 @@
+import React, { useState } from 'react';
+import { eventsData } from '../data/events';
+import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight } from 'lucide-react';
+
+export default function EventsCalendar() {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filters = [
+    { id: 'all', label: 'Tots els actes' },
+    { id: 'festa-major', label: 'Festa Major' },
+    { id: 'trobades', label: 'Trobades' },
+    { id: 'sortides', label: 'Sortides Locals' },
+  ];
+
+  const filteredEvents = activeFilter === 'all'
+    ? eventsData
+    : eventsData.filter(e => e.category === activeFilter);
+
+  return (
+    <section id="calendari" className="py-24 bg-cardona-sand relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
+            Agenda i Sortides
+          </span>
+          <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
+            Calendari d'Actuacions
+          </h2>
+          <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
+          <p className="text-gray-600 text-base sm:text-lg">
+            Acompanya la colla en cadascuna de les nostres cercaviles, trobades geganteres i especialment a la gran Festa Major de Cardona.
+          </p>
+        </div>
+
+        {/* Big Festa Major Banner */}
+        <div className="mb-14 p-8 rounded-3xl bg-gradient-to-br from-cardona-burgundy to-cardona-burgundyDark text-white shadow-xl border border-cardona-gold/30 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark shadow-sm">
+              <Sparkles className="w-3.5 h-3.5" />
+              Cita Imparable
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-cardona-goldLight">
+              Festa Major de Cardona 2026
+            </h3>
+            <p className="text-sm text-amber-100/90 max-w-xl">
+              La gran cita anual del segon cap de setmana de setembre. Ball de Gegants a la plaça, el tradicional Correbous i balls de bastons en un ambient festiu incomparable.
+            </p>
+          </div>
+          <div className="shrink-0 text-center bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20">
+            <span className="text-xs text-amber-200 uppercase tracking-widest block font-medium">Dies Centrals</span>
+            <span className="font-serif text-3xl font-black text-cardona-gold block">12-15</span>
+            <span className="text-xs text-white font-medium">Setembre 2026</span>
+          </div>
+        </div>
+
+        {/* Filter buttons */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {filters.map((f) => (
+            <button
+              key={f.id}
+              onClick={() => setActiveFilter(f.id)}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+                activeFilter === f.id
+                  ? 'bg-cardona-burgundy text-white shadow-md'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Events List */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {filteredEvents.map((evt) => (
+            <div
+              key={evt.id}
+              className={`p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border flex flex-col justify-between ${
+                evt.highlight ? 'border-cardona-gold ring-1 ring-cardona-gold/50' : 'border-gray-200'
+              }`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                    evt.highlight 
+                      ? 'bg-cardona-gold/20 text-cardona-goldDark'
+                      : 'bg-gray-100 text-gray-700'
+                  }`}>
+                    {evt.type}
+                  </span>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-cardona-burgundy">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>{evt.date}</span>
+                  </div>
+                </div>
+
+                <h4 className="font-serif text-xl font-bold text-cardona-burgundyDark mb-2">
+                  {evt.title}
+                </h4>
+
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  {evt.description}
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500">
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-cardona-goldDark" />
+                  <span>{evt.time}</span>
+                </div>
+                <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                  <MapPin className="w-3.5 h-3.5 text-cardona-burgundy" />
+                  <span>{evt.location}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

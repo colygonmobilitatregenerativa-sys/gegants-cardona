@@ -1,0 +1,141 @@
+import React, { useState } from 'react';
+import { X, ZoomIn, Camera } from 'lucide-react';
+
+const galleryPhotos = [
+  {
+    id: 1,
+    title: 'Ballada al centre històric',
+    category: 'Balles',
+    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80',
+    description: 'La colla ballant sota els aplaudiments del públic a la Plaça del Mercat.'
+  },
+  {
+    id: 2,
+    title: 'Dansa de gala al Castell',
+    category: 'Patrimoni',
+    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+    description: 'Abdal·là i Adalgisa als peus de la històrica Torre de la Minyona.'
+  },
+  {
+    id: 3,
+    title: 'Els Nans i Capgrossos en acció',
+    category: 'Nans',
+    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80',
+    description: 'Alegria i somriures dels infants davant les corredisses dels capgrossos.'
+  },
+  {
+    id: 4,
+    title: 'Els músics i grallers de Cardona',
+    category: 'Música',
+    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    description: 'El so inconfusible de les gralles i timbals que marca el ritme del pasdoble.'
+  },
+  {
+    id: 5,
+    title: 'Cercavila festiva de Festa Major',
+    category: 'Festa Major',
+    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
+    description: 'Els carrers medievals engalanats s\'omplen de colors i gom a gom de gent.'
+  },
+  {
+    id: 6,
+    title: 'El moment solemne del Ball Pla',
+    category: 'Balles',
+    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80',
+    description: 'Borrell II i Letgarda oferint la dansa tradicional comtal.'
+  }
+];
+
+export default function Gallery() {
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  return (
+    <section id="galeria" className="py-24 bg-white relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
+            Moments Inoblidables
+          </span>
+          <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
+            Galeria d'Imatges
+          </h2>
+          <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
+          <p className="text-gray-600 text-base sm:text-lg">
+            Recull fotogràfic de les sortides, balls solemnes i la màgia dels gegants als carrers de Cardona.
+          </p>
+        </div>
+
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {galleryPhotos.map((photo) => (
+            <div
+              key={photo.id}
+              onClick={() => setSelectedPhoto(photo)}
+              className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300"
+            >
+              <img
+                src={photo.image}
+                alt={photo.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              
+              <div className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <ZoomIn className="w-5 h-5" />
+              </div>
+
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="text-xs font-semibold text-cardona-gold uppercase tracking-wider block mb-1">
+                  {photo.category}
+                </span>
+                <h4 className="font-serif text-lg font-bold">
+                  {photo.title}
+                </h4>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedPhoto && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fadeIn"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full bg-cardona-burgundyDark rounded-2xl overflow-hidden shadow-2xl border border-cardona-gold/40"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedPhoto(null)}
+              className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/60 hover:bg-black text-white hover:text-cardona-gold transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <img
+              src={selectedPhoto.image}
+              alt={selectedPhoto.title}
+              className="w-full max-h-[70vh] object-cover"
+            />
+
+            <div className="p-6 text-white bg-cardona-burgundyDark">
+              <span className="text-xs font-bold text-cardona-gold uppercase tracking-widest block mb-1">
+                {selectedPhoto.category}
+              </span>
+              <h3 className="font-serif text-2xl font-bold mb-2">
+                {selectedPhoto.title}
+              </h3>
+              <p className="text-sm text-amber-100/80">
+                {selectedPhoto.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}

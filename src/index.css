@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom cardona decorative elements */
+.cardona-pattern {
+  background-color: #faf8f5;
+  background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#6b1124 0.75px, #faf8f5 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.05;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa8214 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
