@@ -39,10 +39,10 @@ const galleryPhotos = [
   },
   {
     id: 6,
-    title: 'El moment solemne del Ball Pla',
-    category: 'Balles',
-    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80',
-    description: 'Borrell II i Letgarda oferint la dansa tradicional comtal.'
+    title: 'La Comtessa Letgarda davant la Fortalesa',
+    category: 'Centenaris',
+    image: './images/letgarda.jpg',
+    description: 'Elegància i sobirania medieval de la geganta del Barri Major de Cardona.'
   }
 ];
 

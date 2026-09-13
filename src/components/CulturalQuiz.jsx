@@ -86,7 +86,7 @@ export default function CulturalQuiz() {
     letgarda: {
       name: 'Letgarda',
       title: 'Comtessa consort de Cardona (Barri Major)',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80',
+      image: './images/letgarda.jpg',
       description: {
         ca: 'Destaques per la teva elegància, serenor i saviesa. Ets la figura que aporta calma, equilibri i dignitat a cada celebració col·lectiva.',
         es: 'Destacas por tu elegancia, serenidad y sabiduría. Eres la figura que aporta calma, equilibrio y dignidad a cada celebración popular.',

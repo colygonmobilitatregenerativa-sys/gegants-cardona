@@ -46,9 +46,9 @@ export const figuresData = [
     height: '3,75 m',
     weight: '58 kg',
     location: 'Cardona - Barri Major',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
+    image: './images/letgarda.jpg',
     description: 'Parella inseparable de Borrell II. Simbolitza l\'elegància i sobirania medieval de Cardona. Juntament amb Borrell II, van ser construïts en fusta, cartró pedra i vímet a principis del segle XIX, sent de les figures més antigues i estimades de tot el Bages.',
-    vestimenta: 'Vestit de brocat daurat i seda noble, mantell de gala amb motius florals catalans, mocador d\'encaix de bolillos a la mà esquerra i ram de flors silvestres de la vall.',
+    vestimenta: 'Pentinat noble d\'època amb recollit trenat i ornaments florals, arracades aristocràtiques de pedreria fina, vestit de gala en to blau teixit amb randa de puntes blanques al coll i espatlles, camisa prisada d\'ivori i mocador d\'encaix tradicional, alçada amb elegància davant la muralla del Castell de Cardona.',
     ball: 'Ball Pla i Marxa dels Gegants del Barri Major',
     badge: 'Centenària (1834)',
     featured: true
