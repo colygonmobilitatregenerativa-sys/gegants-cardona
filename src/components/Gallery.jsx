@@ -43,6 +43,13 @@ const galleryPhotos = [
     category: 'Centenaris',
     image: './images/letgarda.jpg',
     description: 'Elegància i sobirania medieval de la geganta del Barri Major de Cardona.'
+  },
+  {
+    id: 7,
+    title: 'El Príncep Abdal·là davant el Castell',
+    category: 'Barri Nou',
+    image: './images/abdalla.jpg',
+    description: 'El noble guerrer sarraí de la llegenda de la Minyona amb la simitarra i l\'escut de la mitja lluna.'
   }
 ];
 

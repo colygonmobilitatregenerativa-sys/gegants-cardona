@@ -100,9 +100,9 @@ export const figuresData = [
     height: '3,90 m',
     weight: '64 kg',
     location: 'Cardona - Barri Nou',
-    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
-    description: 'Protagonista de la immortal llegenda de la Torre de la Minyona. Abdal·là, noble sarraí de gran coratge, va caure presoner d\'amor per Adalgisa, la filla del vescomte de Cardona, desencadenant una de les històries més profundes del patrimoni oral cardoní.',
-    vestimenta: 'Túnica de teixit oriental d\'alta qualitat amb filigranes daurades, turbant majestuós amb joia central i sabre corb cerimonial a la cintura.',
+    image: './images/abdalla.jpg',
+    description: 'Protagonista de la immortal llegenda de la Torre de la Minyona del Castell de Cardona. Abdal·là, noble i valent príncep sarraí, va caure presoner d\'amor per Adalgisa, la filla del vescomte de Cardona, desencadenant una de les històries d\'amor i tragèdia més profundes i estimades del patrimoni popular cardoní.',
+    vestimenta: 'Casc metàl·lic de guerrer amb turbant d\'or i teixits nobles, cota de malla i armadura daurada sobre túnica carmesí. Empunya amb fermesa a la mà dreta una imponent espasa corba o simitarra sarraïna, i porta al braç esquerre un gran escut rodó fosc ornat amb la mitja lluna daurada en relleu, dret i senyorial davant els murs del Castell de Cardona.',
     ball: 'Dansa Morisca i Ball dels Gegants Nous',
     badge: 'Llegenda del Castell',
     featured: true

@@ -96,7 +96,7 @@ export default function CulturalQuiz() {
     abdalla: {
       name: 'Abdal·là',
       title: 'El Príncep Sarraí (Barri Nou)',
-      image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80',
+      image: './images/abdalla.jpg',
       description: {
         ca: 'Ets passió pura i coratge. No hi ha muralla ni dificultat que freni la teva entrega per les persones que estimes i pels teus somnis més alts.',
         es: 'Eres pura pasión y valentía. No hay muro ni dificultad que frene tu lealtad hacia tus seres queridos y tus ideales.',
