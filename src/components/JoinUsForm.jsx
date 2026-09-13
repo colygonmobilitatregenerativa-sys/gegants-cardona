@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle, HeartHandshake, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -12,6 +12,16 @@ export default function JoinUsForm() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const handleSelectRole = (e) => {
+      if (e.detail?.role) {
+        setFormData(prev => ({ ...prev, role: e.detail.role }));
+      }
+    };
+    window.addEventListener('setContactRole', handleSelectRole);
+    return () => window.removeEventListener('setContactRole', handleSelectRole);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -171,6 +181,7 @@ export default function JoinUsForm() {
                       <option value="capgrossos">{t('contact', 'roleNans')}</option>
                       <option value="music">{t('contact', 'roleMusician')}</option>
                       <option value="acompanyament">{t('contact', 'roleSupport')}</option>
+                      <option value="intercanvi">{t('contact', 'roleExchange')}</option>
                       <option value="contractacio">{t('contact', 'roleBooking')}</option>
                     </select>
                   </div>

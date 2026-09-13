@@ -91,7 +91,11 @@ export const translations = {
       filterAll: 'Tots els actes',
       filterMajor: 'Festa Major',
       filterTrobades: 'Trobades',
-      filterSortides: 'Sortides Locals'
+      filterSortides: 'Sortides Locals',
+      collaBannerTag: 'Intercanvis i Trobades',
+      collaBannerTitle: 'Sou una colla gegantera? Coordinem sortides per a l\'any que ve!',
+      collaBannerText: 'Voleu convidar els Gegants de Cardona a la vostra vila o participar en les nostres cercaviles i a la Festa Major? Ja estem coordinant el calendari d\'actuacions i intercanvis de la propera temporada.',
+      collaBannerBtn: 'Proposar un Intercanvi o Sortida'
     },
     shop: {
       tag: 'Botiga Oficial',
@@ -142,6 +146,7 @@ export const translations = {
       roleNans: 'Portador/a de Nans i Capgrossos',
       roleMusician: 'Músic (Gralla o Timbal)',
       roleSupport: 'Equip de Suport i Logística',
+      roleExchange: 'Intercanvi o invitació entre Colles Geganteres',
       roleBooking: 'Contractació per a festes o trobades',
       message: 'Missatge o Comentaris',
       send: 'Enviar Sol·licitud',
@@ -253,7 +258,11 @@ export const translations = {
       filterAll: 'Todos los actos',
       filterMajor: 'Fiesta Mayor',
       filterTrobades: 'Encuentros',
-      filterSortides: 'Salidas Locales'
+      filterSortides: 'Salidas Locales',
+      collaBannerTag: 'Intercambios y Encuentros',
+      collaBannerTitle: '¿Sois una colla gegantera? ¡Coordinemos salidas para el año que viene!',
+      collaBannerText: '¿Queréis invitar a los Gigantes de Cardona a vuestro pueblo o participar en nuestros pasacalles y en la Fiesta Mayor? Ya estamos coordinando el calendario de actuaciones e intercambios de la próxima temporada.',
+      collaBannerBtn: 'Proponer un Intercambio o Salida'
     },
     shop: {
       tag: 'Tienda Oficial',
@@ -304,6 +313,7 @@ export const translations = {
       roleNans: 'Portador/a de Enanos y Cabezudos',
       roleMusician: 'Músico (Gralla o Tambor)',
       roleSupport: 'Equipo de Apoyo y Logística',
+      roleExchange: 'Intercambio o invitación entre Cuadrillas de Gigantes',
       roleBooking: 'Contratación para fiestas o desfiles',
       message: 'Mensaje o Comentarios',
       send: 'Enviar Solicitud',
@@ -415,7 +425,11 @@ export const translations = {
       filterAll: 'All events',
       filterMajor: 'Main Festival',
       filterTrobades: 'Gatherings',
-      filterSortides: 'Local Outings'
+      filterSortides: 'Local Outings',
+      collaBannerTag: 'Troupe Exchanges & Tours',
+      collaBannerTitle: 'Are you a giant troupe? Let\'s coordinate joint outings for next year!',
+      collaBannerText: 'Would you like to invite the Giants of Cardona to your town or take part in our parades and the Festa Major? We are already organizing our schedule and troupe exchanges for the upcoming season.',
+      collaBannerBtn: 'Propose an Exchange or Outing'
     },
     shop: {
       tag: 'Official Troupe Shop',
@@ -466,6 +480,7 @@ export const translations = {
       roleNans: 'Bighead & Dwarf Carrier',
       roleMusician: 'Musician (Gralla or Drum)',
       roleSupport: 'Support & Logistics Crew',
+      roleExchange: 'Troupe Exchange or Invitation',
       roleBooking: 'Booking for Festivities / Parades',
       message: 'Message / Notes',
       send: 'Send Application',

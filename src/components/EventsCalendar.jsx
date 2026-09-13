@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { eventsData } from '../data/events';
-import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight, Users2, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function EventsCalendar() {
@@ -78,7 +78,7 @@ export default function EventsCalendar() {
         </div>
 
         {/* Events List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
           {filteredEvents.map((evt) => (
             <div
               key={evt.id}
@@ -123,6 +123,39 @@ export default function EventsCalendar() {
             </div>
           ))}
         </div>
+
+        {/* Colla Exchange Callout Banner */}
+        <div className="max-w-5xl mx-auto p-8 sm:p-10 rounded-3xl bg-white border-2 border-cardona-gold/50 shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="absolute top-0 right-0 w-72 h-72 bg-cardona-gold/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
+          
+          <div className="space-y-3 max-w-2xl relative z-10 text-center lg:text-left">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-burgundy/10 text-cardona-burgundy border border-cardona-burgundy/20">
+              <Users2 className="w-3.5 h-3.5 text-cardona-burgundy" />
+              {t('calendar', 'collaBannerTag')}
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-cardona-burgundyDark">
+              {t('calendar', 'collaBannerTitle')}
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light">
+              {t('calendar', 'collaBannerText')}
+            </p>
+          </div>
+
+          <div className="relative z-10 shrink-0">
+            <a
+              href="#contacte"
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('setContactRole', { detail: { role: 'intercanvi' } }));
+              }}
+              className="px-7 py-4 rounded-full bg-cardona-burgundy hover:bg-cardona-burgundyDark text-cardona-goldLight font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+            >
+              <Mail className="w-4 h-4 text-cardona-gold" />
+              <span>{t('calendar', 'collaBannerBtn')}</span>
+              <ChevronRight className="w-4 h-4 text-cardona-gold group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );
