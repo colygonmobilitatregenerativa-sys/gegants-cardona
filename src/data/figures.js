@@ -18,6 +18,24 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'esperanca',
+    name: 'L\'Esperança',
+    subtitle: 'Geganta del Barri de Sant Miquel',
+    category: 'sant-miquel',
+    categoryLabel: 'Barri de Sant Miquel',
+    year: '1957 (Estrena: 16 de juny de 1957)',
+    sculptor: 'El Ingenio (Barcelona) · Restauracions de Manel Casserres i Toni Mujal',
+    height: '3,70 m',
+    weight: '55 kg',
+    location: 'Cardona - Barri de Sant Miquel',
+    image: './images/esperanca.jpg',
+    description: 'La geganta Esperança és la dama senyorial del Barri de Sant Miquel de Cardona i parella inseparable d\'El Batallador. Estrenada solemnement el 16 de juny de 1957 gràcies a la iniciativa veïnal finançada per Jaume Vendrell Rosas, simbolitza la concòrdia, la bellesa i la virtut que acompanyen el caràcter heroic del guerrer cardoní.',
+    vestimenta: 'Majestuosa corona reial daurada sobre cabellera castanya ondulada, arracades aristocràtiques de pedreria, mantell verd oliva amb brocats florals a les espatlles, vestit de brocat daurat amb sanefa triangular gòtica i estel a la faldilla. Lluu al pit l\'escut heràldic de la vall salina i sosté a la mà un delicat ram de flors silvestres davant els balcons engalanats de la vila.',
+    ball: 'Ball de Gegants de Sant Miquel i Vals de l\'Esperança',
+    badge: 'Geganta de Sant Miquel (1957)',
+    featured: true
+  },
+  {
     id: 'borrell-ii',
     name: 'Borrell II',
     subtitle: 'Comte de Barcelona i Senyor de Cardona',

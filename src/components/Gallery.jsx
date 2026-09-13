@@ -25,10 +25,10 @@ const galleryPhotos = [
   },
   {
     id: 4,
-    title: 'Els músics i grallers de Cardona',
-    category: 'Música',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
-    description: 'El so inconfusible de les gralles i timbals que marca el ritme del pasdoble.'
+    title: 'La Geganta Esperança a la Festa Major',
+    category: 'Sant Miquel',
+    image: './images/esperanca.jpg',
+    description: 'La senyora de Sant Miquel amb el ram de flors i els domassos del Patrocini de fons.'
   },
   {
     id: 5,
