@@ -154,6 +154,25 @@ const galleryPhotos = [
       es: 'La noble dama del Barrio Nuevo y Minyona de Cardona con el vestido medieval verde esmeralda y el libro en mano.',
       en: 'The noble lady of Barri Nou and Minyona of Cardona dressed in emerald medieval gown holding her book.'
     }
+  },
+  {
+    id: 9,
+    title: {
+      ca: 'La Plaça de Bous i el Correbous de Cardona',
+      es: 'La Plaza de Toros y el Correbous de Cardona',
+      en: 'Bullring Square & the Cardona Correbous'
+    },
+    category: {
+      ca: 'Festa Major',
+      es: 'Fiesta Mayor',
+      en: 'Major Festival'
+    },
+    image: './images/correbous.jpg',
+    description: {
+      ca: 'La tradicional plaça amb les baranes de fusta i l\'ambient festiu de gom a gom durant la Festa Major.',
+      es: 'La tradicional plaza con los tablados de madera y el vibrante ambiente festivo durante la Fiesta Mayor.',
+      en: 'The historic square with wooden railings packed with spectators during Cardona’s Major Festival.'
+    }
   }
 ];
 

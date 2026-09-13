@@ -124,7 +124,7 @@ export default function RouteMap() {
         es: 'Durante la Fiesta Mayor, la plaza se transforma para acoger la fiesta cardonina. Los gigantes forman un corro espectacular donde bailan al unísono con toda la plaza abarrotada.',
         en: 'During the Major Festival, the square transforms into the festival arena. The giant figures dance together in a massive circular formation amidst packed cheers.'
       },
-      image: './images/batallador.jpg',
+      image: './images/correbous.jpg',
       coords: { x: '72%', y: '60%' }
     },
     {
