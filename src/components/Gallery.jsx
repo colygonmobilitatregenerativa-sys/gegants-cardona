@@ -32,10 +32,10 @@ const galleryPhotos = [
   },
   {
     id: 5,
-    title: 'Cercavila festiva de Festa Major',
-    category: 'Festa Major',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
-    description: 'Els carrers medievals engalanats s\'omplen de colors i gom a gom de gent.'
+    title: 'El Gegant Romeu pel centre històric',
+    category: 'La Fira (1908)',
+    image: './images/romeu.jpg',
+    description: 'La segona figura més antiga de Cardona lluint l\'escut del card al pit pels carrers de la vila.'
   },
   {
     id: 6,

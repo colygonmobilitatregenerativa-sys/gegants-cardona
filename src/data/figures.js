@@ -54,6 +54,24 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'romeu',
+    name: 'Romeu',
+    subtitle: 'Gegant Centenari del Barri de la Fira',
+    category: 'barri-fira',
+    categoryLabel: 'Barri de la Fira (Centenari)',
+    year: '1908 (Estrena: Barri de la Fira)',
+    sculptor: 'Miquel Serra i Mosella ("Sabater Fraret")',
+    height: '3,20 m',
+    weight: '48 kg',
+    location: 'Cardona - Barri de la Fira',
+    image: './images/romeu.jpg',
+    description: 'El Gegant Romeu és la segona figura més antiga de Cardona, construït el 1908 pel cèlebre sabater cardoní Miquel Serra («Sabater Fraret») per a les festivitats del Barri de la Fira. Forma la mítica parella de «Romeu i Julieta» i està catalogat oficialment com a Gegant Centenari de Catalunya. La seva mirada expressiva i somriure noble el fan una de les figures més carismàtiques de la vila.',
+    vestimenta: 'Barret cerimonial de feltre carmesí amb ploma noble i fermall daurat, cabellera negra i bigoti corbat, capa de vellut grana amb sanefes i túnica ivori. Lluu al pit amb gran orgull l\'escut oficial de Cardona: les quatre barres catalanes amb la mata de card comtal al centre.',
+    ball: 'Vals de Romeu i Julieta i Ballada del Barri de la Fira',
+    badge: 'Centenari (1908)',
+    featured: true
+  },
+  {
     id: 'abdalla',
     name: 'Abdal·là',
     subtitle: 'Príncep Sarraí / Barri Nou',
