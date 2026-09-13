@@ -66,7 +66,7 @@ export default function CulturalQuiz() {
         { label: { ca: 'La corona comtal i el pergamí de 986', es: 'La corona condal y el pergamino de 986', en: 'The count crown and founding parchment of 986' }, type: 'borrell' },
         { label: { ca: 'El mantell de brocat fi i el ram de flors nobles', es: 'El manto de brocado fino y el ramo de flores nobles', en: 'The fine brocade cloak and noble flowers bouquet' }, type: 'letgarda' },
         { label: { ca: 'El turbant cerimonial i el sabre de cavaller', es: 'El turbante ceremonial y el sable de caballero', en: 'The royal turban and knightly curved sabre' }, type: 'abdalla' },
-        { label: { ca: 'El vel poètic i el mirall d\'argent que reflecteix el cel', es: 'El velo poético y el espejo de plata que refleja el cielo', en: 'The poetic veil and silver mirror reflecting the sky' }, type: 'adalgisa' },
+        { label: { ca: 'El llibre de memòries enquadernat en cuir i el vestit medieval verd', es: 'El libro de memorias encuadernado en cuero y el vestido medieval verde', en: 'The leather-bound book of memories and green medieval gown' }, type: 'adalgisa' },
         { label: { ca: 'El barret de tres pics i una bona vara per ballar', es: 'El sombrero de tres picos y una vara para saltar', en: 'The tricorn hat and stick for dancing around' }, type: 'nan' }
       ]
     }
@@ -104,13 +104,13 @@ export default function CulturalQuiz() {
       }
     },
     adalgisa: {
-      name: 'Adalgisa',
+      name: 'Adalés',
       title: 'La Minyona de Cardona (Barri Nou)',
-      image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
+      image: './images/adales.jpg',
       description: {
-        ca: 'Sensible, lliure i amb un esperit poètic indomable. Fins i tot des de la torre més alta, el teu record i la teva veu ressonen com un símbol immortal.',
-        es: 'Sensible, libre y con un espíritu poético indomable. Incluso en la torre más alta, tu voz y tus anhelos resuenan inmortales.',
-        en: 'Free-spirited, sensitive, and romantic. Your heart knows no confinement, and your dreams inspire everyone who hears your song.'
+        ca: 'Sensible, lliure i amb un esperit poètic indomable. Fidel al teu cor i als teus ideals, el teu record ressona com un símbol immortal d\'amor i llibertat.',
+        es: 'Sensible, libre y con un espíritu poético indomable. Fiel a tu corazón y a tus ideales, tu recuerdo resuena como un símbolo inmortal de amor y libertad.',
+        en: 'Free-spirited, sensitive, and romantic. Faithful to your heart and ideals, your story inspires everyone with enduring love and liberty.'
       }
     },
     nan: {

@@ -50,6 +50,13 @@ const galleryPhotos = [
     category: 'Barri Nou',
     image: './images/abdalla.jpg',
     description: 'El noble guerrer sarraí de la llegenda de la Minyona amb la simitarra i l\'escut de la mitja lluna.'
+  },
+  {
+    id: 8,
+    title: 'La Geganta Adalés davant el Portal de Sant Miquel',
+    category: 'Barri Nou',
+    image: './images/adales.jpg',
+    description: 'La noble dama del Barri Nou i Minyona de Cardona amb el vestit medieval verd maragda i el llibre a la mà.'
   }
 ];
 

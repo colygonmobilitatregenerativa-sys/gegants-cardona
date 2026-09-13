@@ -109,7 +109,7 @@ export const figuresData = [
   },
   {
     id: 'adalgisa',
-    name: 'Adalgisa',
+    name: 'Adalés',
     subtitle: 'La Minyona de Cardona / Barri Nou',
     category: 'barri-nou',
     categoryLabel: 'Barri Nou',
@@ -118,10 +118,10 @@ export const figuresData = [
     height: '3,78 m',
     weight: '59 kg',
     location: 'Cardona - Barri Nou',
-    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
-    description: 'La donzella Adalgisa encarna la tragèdia de la Torre de la Minyona. Closa pel seu pare i germà al calabós de la torre circular per haver-se enamorat d\'Abdal·là, la seva memòria perdura per sempre en el vent del castell i en la festa alegre del poble.',
-    vestimenta: 'Vestit medieval de vellut blau marí i vori, vel transparent que evoca la seva estada a la torre i mirall d\'argent a la mà que reflecteix el cel de Cardona.',
-    ball: 'Lament d\'Adalgisa i Vals del Barri Nou',
+    image: './images/adales.jpg',
+    description: 'La donzella Adalés (coneguda també en la tradició com la Minyona de Cardona) és la noble dama del Barri Nou i protagonista de la cèlebre llegenda de la Torre de la Minyona del Castell de Cardona. Filla del vescomte de Cardona, el seu amor secret pel príncep sarraí Abdal·là va desafiar les rivalitats de l\'època. Avui dia, tots dos gegants dansen lliures i units als carrers i places de la vila com a màxim símbol d\'amor, llibertat i concòrdia.',
+    vestimenta: 'Pentinat clàssic amb llargues trenes castanyes daurades sobre les espatlles enllaçades amb vetes blanques i penjoll noble al coll. Llueix un vestit medieval d\'època en to verd maragda i vellut oliva amb amples mànigues acampanades, cosset ajustat amb sanefes d\'or i sanefa geomètrica de rombes a la faldilla. Sosté a la mà dreta un llibre enquadernat en cuir antic, capturada al costat d\'Abdal·là davant el portal gòtic de Sant Miquel de Cardona.',
+    ball: 'Dansa d\'Adalés i Abdal·là i Vals del Barri Nou',
     badge: 'Llegenda del Castell',
     featured: true
   },
