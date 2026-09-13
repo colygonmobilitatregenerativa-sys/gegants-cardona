@@ -76,7 +76,7 @@ export default function CulturalQuiz() {
     borrell: {
       name: 'Borrell II',
       title: 'Comte de Barcelona i Senyor de Cardona (Barri Major)',
-      image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80',
+      image: './images/borrell.jpg',
       description: {
         ca: 'Tens ànima de líder natural. Igual que el noble comte que va atorgar la Carta de Poblament el 986, valores la comunitat, la història i el respecte per les arrels.',
         es: 'Tienes alma de líder natural. Como el noble conde que otorgó la Carta de Poblament en 986, valoras la comunidad, la historia y el respeto a las raíces.',

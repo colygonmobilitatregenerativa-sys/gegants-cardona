@@ -28,9 +28,9 @@ export const figuresData = [
     height: '3,85 m',
     weight: '62 kg',
     location: 'Cardona - Barri Major',
-    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80',
+    image: './images/borrell.jpg',
     description: 'El gegant del Barri Major representa el poder noble i comtal de la Cardona medieval. Borrell II és el comte que atorgà la cèlebre Carta de Poblament l\'any 986 a l\'església de Sant Vicenç del Castell de Cardona, concedint franquícies als pobladors del castell i la vall salina.',
-    vestimenta: 'Capa cerimonial de vellut carmesí bordada en or, espasa d\'acer amb empunyadura noble, corona comtal damunt casc de plata i pergamí fundacional a la mà dreta.',
+    vestimenta: 'Toc cerimonial en tons blancs i verds amb joia d\'or frontal, cabellera negra i bigoti noble, corbatí de llaç i túnica comtal amb brocats daurats. Lluu al pit la gran medalla commemorativa de la Vila de Cardona penjada d\'un cordó trenat i mantell senyorial davant les muralles del Castell.',
     ball: 'Ball de Gegants de Cardona i Pasdoble Major',
     badge: 'Centenari (1834)',
     featured: true

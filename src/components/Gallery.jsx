@@ -4,17 +4,17 @@ import { X, ZoomIn, Camera } from 'lucide-react';
 const galleryPhotos = [
   {
     id: 1,
-    title: 'Ballada al centre històric',
-    category: 'Balles',
-    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80',
-    description: 'La colla ballant sota els aplaudiments del públic a la Plaça del Mercat.'
+    title: 'El Comte Borrell II davant el Castell de Cardona',
+    category: 'Centenaris',
+    image: './images/borrell.jpg',
+    description: 'La imponent figura comtal del Barri Major amb la medalla de Cardona al pit.'
   },
   {
     id: 2,
-    title: 'Dansa de gala al Castell',
-    category: 'Patrimoni',
-    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
-    description: 'Abdal·là i Adalgisa als peus de la històrica Torre de la Minyona.'
+    title: 'El Gegant Batallador al peu de la fortalesa',
+    category: 'Sant Miquel',
+    image: './images/batallador.jpg',
+    description: 'El guerrer de Sant Miquel sostenint la destral cerimonial amb el Castell al fons.'
   },
   {
     id: 3,
