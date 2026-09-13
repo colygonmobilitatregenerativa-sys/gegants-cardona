@@ -64,6 +64,11 @@ export default function Footer() {
                   Castell i Muntanya de Sal
                 </a>
               </li>
+              <li>
+                <a href="https://open.spotify.com/intl-es/album/6W9HqagD6qrbTnailiDLJw" target="_blank" rel="noopener noreferrer" className="text-[#1ed760] hover:text-white flex items-center gap-1.5 transition-colors font-medium">
+                  <span>Banda de Cardona a Spotify ↗</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
