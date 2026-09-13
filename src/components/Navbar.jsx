@@ -18,8 +18,8 @@ export default function Navbar() {
   const navLinks = [
     { name: t('nav', 'inici'), href: '#inici', icon: Shield },
     { name: t('nav', 'figures'), href: '#figures', icon: Users },
-    { name: t('nav', 'historia'), href: '#historia', icon: History },
     { name: t('nav', 'musica'), href: '#musica', icon: Music },
+    { name: t('nav', 'historia'), href: '#historia', icon: History },
     { name: t('nav', 'recorregut'), href: '#recorregut', icon: Navigation },
     { name: t('nav', 'calendari'), href: '#calendari', icon: Calendar },
     { name: t('nav', 'quiz'), href: '#quiz', icon: HelpCircle },

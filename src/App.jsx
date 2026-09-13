@@ -21,8 +21,8 @@ export default function App() {
         <Navbar />
         <main className="flex-grow">
           <Hero />
-          <AudioPlayer />
           <FiguresCatalog />
+          <AudioPlayer />
           <HistoryTimeline />
           <RouteMap />
           <EventsCalendar />
