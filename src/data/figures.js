@@ -144,21 +144,21 @@ export const figuresData = [
     featured: false
   },
   {
-    id: 'capgrossos-cardona',
-    name: 'Nans i Capgrossos de Cardona',
-    subtitle: 'La Cort d\'animació de les cercaviles',
+    id: 'nans-mercat',
+    name: 'Nans del Mercat (Minga i Agneta)',
+    subtitle: 'Els Nans més antics de Cardona (Barri del Mercat)',
     category: 'capgrossos',
-    categoryLabel: 'Nans i Capgrossos',
-    year: 'Diferents èpoques (S. XIX - XXI)',
-    sculptor: 'Diversos artesans i Toni Mujal',
-    height: '1,70 m - 2,10 m',
-    weight: '8 - 14 kg',
-    location: 'Cardona',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
-    description: 'La colla de capgrossos i nans acompanya els gegants obrint pas amb les seves garlandes, fuets i balls trapelles. Representen personatges còmics, burgesos, l\'Hereu, la Pubilla i animals simbòlics que fan somriure els més petits.',
-    vestimenta: 'Robes tradicionals estampades, capes acolorides i barrets de tres pics.',
-    ball: 'Ball de Nans de la Festa Major',
-    badge: 'Festa Popular',
-    featured: false
+    categoryLabel: 'Nans i Capgrossos (Barri del Mercat)',
+    year: 'Segle XVIII (ca. 1750-1800) · Batejats el 1996',
+    sculptor: 'Artesans tradicionals (Casa Climens) · Rèpliques de 1996 per a conservació',
+    height: '1,80 m',
+    weight: '12 kg (cada nan)',
+    location: 'Cardona - Barri del Mercat',
+    image: './images/nans-mercat.jpg',
+    description: 'Els Nans del Mercat són la parella de figures còmiques més antiga de Cardona i una de les més antigues de tot Catalunya, amb orígens documentats que es remunten a la segona meitat del segle XVIII (1750-1800). Vinculats històricament a la nissaga i pastisseria Climens del carrer Major, el 1996 l\'Ajuntament i la Colla van estrenar les rèpliques batejades com a Minga i Agneta en record de personatges populars del veïnat, preservant les peces originals al Saló de Plens com a joia patrimonial.',
+    vestimenta: 'En Minga llueix un barret de tres pics (tricorn) fosc amb rivet daurat, casaca vermella de gala amb botons rodons negres, corbatí blanc amb xulles de randa i llaç de la senyera catalana amb medalla. L\'Agneta porta mocador blanc de cap amb costura de ziga-zaga vermella, vestit blanc estampat de flors amb gran llaçada al coll, cinta de les quatre barres i el seu inconfusible pigall a la galta dreta.',
+    ball: 'Ball de Nans de Cardona i Ballada del Barri del Mercat',
+    badge: 'Bicentenaris (S. XVIII)',
+    featured: true
   }
 ];

@@ -18,10 +18,10 @@ const galleryPhotos = [
   },
   {
     id: 3,
-    title: 'Els Nans i Capgrossos en acció',
-    category: 'Nans',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80',
-    description: 'Alegria i somriures dels infants davant les corredisses dels capgrossos.'
+    title: 'Els Nans del Mercat: Minga i Agneta',
+    category: 'Barri del Mercat',
+    image: './images/nans-mercat.jpg',
+    description: 'Els nans bicentenaris més antics de Cardona conservats com a patrimoni històric.'
   },
   {
     id: 4,

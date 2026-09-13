@@ -114,13 +114,13 @@ export default function CulturalQuiz() {
       }
     },
     nan: {
-      name: 'El Nan Trapella',
-      title: 'Ànima de les cercaviles i la quitxalla',
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80',
+      name: 'Els Nans del Mercat (Minga i Agneta)',
+      title: 'Les figures més antigues i trapelles de Cardona',
+      image: './images/nans-mercat.jpg',
       description: {
-        ca: 'Ets pura alegria, espontaneïtat i dinamisme. Sense tu, la festa no tindria aquell somriure trapella que fa gaudir grans i menuts per igual.',
-        es: 'Eres pura alegría, dinamismo y picardía. Sin ti, la fiesta no tendría esa chispa contagiosa que hace reír a pequeños y mayores.',
-        en: 'You are pure happiness, fun, and unstoppable vitality. Without you, no festival would ever be truly complete!'
+        ca: 'Ets pura alegria, tradició bicentenària i espontaneïtat. Com el Minga i l\'Agneta del Mercat, saps com arrencar un somriure i fer bategar el cor festiu de la vila a cada plaça.',
+        es: 'Eres pura alegría, tradición bicentenaria y espontaneidad. Como Minga y Agneta del Mercado, sabes cómo arrancar una sonrisa y hacer vibrar el corazón festivo del pueblo.',
+        en: 'You are pure joy, bicentennial tradition, and spontaneous fun. Like Minga & Agneta, you bring laughter and celebration wherever you go.'
       }
     }
   };
