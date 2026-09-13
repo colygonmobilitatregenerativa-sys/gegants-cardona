@@ -11,6 +11,7 @@ export default function FiguresCatalog() {
 
   const categories = [
     { id: 'all', label: t('catalog', 'filterAll') },
+    { id: 'sant-miquel', label: t('catalog', 'filterSantMiquel') },
     { id: 'barri-major', label: t('catalog', 'filterMajor') },
     { id: 'barri-nou', label: t('catalog', 'filterNou') },
     { id: 'capgrossos', label: t('catalog', 'filterCapgrossos') },

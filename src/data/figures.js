@@ -1,5 +1,23 @@
 export const figuresData = [
   {
+    id: 'batallador',
+    name: 'El Batallador',
+    subtitle: 'Gegant Guerrer del Barri de Sant Miquel',
+    category: 'sant-miquel',
+    categoryLabel: 'Barri de Sant Miquel',
+    year: '1957 (Estrena: 16 de juny de 1957)',
+    sculptor: 'El Ingenio (Barcelona) · Restauracions de Manel Casserres i Toni Mujal',
+    height: '3,80 m',
+    weight: '60 kg',
+    location: 'Cardona - Barri de Sant Miquel',
+    image: './images/batallador.jpg',
+    description: 'El Gegant Batallador és la figura guerrera i senyorial del Barri de Sant Miquel de Cardona. Estrenat solemnement el 16 de juny de 1957 gràcies a la iniciativa veïnal i finançat per Jaume Vendrell Rosas, forma parella històrica amb la geganta l\'Esperança. Encarna la valentia militar i l\'esperit heroic dels defensors de la fortalesa del Castell de Cardona al llarg dels segles.',
+    vestimenta: 'Imponent capa cerimonial de vellut carmesí ricament brodada amb sanefes daurades, casc guerrer amb cimera daurada en forma de drac/ocell mitològic, túnica noble amb escut central que il·lustra el paisatge de la vall salina, i la cèlebre destral de combat medieval que empunya amb fermesa a la mà dreta.',
+    ball: 'Ball de Gegants de Sant Miquel i Pasdoble del Batallador',
+    badge: 'Gegant Guerrer (1957)',
+    featured: true
+  },
+  {
     id: 'borrell-ii',
     name: 'Borrell II',
     subtitle: 'Comte de Barcelona i Senyor de Cardona',
