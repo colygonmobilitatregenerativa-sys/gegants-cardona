@@ -1,6 +1,7 @@
 import React from 'react';
 import { timelineData, minyonaLegend } from '../data/history';
 import { Landmark, Crown, Heart, ScrollText, Sparkles, BookOpen, Quote } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const iconMap = {
   castle: Landmark,
@@ -11,20 +12,22 @@ const iconMap = {
 };
 
 export default function HistoryTimeline() {
+  const { t, loc } = useLanguage();
+
   return (
     <section id="historia" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
-            Memòria Viva
+            {t('history', 'tag')}
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
-            Història i Tradició
+            {t('history', 'title')}
           </h2>
           <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
           <p className="text-gray-600 text-base sm:text-lg">
-            La història dels gegants de Cardona està estretament lligada a la identitat comtal, al castell inexpugnable i a les llegendes que han passat de generació en generació.
+            {t('history', 'subtitle')}
           </p>
         </div>
 
@@ -54,16 +57,16 @@ export default function HistoryTimeline() {
                   <div className={`w-full md:w-1/2 ${isEven ? 'md:pl-12' : 'md:pr-12'}`}>
                     <div className="bg-cardona-sand p-6 rounded-2xl border border-cardona-stone shadow-md hover:shadow-xl transition-shadow duration-300">
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-black tracking-wider bg-cardona-gold text-cardona-burgundyDark mb-2">
-                        Any {item.year}
+                        {t('history', 'yearPrefix')} {item.year}
                       </span>
                       <h3 className="font-serif text-xl font-bold text-cardona-burgundyDark mb-1">
-                        {item.title}
+                        {loc(item.title)}
                       </h3>
                       <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">
-                        {item.subtitle}
+                        {loc(item.subtitle)}
                       </p>
                       <p className="text-sm text-gray-700 leading-relaxed">
-                        {item.description}
+                        {loc(item.description)}
                       </p>
                     </div>
                   </div>
@@ -88,19 +91,19 @@ export default function HistoryTimeline() {
             <div className="flex items-center gap-3 text-cardona-gold mb-4">
               <BookOpen className="w-6 h-6 text-cardona-gold animate-bounce" />
               <span className="text-xs font-bold uppercase tracking-widest text-cardona-goldLight">
-                Llegenda Cardonina
+                {t('history', 'legendTag')}
               </span>
             </div>
 
             <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-cardona-goldLight mb-2">
-              {minyonaLegend.title}
+              {t('history', 'legendTitle')}
             </h3>
             <p className="text-amber-200/90 text-sm font-medium mb-8 italic">
-              {minyonaLegend.subtitle}
+              {t('history', 'legendSubtitle')}
             </p>
 
             <div className="space-y-4 text-amber-100/90 text-sm sm:text-base leading-relaxed font-light">
-              {minyonaLegend.paragraphs.map((p, i) => (
+              {(loc(minyonaLegend.paragraphs) || []).map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
@@ -108,7 +111,7 @@ export default function HistoryTimeline() {
             <div className="mt-8 pt-6 border-t border-cardona-gold/20 flex items-center gap-4">
               <Quote className="w-8 h-8 text-cardona-gold shrink-0 opacity-60" />
               <p className="text-xs sm:text-sm text-cardona-goldLight italic font-serif">
-                «A cada ballada a la plaça, Abdal·là i Adalés retroben la llibertat que la torre els va negar.»
+                {t('history', 'legendQuote')}
               </p>
             </div>
           </div>

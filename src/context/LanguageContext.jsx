@@ -17,8 +17,16 @@ export function LanguageProvider({ children }) {
     return translations[lang]?.[section]?.[key] || translations['ca']?.[section]?.[key] || key;
   };
 
+  const loc = (val) => {
+    if (!val) return '';
+    if (typeof val === 'object' && val !== null) {
+      return val[lang] || val['ca'] || val['es'] || val['en'] || Object.values(val)[0] || '';
+    }
+    return val;
+  };
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, loc }}>
       {children}
     </LanguageContext.Provider>
   );

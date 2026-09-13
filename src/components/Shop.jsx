@@ -3,7 +3,7 @@ import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart } fr
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Shop() {
-  const { t } = useLanguage();
+  const { t, loc } = useLanguage();
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
@@ -11,51 +11,123 @@ export default function Shop() {
   const products = [
     {
       id: 1,
-      name: 'Samarreta Oficial de la Colla',
+      name: {
+        ca: 'Samarreta Oficial de la Colla',
+        es: 'Camiseta Oficial de la Cuadrilla',
+        en: 'Official T-Shirt of the Troupes'
+      },
       price: 16.00,
       image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80',
-      badge: '100% Cotó Orgànic',
-      description: 'Samarreta en color bordeus amb l\'emblema de Borrell II i Letgarda estampat al pit i la silueta del Castell a l\'esquena.'
+      badge: {
+        ca: '100% Cotó Orgànic',
+        es: '100% Algodón Orgánico',
+        en: '100% Organic Cotton'
+      },
+      description: {
+        ca: 'Samarreta en color bordeus amb l\'emblema de Borrell II i Letgarda estampat al pit i la silueta del Castell a l\'esquena.',
+        es: 'Camiseta en color burdeos con el emblema de Borrell II y Letgarda estampado en el pecho y la silueta del Castillo en la espalda.',
+        en: 'Burgundy t-shirt featuring Borrell II and Letgarda crest on the chest and Cardona Castle silhouette on the back.'
+      }
     },
     {
       id: 2,
-      name: 'Figura de Goma: Borrell II (Centenari)',
+      name: {
+        ca: 'Figura de Goma: Borrell II (Centenari)',
+        es: 'Figura de Goma: Borrell II (Centenario)',
+        en: 'Rubber Figure: Borrell II (Centenary)'
+      },
       price: 24.50,
       image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=80',
-      badge: 'Col·leccionable',
-      description: 'Rèplica detallada en goma tova de 30 cm de la figura històrica del Barri Major. Ideal per a infants i col·leccionistes.'
+      badge: {
+        ca: 'Col·leccionable',
+        es: 'Coleccionable',
+        en: 'Collectible'
+      },
+      description: {
+        ca: 'Rèplica detallada en goma tova de 30 cm de la figura històrica del Barri Major. Ideal per a infants i col·leccionistes.',
+        es: 'Réplica detallada en goma blanda de 30 cm de la figura histórica del Barrio Mayor. Ideal para niños y coleccionistas.',
+        en: 'Detailed 30 cm soft rubber replica of the historic Barri Major figure. Perfect for children and collectors alike.'
+      }
     },
     {
       id: 3,
-      name: 'Figura de Goma: Adalés (Barri Nou)',
+      name: {
+        ca: 'Figura de Goma: Adalés (Barri Nou)',
+        es: 'Figura de Goma: Adalés (Barrio Nuevo)',
+        en: 'Rubber Figure: Adalés (Barri Nou)'
+      },
       price: 24.50,
       image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80',
-      badge: 'Col·leccionable',
-      description: 'Reproducció oficial de la donzella de la Torre de la Minyona segons l\'escultura de Toni Mujal.'
+      badge: {
+        ca: 'Col·leccionable',
+        es: 'Coleccionable',
+        en: 'Collectible'
+      },
+      description: {
+        ca: 'Reproducció oficial de la donzella de la Torre de la Minyona segons l\'escultura de Toni Mujal.',
+        es: 'Reproducción oficial de la doncella de la Torre de la Minyona según la escultura de Toni Mujal.',
+        en: 'Official miniature reproduction of the Minyona Tower maiden sculpted by Toni Mujal.'
+      }
     },
     {
       id: 4,
-      name: 'Mocador Tradicional de Festa Major',
+      name: {
+        ca: 'Mocador Tradicional de Festa Major',
+        es: 'Pañuelo Tradicional de Fiesta Mayor',
+        en: 'Traditional Major Festival Neckerchief'
+      },
       price: 6.00,
       image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80',
-      badge: 'Festa Popular',
-      description: 'Mocador triangular de quadres vermells i negres amb l\'escut brodat de la Colla de Geganters de Cardona.'
+      badge: {
+        ca: 'Festa Popular',
+        es: 'Fiesta Popular',
+        en: 'Folk Festival'
+      },
+      description: {
+        ca: 'Mocador triangular de quadres vermells i negres amb l\'escut brodat de la Colla de Geganters de Cardona.',
+        es: 'Pañuelo triangular de cuadros rojos y negros con el escudo bordado de la Colla de Geganters de Cardona.',
+        en: 'Triangular red-and-black checkered festival kerchief with embroidered Cardona Giants crest.'
+      }
     },
     {
       id: 5,
-      name: 'Llibre: "Història i Llegendes dels Gegants"',
+      name: {
+        ca: 'Llibre: "Història i Llegendes dels Gegants"',
+        es: 'Libro: "Historia y Leyendas de los Gigantes"',
+        en: 'Book: "History and Legends of the Giants"'
+      },
       price: 18.00,
       image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
-      badge: 'Edició Il·lustrada',
-      description: 'Monografia històrica sobre els 190 anys de tradició gegantera a Cardona, fotografies inèdites i partitures musicals.'
+      badge: {
+        ca: 'Edició Il·lustrada',
+        es: 'Edición Ilustrada',
+        en: 'Illustrated Edition'
+      },
+      description: {
+        ca: 'Monografia històrica sobre els 190 anys de tradició gegantera a Cardona, fotografies inèdites i partitures musicals.',
+        es: 'Monografía histórica sobre los 190 años de tradición de gigantes en Cardona, fotografías inéditas y partituras musicales.',
+        en: 'Historical monograph celebrating 190 years of giant folklore in Cardona, rare archive photos, and musical scores.'
+      }
     },
     {
       id: 6,
-      name: 'Pack 4 Pins Metàl·lics de les Figures',
+      name: {
+        ca: 'Pack 4 Pins Metàl·lics de les Figures',
+        es: 'Pack 4 Pines Metálicos de las Figuras',
+        en: '4-Pin Metal Collector Set'
+      },
       price: 8.50,
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
-      badge: 'Pack 4 unitats',
-      description: 'Pins esmaltats de Borrell II, Letgarda, Abdal·là i Adalés per lluir a la solapa o a la motxilla.'
+      badge: {
+        ca: 'Pack 4 unitats',
+        es: 'Pack 4 unidades',
+        en: 'Pack of 4'
+      },
+      description: {
+        ca: 'Pins esmaltats de Borrell II, Letgarda, Abdal·là i Adalés per lluir a la solapa o a la motxilla.',
+        es: 'Pines esmaltados de Borrell II, Letgarda, Abdal·là y Adalés para lucir en la solapa o mochila.',
+        en: 'Enamel pins of Borrell II, Letgarda, Abdal·là, and Adalés for your lapel or backpack.'
+      }
     }
   ];
 
@@ -141,13 +213,13 @@ export default function Shop() {
                 <div className="relative h-60 overflow-hidden bg-gray-100">
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={loc(item.name)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cardona-burgundy text-white shadow">
-                      {item.badge}
+                      {loc(item.badge)}
                     </span>
                   </div>
                 </div>
@@ -155,14 +227,14 @@ export default function Shop() {
                 <div className="p-6">
                   <div className="flex items-baseline justify-between mb-2">
                     <h3 className="font-serif text-lg font-bold text-cardona-burgundyDark">
-                      {item.name}
+                      {loc(item.name)}
                     </h3>
                     <span className="font-serif text-xl font-black text-cardona-burgundy">
                       {item.price.toFixed(2)} €
                     </span>
                   </div>
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    {item.description}
+                    {loc(item.description)}
                   </p>
                 </div>
               </div>
@@ -213,9 +285,9 @@ export default function Shop() {
                 <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-1">
                   {cart.map((it) => (
                     <div key={it.id} className="flex items-center justify-between gap-3 p-3 rounded-xl bg-cardona-sand border border-cardona-stone">
-                      <img src={it.image} alt={it.name} className="w-14 h-14 rounded-lg object-cover" />
+                      <img src={it.image} alt={loc(it.name)} className="w-14 h-14 rounded-lg object-cover" />
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-xs font-bold text-gray-800 truncate">{it.name}</h4>
+                        <h4 className="text-xs font-bold text-gray-800 truncate">{loc(it.name)}</h4>
                         <p className="text-xs text-cardona-burgundy font-semibold">{(it.price * it.qty).toFixed(2)} €</p>
                         <div className="flex items-center gap-2 mt-1">
                           <button

@@ -5,7 +5,7 @@ import { Ruler, Scale, Eye, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function FiguresCatalog() {
-  const { t } = useLanguage();
+  const { t, loc } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [activeFigure, setActiveFigure] = useState(null);
 
@@ -76,13 +76,13 @@ export default function FiguresCatalog() {
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold/90 text-cardona-burgundyDark backdrop-blur-sm shadow">
                     <Sparkles className="w-3 h-3" />
-                    {fig.badge}
+                    {loc(fig.badge)}
                   </span>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-xs font-semibold tracking-wider text-cardona-gold uppercase block">
-                    {fig.categoryLabel}
+                    {loc(fig.categoryLabel)}
                   </span>
                   <h3 className="font-serif text-2xl font-bold leading-snug drop-shadow-sm">
                     {fig.name}
@@ -94,7 +94,7 @@ export default function FiguresCatalog() {
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <p className="text-xs font-medium text-amber-800 mb-3">
-                    {fig.subtitle}
+                    {loc(fig.subtitle)}
                   </p>
                   
                   {/* Quick specs pills */}
@@ -110,12 +110,12 @@ export default function FiguresCatalog() {
                     </div>
                     <div className="h-3 w-px bg-gray-300" />
                     <div className="truncate">
-                      <span>{fig.year.split(' ')[0]}</span>
+                      <span>{loc(fig.year).split(' ')[0]}</span>
                     </div>
                   </div>
 
                   <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6">
-                    {fig.description}
+                    {loc(fig.description)}
                   </p>
                 </div>
 

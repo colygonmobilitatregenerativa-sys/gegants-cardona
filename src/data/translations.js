@@ -3,10 +3,10 @@ export const translations = {
     nav: {
       inici: 'Inici',
       figures: 'Figures',
+      musica: 'Música',
       historia: 'Història & Llegenda',
       recorregut: 'Ruta Cercavila',
       calendari: 'Calendari',
-      musica: 'Música',
       quiz: 'Joc Cultural',
       botiga: 'Botiga',
       galeria: 'Galeria',
@@ -44,22 +44,54 @@ export const translations = {
       height: 'Alçada',
       weight: 'Pes',
       year: 'Any',
-      close: 'Tancar Fitxa'
+      close: 'Tancar Fitxa',
+      location: 'Lloc:',
+      historyTitle: 'Història i Significat:',
+      attireTitle: 'Vestimenta i Atributs:',
+      musicTitle: 'Música i Ball propi:',
+      sculptorTitle: 'Mestre Escultor / Taller:'
     },
     audio: {
       tag: 'Gravacions Oficials a Spotify',
       title: 'Banda de Música de Cardona',
       subtitle: 'Músiques de Cardona: Gegants, Balls de Bastons, Àliga i més',
       albumBtn: 'Obrir Àlbum a Spotify',
-      bandBtn: 'Perfil de la Banda'
+      bandBtn: 'Perfil de la Banda',
+      tracksPrompt: 'Peces de gegants i festa tradicional a Spotify:'
+    },
+    history: {
+      tag: 'Memòria Viva',
+      title: 'Història i Tradició',
+      subtitle: 'La història dels gegants de Cardona està estretament lligada a la identitat comtal, al castell inexpugnable i a les llegendes que han passat de generació en generació.',
+      yearPrefix: 'Any',
+      legendTag: 'Llegenda Cardonina',
+      legendTitle: 'La Llegenda de la Torre de la Minyona',
+      legendSubtitle: 'L\'amor impossible del Castell de Cardona',
+      legendQuote: '«A cada ballada a la plaça, Abdal·là i Adalés retroben la llibertat que la torre els va negar.»'
     },
     map: {
       tag: 'Cercavila Tradicional',
       title: 'Ruta de la Cercavila per Cardona',
       subtitle: 'Recorre pas a pas les places i carrers medievals on dansen els gegants durant la Festa Major.',
+      itineraryBadge: 'Itinerari oficial de la Vila Comtal',
       stop: 'Parada',
       figuresHere: 'Figures protagonistes:',
-      time: 'Hora estimada:'
+      time: 'Hora estimada:',
+      nextStop: 'Següent Parada'
+    },
+    calendar: {
+      tag: 'Agenda i Sortides',
+      title: 'Calendari d\'Actuacions',
+      subtitle: 'Acompanya la colla en cadascuna de les nostres cercaviles, trobades geganteres i especialment a la gran Festa Major de Cardona.',
+      bannerTag: 'Cita Imparable',
+      bannerTitle: 'Festa Major de Cardona 2026',
+      bannerText: 'La gran cita anual del segon cap de setmana de setembre. Ball de Gegants a la plaça, el tradicional Correbous i balls de bastons en un ambient festiu incomparable.',
+      centralDays: 'Dies Centrals',
+      monthYear: 'Setembre 2026',
+      filterAll: 'Tots els actes',
+      filterMajor: 'Festa Major',
+      filterTrobades: 'Trobades',
+      filterSortides: 'Sortides Locals'
     },
     shop: {
       tag: 'Botiga Oficial',
@@ -83,6 +115,11 @@ export const translations = {
       share: 'Comparteix el teu personatge',
       yourResult: 'El teu resultat és:'
     },
+    gallery: {
+      tag: 'Moments Inoblidables',
+      title: 'Galeria d\'Imatges',
+      subtitle: 'Recull fotogràfic de les sortides, balls solemnes i la màgia dels gegants als carrers de Cardona.'
+    },
     videos: {
       tag: 'En Imatges Vives',
       title: 'Vídeos de la Festa Major i Balls',
@@ -92,6 +129,11 @@ export const translations = {
       tag: 'Fes Poble, Fes Tradició',
       title: 'Uneix-te a la Colla',
       formTitle: 'Vols formar part de la Colla?',
+      leadText: 'T\'agradaria portar en Borrell II, el Batallador o l\'Adalés? Tocar la gralla o el timbal? O donar un cop de mà a l\'equip d\'acompanyament? La colla dels Gegants de Cardona té les portes obertes per a tothom!',
+      rehearsalTitle: 'Assajos i Trobades',
+      rehearsalDesc: 'Divendres a la tarda a Cardona. Tothom és benvingut, amb o sense experiència prèvia.',
+      locationTitle: 'Local de la Colla',
+      locationDesc: 'Vila de Cardona (08261), Bages, Catalunya',
       name: 'Nom i Cognoms',
       email: 'Correu Electrònic',
       phone: 'Telèfon',
@@ -104,16 +146,29 @@ export const translations = {
       message: 'Missatge o Comentaris',
       send: 'Enviar Sol·licitud',
       success: 'Gràcies per sumar-te! Ben aviat ens posarem en contacte amb tu.'
+    },
+    footer: {
+      description: 'Associació i colla gegantera dedicada a la conservació, dansa i difusió de les figures històriques i centenàries de la Vila de Cardona (Bages, Catalunya).',
+      slogan: '«Que no pari el ball a la plaça!»',
+      navTitle: 'Navegació',
+      linksTitle: 'Patrimoni i Vila',
+      ajuntament: 'Ajuntament de Cardona',
+      agrupacio: 'Agrupació de Colles Geganteres',
+      turisme: 'Castell i Muntanya de Sal',
+      spotifyLink: 'Banda de Cardona a Spotify ↗',
+      madeWith: 'Fet amb orgull per a la cultura popular de Cardona',
+      rights: 'Colla de Geganters de Cardona',
+      backToTop: 'Tornar a dalt'
     }
   },
   es: {
     nav: {
       inici: 'Inicio',
       figures: 'Figuras',
+      musica: 'Música',
       historia: 'Historia & Leyenda',
       recorregut: 'Ruta Pasacalles',
       calendari: 'Calendario',
-      musica: 'Música',
       quiz: 'Juego Cultural',
       botiga: 'Tienda',
       galeria: 'Galería',
@@ -151,22 +206,54 @@ export const translations = {
       height: 'Altura',
       weight: 'Peso',
       year: 'Año',
-      close: 'Cerrar Ficha'
+      close: 'Cerrar Ficha',
+      location: 'Lugar:',
+      historyTitle: 'Historia y Significado:',
+      attireTitle: 'Vestimenta y Atributos:',
+      musicTitle: 'Música y Baile propio:',
+      sculptorTitle: 'Maestro Escultor / Taller:'
     },
     audio: {
       tag: 'Grabaciones Oficiales en Spotify',
       title: 'Banda de Música de Cardona',
       subtitle: 'Músicas de Cardona: Gigantes, Bailes de Bastones, Águila y más',
       albumBtn: 'Abrir Álbum en Spotify',
-      bandBtn: 'Perfil de la Banda'
+      bandBtn: 'Perfil de la Banda',
+      tracksPrompt: 'Piezas de gigantes y fiesta tradicional en Spotify:'
+    },
+    history: {
+      tag: 'Memoria Viva',
+      title: 'Historia y Tradición',
+      subtitle: 'La historia de los gigantes de Cardona está estrechamente ligada a la identidad condal, al castillo inexpugnable y a las leyendas transmitidas de generación en generación.',
+      yearPrefix: 'Año',
+      legendTag: 'Leyenda Cardonina',
+      legendTitle: 'La Leyenda de la Torre de la Minyona',
+      legendSubtitle: 'El amor imposible del Castillo de Cardona',
+      legendQuote: '«En cada baile en la plaza, Abdal·là y Adalés reencuentran la libertad que la torre les negó.»'
     },
     map: {
       tag: 'Pasacalles Tradicional',
       title: 'Ruta del Pasacalles por Cardona',
       subtitle: 'Recorre paso a paso las plazas y calles medievales donde bailan los gigantes durante la Fiesta Mayor.',
+      itineraryBadge: 'Itinerario oficial de la Villa Condal',
       stop: 'Parada',
       figuresHere: 'Figuras protagonistas:',
-      time: 'Hora estimada:'
+      time: 'Hora estimada:',
+      nextStop: 'Siguiente Parada'
+    },
+    calendar: {
+      tag: 'Agenda y Salidas',
+      title: 'Calendario de Actuaciones',
+      subtitle: 'Acompaña a la colla en cada uno de nuestros pasacalles, encuentros de gigantes y en especial en la gran Fiesta Mayor de Cardona.',
+      bannerTag: 'Cita Ineludible',
+      bannerTitle: 'Fiesta Mayor de Cardona 2026',
+      bannerText: 'La gran cita anual del segundo fin de semana de septiembre. Baile de Gigantes en la plaza, el tradicional encierro Correbous y bailes de bastones en un ambiente festivo único.',
+      centralDays: 'Días Centrales',
+      monthYear: 'Septiembre 2026',
+      filterAll: 'Todos los actos',
+      filterMajor: 'Fiesta Mayor',
+      filterTrobades: 'Encuentros',
+      filterSortides: 'Salidas Locales'
     },
     shop: {
       tag: 'Tienda Oficial',
@@ -190,6 +277,11 @@ export const translations = {
       share: 'Compartir mi personaje',
       yourResult: 'Tu resultado es:'
     },
+    gallery: {
+      tag: 'Momentos Inolvidables',
+      title: 'Galería de Imágenes',
+      subtitle: 'Colección fotográfica de las salidas, bailes solemnes y la magia de los gigantes en las calles de Cardona.'
+    },
     videos: {
       tag: 'En Imágenes Vivas',
       title: 'Vídeos de la Fiesta Mayor y Danzas',
@@ -199,6 +291,11 @@ export const translations = {
       tag: 'Haz Pueblo, Haz Tradición',
       title: 'Únete a la Colla',
       formTitle: '¿Quieres formar parte de la Colla?',
+      leadText: '¿Te gustaría llevar a Borrell II, el Batallador o Adalés? ¿Tocar la gralla o el tambor? ¿O ayudar al equipo de acompañamiento? ¡La colla de los Gigantes de Cardona tiene las puertas abiertas para todos!',
+      rehearsalTitle: 'Ensayos y Encuentros',
+      rehearsalDesc: 'Viernes por la tarde en Cardona. Todo el mundo es bienvenido, con o sin experiencia previa.',
+      locationTitle: 'Local de la Colla',
+      locationDesc: 'Villa de Cardona (08261), Bages, Cataluña',
       name: 'Nombre y Apellidos',
       email: 'Correo Electrónico',
       phone: 'Teléfono',
@@ -211,16 +308,29 @@ export const translations = {
       message: 'Mensaje o Comentarios',
       send: 'Enviar Solicitud',
       success: '¡Gracias por unirte! Muy pronto nos pondremos en contacto contigo.'
+    },
+    footer: {
+      description: 'Asociación de gigantes dedicada a la conservación, baile y difusión de las figuras históricas y centenarias de la Villa de Cardona (Bages, Cataluña).',
+      slogan: '«¡Que no pare el baile en la plaza!»',
+      navTitle: 'Navegación',
+      linksTitle: 'Patrimonio y Villa',
+      ajuntament: 'Ayuntamiento de Cardona',
+      agrupacio: 'Agrupación de Collas Geganreras',
+      turisme: 'Castillo y Montaña de Sal',
+      spotifyLink: 'Banda de Cardona en Spotify ↗',
+      madeWith: 'Hecho con orgullo para la cultura popular de Cardona',
+      rights: 'Colla de Geganters de Cardona',
+      backToTop: 'Volver arriba'
     }
   },
   en: {
     nav: {
       inici: 'Home',
       figures: 'Figures',
+      musica: 'Music',
       historia: 'History & Legend',
       recorregut: 'Parade Route',
       calendari: 'Events',
-      musica: 'Music',
       quiz: 'Cultural Quiz',
       botiga: 'Shop',
       galeria: 'Gallery',
@@ -258,22 +368,54 @@ export const translations = {
       height: 'Height',
       weight: 'Weight',
       year: 'Year',
-      close: 'Close Specs'
+      close: 'Close Specs',
+      location: 'Location:',
+      historyTitle: 'History & Significance:',
+      attireTitle: 'Attire & Attributes:',
+      musicTitle: 'Music & Signature Dance:',
+      sculptorTitle: 'Master Sculptor / Workshop:'
     },
     audio: {
       tag: 'Official Spotify Recordings',
       title: 'Cardona Music Band',
       subtitle: 'Music of Cardona: Giants, Stick Dances, Eagle and more',
       albumBtn: 'Open Album on Spotify',
-      bandBtn: 'Band Profile'
+      bandBtn: 'Band Profile',
+      tracksPrompt: 'Traditional festival and giant tracks on Spotify:'
+    },
+    history: {
+      tag: 'Living Memory',
+      title: 'History & Tradition',
+      subtitle: 'The history of the Giants of Cardona is tightly bound to ducal heritage, the impregnable fortress, and legends passed down across centuries.',
+      yearPrefix: 'Year',
+      legendTag: 'Cardona Legend',
+      legendTitle: 'The Legend of the Minyona Tower',
+      legendSubtitle: 'The impossible love of Cardona Castle',
+      legendQuote: '«With every dance in the square, Abdal·là and Adalés reclaim the freedom the tower denied them.»'
     },
     map: {
       tag: 'Traditional Parade',
       title: 'Parade Route through Cardona',
       subtitle: 'Follow the medieval streets and scenic squares where the giants dance during the Festa Major.',
+      itineraryBadge: 'Official Route of the Ducal Town',
       stop: 'Stop',
       figuresHere: 'Key Figures:',
-      time: 'Estimated Time:'
+      time: 'Estimated Time:',
+      nextStop: 'Next Stop'
+    },
+    calendar: {
+      tag: 'Agenda & Outings',
+      title: 'Performance Calendar',
+      subtitle: 'Follow the troupe in every parade, giant gathering, and especially during the grand Festa Major of Cardona.',
+      bannerTag: 'Unmissable Event',
+      bannerTitle: 'Cardona Festa Major 2026',
+      bannerText: 'The grand annual festival on the second weekend of September. Giant dances in the main square, traditional festivities, and stick dances in an incomparable atmosphere.',
+      centralDays: 'Key Days',
+      monthYear: 'September 2026',
+      filterAll: 'All events',
+      filterMajor: 'Main Festival',
+      filterTrobades: 'Gatherings',
+      filterSortides: 'Local Outings'
     },
     shop: {
       tag: 'Official Troupe Shop',
@@ -297,6 +439,11 @@ export const translations = {
       share: 'Share My Figure',
       yourResult: 'Your match is:'
     },
+    gallery: {
+      tag: 'Unforgettable Moments',
+      title: 'Photo Gallery',
+      subtitle: 'A photographic collection of parades, solemn dances, and the magic of the giants in Cardona streets.'
+    },
     videos: {
       tag: 'In Living Motion',
       title: 'Videos of the Festa Major Dances',
@@ -306,6 +453,11 @@ export const translations = {
       tag: 'Join the Community',
       title: 'Join the Troupe',
       formTitle: 'Want to become part of the troupe?',
+      leadText: 'Would you like to carry Borrell II, the Battler, or Adalés? Play the gralla or the drum? Or assist the logistics crew? The Cardona Giants Troupe welcomes everyone!',
+      rehearsalTitle: 'Rehearsals & Gatherings',
+      rehearsalDesc: 'Friday afternoons in Cardona. Everyone is welcome, with or without previous experience.',
+      locationTitle: 'Troupe Headquarters',
+      locationDesc: 'Town of Cardona (08261), Bages, Catalonia',
       name: 'Full Name',
       email: 'Email Address',
       phone: 'Phone',
@@ -318,6 +470,19 @@ export const translations = {
       message: 'Message / Notes',
       send: 'Send Application',
       success: 'Thank you for joining! We will get in touch with you very soon.'
+    },
+    footer: {
+      description: 'Giant troupe dedicated to the preservation, dance, and celebration of the historic and centenarian giants of Cardona (Catalonia).',
+      slogan: '«Keep the dance alive in the square!»',
+      navTitle: 'Navigation',
+      linksTitle: 'Heritage & Links',
+      ajuntament: 'Cardona Town Hall',
+      agrupacio: 'Catalan Giants Troupe Association',
+      turisme: 'Castle & Salt Mountain',
+      spotifyLink: 'Cardona Band on Spotify ↗',
+      madeWith: 'Crafted with pride for Cardona cultural heritage',
+      rights: 'Cardona Giants Troupe',
+      backToTop: 'Back to top'
     }
   }
 };

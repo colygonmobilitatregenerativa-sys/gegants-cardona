@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { eventsData } from '../data/events';
 import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function EventsCalendar() {
+  const { t, loc } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
-    { id: 'all', label: 'Tots els actes' },
-    { id: 'festa-major', label: 'Festa Major' },
-    { id: 'trobades', label: 'Trobades' },
-    { id: 'sortides', label: 'Sortides Locals' },
+    { id: 'all', label: t('calendar', 'filterAll') },
+    { id: 'festa-major', label: t('calendar', 'filterMajor') },
+    { id: 'trobades', label: t('calendar', 'filterTrobades') },
+    { id: 'sortides', label: t('calendar', 'filterSortides') },
   ];
 
   const filteredEvents = activeFilter === 'all'
@@ -22,14 +24,14 @@ export default function EventsCalendar() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
-            Agenda i Sortides
+            {t('calendar', 'tag')}
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
-            Calendari d'Actuacions
+            {t('calendar', 'title')}
           </h2>
           <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
           <p className="text-gray-600 text-base sm:text-lg">
-            Acompanya la colla en cadascuna de les nostres cercaviles, trobades geganteres i especialment a la gran Festa Major de Cardona.
+            {t('calendar', 'subtitle')}
           </p>
         </div>
 
@@ -38,19 +40,23 @@ export default function EventsCalendar() {
           <div className="space-y-2">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark shadow-sm">
               <Sparkles className="w-3.5 h-3.5" />
-              Cita Imparable
+              {t('calendar', 'bannerTag')}
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-cardona-goldLight">
-              Festa Major de Cardona 2026
+              {t('calendar', 'bannerTitle')}
             </h3>
             <p className="text-sm text-amber-100/90 max-w-xl">
-              La gran cita anual del segon cap de setmana de setembre. Ball de Gegants a la plaça, el tradicional Correbous i balls de bastons en un ambient festiu incomparable.
+              {t('calendar', 'bannerText')}
             </p>
           </div>
           <div className="shrink-0 text-center bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20">
-            <span className="text-xs text-amber-200 uppercase tracking-widest block font-medium">Dies Centrals</span>
+            <span className="text-xs text-amber-200 uppercase tracking-widest block font-medium">
+              {t('calendar', 'centralDays')}
+            </span>
             <span className="font-serif text-3xl font-black text-cardona-gold block">12-15</span>
-            <span className="text-xs text-white font-medium">Setembre 2026</span>
+            <span className="text-xs text-white font-medium">
+              {t('calendar', 'monthYear')}
+            </span>
           </div>
         </div>
 
@@ -87,31 +93,31 @@ export default function EventsCalendar() {
                       ? 'bg-cardona-gold/20 text-cardona-goldDark'
                       : 'bg-gray-100 text-gray-700'
                   }`}>
-                    {evt.type}
+                    {loc(evt.type)}
                   </span>
                   <div className="flex items-center gap-1.5 text-xs font-semibold text-cardona-burgundy">
                     <Calendar className="w-3.5 h-3.5" />
-                    <span>{evt.date}</span>
+                    <span>{loc(evt.date)}</span>
                   </div>
                 </div>
 
                 <h4 className="font-serif text-xl font-bold text-cardona-burgundyDark mb-2">
-                  {evt.title}
+                  {loc(evt.title)}
                 </h4>
 
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  {evt.description}
+                  {loc(evt.description)}
                 </p>
               </div>
 
               <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-cardona-goldDark" />
-                  <span>{evt.time}</span>
+                  <span>{loc(evt.time)}</span>
                 </div>
                 <div className="flex items-center gap-1.5 font-medium text-gray-700">
                   <MapPin className="w-3.5 h-3.5 text-cardona-burgundy" />
-                  <span>{evt.location}</span>
+                  <span>{loc(evt.location)}</span>
                 </div>
               </div>
             </div>

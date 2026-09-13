@@ -1,7 +1,10 @@
 import React from 'react';
 import { ExternalLink, Radio, Music } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function AudioPlayer() {
+  const { t } = useLanguage();
+
   return (
     <section id="musica" className="py-20 bg-gradient-to-r from-cardona-burgundyDark via-cardona-burgundy to-cardona-burgundyDark text-white relative overflow-hidden border-y-2 border-cardona-gold/30">
       {/* Subtle background glow */}
@@ -22,13 +25,13 @@ export default function AudioPlayer() {
               </div>
               <div>
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#1DB954] block mb-0.5">
-                  Gravacions Oficials a Spotify
+                  {t('audio', 'tag')}
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-white">
-                  Banda de Música de Cardona
+                  {t('audio', 'title')}
                 </h3>
                 <p className="text-xs sm:text-sm text-amber-200/80">
-                  Àlbum oficial: «Músiques de Cardona: Gegants, Balls de Bastons, Àliga i més»
+                  {t('audio', 'subtitle')}
                 </p>
               </div>
             </div>
@@ -42,7 +45,7 @@ export default function AudioPlayer() {
                 className="flex-1 md:flex-initial px-6 py-3 rounded-full bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-xl flex items-center justify-center gap-2 transform hover:scale-105"
               >
                 <ExternalLink className="w-4 h-4" />
-                <span>Obrir Àlbum a Spotify</span>
+                <span>{t('audio', 'albumBtn')}</span>
               </a>
               <a
                 href="https://open.spotify.com/intl-es/artist/0ZomSlU5AxYhO7TyGQA6Ql"
@@ -51,7 +54,7 @@ export default function AudioPlayer() {
                 className="flex-1 md:flex-initial px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium text-xs uppercase tracking-wider border border-white/20 transition-all flex items-center justify-center gap-2"
               >
                 <Radio className="w-4 h-4 text-cardona-gold" />
-                <span>Perfil de la Banda</span>
+                <span>{t('audio', 'bandBtn')}</span>
               </a>
             </div>
           </div>
@@ -75,7 +78,7 @@ export default function AudioPlayer() {
           <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
             <span className="font-semibold text-amber-200/90 flex items-center gap-1.5">
               <Music className="w-3.5 h-3.5 text-cardona-gold shrink-0" />
-              Peces de gegants i festa tradicional a Spotify:
+              {t('audio', 'tracksPrompt')}
             </span>
             <div className="flex flex-wrap gap-2">
               <a

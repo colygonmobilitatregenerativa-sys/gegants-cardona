@@ -3,28 +3,52 @@ import { Play, X, ExternalLink, Youtube } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function VideoGallery() {
-  const { t, lang } = useLanguage();
+  const { t, lang, loc } = useLanguage();
   const [activeVideo, setActiveVideo] = useState(null);
 
   const videos = [
     {
       id: 'SzMW8_UkgRs',
-      title: 'Increïble Cercavila dels Gegants de Cardona a la Festa Major 2025',
+      title: {
+        ca: 'Increïble Cercavila dels Gegants de Cardona a la Festa Major 2025',
+        es: 'Increíble Pasacalles de los Gigantes de Cardona en la Fiesta Mayor 2025',
+        en: 'Incredible Parade of the Giants of Cardona at the 2025 Major Festival'
+      },
       channel: 'Ball de Gegants',
       duration: 'Festa Major 2025',
-      tag: 'Cercavila de Gala',
-      description: 'Viu des de dins el pas vibrant dels Gegants Centenaris, els Gegants Nous, el Batallador i els Nans pels carrers i places de Cardona.',
+      tag: {
+        ca: 'Cercavila de Gala',
+        es: 'Pasacalles de Gala',
+        en: 'Gala Parade'
+      },
+      description: {
+        ca: 'Viu des de dins el pas vibrant dels Gegants Centenaris, els Gegants Nous, el Batallador i els Nans pels carrers i places de Cardona.',
+        es: 'Vive desde dentro el paso vibrante de los Gigantes Centenarios, los Gigantes Nuevos, el Batallador y los Cabezudos por las calles y plazas de Cardona.',
+        en: 'Experience from within the vibrant march of the Centenary Giants, New Giants, the Batallador, and Dwarfs through the streets and squares of Cardona.'
+      },
       thumbnail: 'https://i.ytimg.com/vi/SzMW8_UkgRs/maxresdefault.jpg',
       url: 'https://youtu.be/SzMW8_UkgRs?is=x6tWxgmr9-ujcV84',
       embedUrl: 'https://www.youtube-nocookie.com/embed/SzMW8_UkgRs?autoplay=1&rel=0'
     },
     {
       id: 'UfCLtvSi-LM',
-      title: 'La Casa dels Gegants de Cardona - Descobreix els Gegants més Grans de la Festa!',
+      title: {
+        ca: 'La Casa dels Gegants de Cardona - Descobreix els Gegants més Grans de la Festa!',
+        es: 'La Casa de los Gigantes de Cardona - ¡Descubre los Gigantes más Grandes de la Fiesta!',
+        en: 'The House of the Giants of Cardona - Discover the Largest Giants of the Festival!'
+      },
       channel: 'Ball de Gegants',
       duration: 'Reportatge Patrimonial',
-      tag: 'Casa dels Gegants',
-      description: 'Un recorregut màgic per la història viva, la construcció artesana i els secrets de les figures més estimades del patrimoni cardoní.',
+      tag: {
+        ca: 'Casa dels Gegants',
+        es: 'Casa de los Gigantes',
+        en: 'House of the Giants'
+      },
+      description: {
+        ca: 'Un recorregut màgic per la història viva, la construcció artesana i els secrets de les figures més estimades del patrimoni cardoní.',
+        es: 'Un recorrido mágico por la historia viva, la construcción artesana y los secretos de las figuras más queridas del patrimonio cardonino.',
+        en: 'A magical journey through living history, artisanal craftsmanship, and the secrets of Cardona’s most cherished giants.'
+      },
       thumbnail: 'https://i.ytimg.com/vi/UfCLtvSi-LM/maxresdefault.jpg',
       url: 'https://youtu.be/UfCLtvSi-LM?is=9SGOqMQYtbbSzsXK',
       embedUrl: 'https://www.youtube-nocookie.com/embed/UfCLtvSi-LM?autoplay=1&rel=0'
@@ -63,7 +87,7 @@ export default function VideoGallery() {
               >
                 <img
                   src={vid.thumbnail}
-                  alt={vid.title}
+                  alt={loc(vid.title)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                   loading="lazy"
                 />
@@ -78,7 +102,7 @@ export default function VideoGallery() {
 
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-burgundy text-white shadow-md">
-                    {vid.tag}
+                    {loc(vid.tag)}
                   </span>
                 </div>
 
@@ -92,13 +116,13 @@ export default function VideoGallery() {
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <span className="text-xs text-cardona-burgundy font-semibold uppercase tracking-wider block mb-1">
-                    Canal {vid.channel}
+                    {lang === 'es' ? 'Canal' : lang === 'en' ? 'Channel' : 'Canal'} {vid.channel}
                   </span>
                   <h3 className="font-serif text-xl font-bold text-cardona-burgundyDark leading-snug group-hover:text-cardona-burgundyLight transition-colors mb-2">
-                    {vid.title}
+                    {loc(vid.title)}
                   </h3>
                   <p className="text-sm text-gray-600 line-clamp-2">
-                    {vid.description}
+                    {loc(vid.description)}
                   </p>
                 </div>
 
@@ -164,7 +188,7 @@ export default function VideoGallery() {
             <div className="relative pt-[56.25%] bg-black">
               <iframe
                 src={activeVideo.embedUrl}
-                title={activeVideo.title}
+                title={loc(activeVideo.title)}
                 className="absolute inset-0 w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -174,10 +198,10 @@ export default function VideoGallery() {
             <div className="p-5 bg-cardona-burgundyDark text-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <span className="text-xs font-bold text-cardona-gold uppercase tracking-widest block mb-1">
-                  {activeVideo.tag} · {activeVideo.channel}
+                  {loc(activeVideo.tag)} · {activeVideo.channel}
                 </span>
                 <h4 className="font-serif text-lg sm:text-xl font-bold">
-                  {activeVideo.title}
+                  {loc(activeVideo.title)}
                 </h4>
               </div>
 

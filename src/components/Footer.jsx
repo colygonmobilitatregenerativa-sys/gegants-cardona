@@ -1,7 +1,10 @@
 import React from 'react';
 import { Shield, Heart, ArrowUp } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -21,52 +24,52 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-amber-100/80 text-sm max-w-md leading-relaxed">
-              Associació i colla gegantera dedicada a la conservació, dansa i difusió de les figures històriques i centenàries de la Vila de Cardona (Bages, Catalunya).
+              {t('footer', 'description')}
             </p>
             <div className="pt-2 text-xs text-cardona-gold">
-              «Que no pari el ball a la plaça!»
+              {t('footer', 'slogan')}
             </div>
           </div>
 
           {/* Col 2: Enllaços ràpids */}
           <div>
             <h4 className="font-serif font-bold text-cardona-goldLight text-sm uppercase tracking-wider mb-4">
-              Navegació
+              {t('footer', 'navTitle')}
             </h4>
             <ul className="space-y-2 text-sm text-amber-100/80">
-              <li><a href="#inici" className="hover:text-cardona-gold transition-colors">Inici</a></li>
-              <li><a href="#figures" className="hover:text-cardona-gold transition-colors">Catàleg de Figures</a></li>
-              <li><a href="#historia" className="hover:text-cardona-gold transition-colors">Història i Torre de la Minyona</a></li>
-              <li><a href="#calendari" className="hover:text-cardona-gold transition-colors">Festa Major i Calendari</a></li>
-              <li><a href="#galeria" className="hover:text-cardona-gold transition-colors">Galeria Fotogràfica</a></li>
-              <li><a href="#contacte" className="hover:text-cardona-gold transition-colors">Fes-te Geganer</a></li>
+              <li><a href="#inici" className="hover:text-cardona-gold transition-colors">{t('nav', 'inici')}</a></li>
+              <li><a href="#figures" className="hover:text-cardona-gold transition-colors">{t('nav', 'figures')}</a></li>
+              <li><a href="#historia" className="hover:text-cardona-gold transition-colors">{t('nav', 'historia')}</a></li>
+              <li><a href="#calendari" className="hover:text-cardona-gold transition-colors">{t('nav', 'calendari')}</a></li>
+              <li><a href="#galeria" className="hover:text-cardona-gold transition-colors">{t('nav', 'galeria')}</a></li>
+              <li><a href="#contacte" className="hover:text-cardona-gold transition-colors">{t('nav', 'contacte')}</a></li>
             </ul>
           </div>
 
           {/* Col 3: Enllaços d'interès */}
           <div>
             <h4 className="font-serif font-bold text-cardona-goldLight text-sm uppercase tracking-wider mb-4">
-              Patrimoni i Vila
+              {t('footer', 'linksTitle')}
             </h4>
             <ul className="space-y-2 text-sm text-amber-100/80">
               <li>
                 <a href="https://www.cardona.cat" target="_blank" rel="noopener noreferrer" className="hover:text-cardona-gold transition-colors">
-                  Ajuntament de Cardona
+                  {t('footer', 'ajuntament')}
                 </a>
               </li>
               <li>
                 <a href="https://gegants.cat" target="_blank" rel="noopener noreferrer" className="hover:text-cardona-gold transition-colors">
-                  Agrupació de Colles Geganteres
+                  {t('footer', 'agrupacio')}
                 </a>
               </li>
               <li>
                 <a href="https://cardonaturisme.com" target="_blank" rel="noopener noreferrer" className="hover:text-cardona-gold transition-colors">
-                  Castell i Muntanya de Sal
+                  {t('footer', 'turisme')}
                 </a>
               </li>
               <li>
                 <a href="https://open.spotify.com/intl-es/album/6W9HqagD6qrbTnailiDLJw" target="_blank" rel="noopener noreferrer" className="text-[#1ed760] hover:text-white flex items-center gap-1.5 transition-colors font-medium">
-                  <span>Banda de Cardona a Spotify ↗</span>
+                  <span>{t('footer', 'spotifyLink')}</span>
                 </a>
               </li>
             </ul>
@@ -76,16 +79,16 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-cardona-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-amber-200/60">
           <div className="flex items-center gap-1">
-            <span>Fet amb orgull per a la cultura popular de Cardona</span>
+            <span>{t('footer', 'madeWith')}</span>
             <Heart className="w-3.5 h-3.5 text-cardona-gold fill-cardona-gold inline" />
           </div>
 
           <div className="flex items-center gap-4">
-            <span>© {new Date().getFullYear()} Colla de Geganters de Cardona</span>
+            <span>© {new Date().getFullYear()} {t('footer', 'rights')}</span>
             <button
               onClick={scrollToTop}
               className="p-2 rounded-full bg-white/10 hover:bg-cardona-gold hover:text-cardona-burgundyDark text-white transition-colors"
-              title="Tornar a dalt"
+              title={t('footer', 'backToTop')}
             >
               <ArrowUp className="w-4 h-4" />
             </button>

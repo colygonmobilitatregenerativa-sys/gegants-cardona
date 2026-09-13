@@ -1,66 +1,164 @@
 import React, { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const galleryPhotos = [
   {
     id: 1,
-    title: 'El Comte Borrell II davant el Castell de Cardona',
-    category: 'Centenaris',
+    title: {
+      ca: 'El Comte Borrell II davant el Castell de Cardona',
+      es: 'El Conde Borrell II ante el Castillo de Cardona',
+      en: 'Count Borrell II before Cardona Castle'
+    },
+    category: {
+      ca: 'Centenaris',
+      es: 'Centenarios',
+      en: 'Centenary Giants'
+    },
     image: './images/borrell.jpg',
-    description: 'La imponent figura comtal del Barri Major amb la medalla de Cardona al pit.'
+    description: {
+      ca: 'La imponent figura comtal del Barri Major amb la medalla de Cardona al pit.',
+      es: 'La imponente figura condal del Barrio Mayor con la medalla de Cardona al pecho.',
+      en: 'The imposing ducal figure of Barri Major bearing the Cardona medal on his chest.'
+    }
   },
   {
     id: 2,
-    title: 'El Gegant Batallador al peu de la fortalesa',
-    category: 'Sant Miquel',
+    title: {
+      ca: 'El Gegant Batallador al peu de la fortalesa',
+      es: 'El Gigante Batallador al pie de la fortaleza',
+      en: 'The Batallador Giant at the foot of the fortress'
+    },
+    category: {
+      ca: 'Sant Miquel',
+      es: 'San Miguel',
+      en: 'Sant Miquel'
+    },
     image: './images/batallador.jpg',
-    description: 'El guerrer de Sant Miquel sostenint la destral cerimonial amb el Castell al fons.'
+    description: {
+      ca: 'El guerrer de Sant Miquel sostenint la destral cerimonial amb el Castell al fons.',
+      es: 'El guerrero de Sant Miquel sosteniendo el hacha ceremonial con el Castillo al fondo.',
+      en: 'The Sant Miquel warrior holding his ceremonial battleaxe with the Castle behind.'
+    }
   },
   {
     id: 3,
-    title: 'Els Nans del Mercat: Minga i Agneta',
-    category: 'Barri del Mercat',
+    title: {
+      ca: 'Els Nans del Mercat: Minga i Agneta',
+      es: 'Los Cabezudos del Mercado: Minga y Agneta',
+      en: 'Market Dwarfs: Minga & Agneta'
+    },
+    category: {
+      ca: 'Barri del Mercat',
+      es: 'Barrio del Mercado',
+      en: 'Market Quarter'
+    },
     image: './images/nans-mercat.jpg',
-    description: 'Els nans bicentenaris més antics de Cardona conservats com a patrimoni històric.'
+    description: {
+      ca: 'Els nans bicentenaris més antics de Cardona conservats com a patrimoni històric.',
+      es: 'Los cabezudos bicentenarios más antiguos de Cardona preservados como patrimonio histórico.',
+      en: 'The oldest bicentennial dwarf figures in Cardona preserved as living cultural heritage.'
+    }
   },
   {
     id: 4,
-    title: 'La Geganta Esperança a la Festa Major',
-    category: 'Sant Miquel',
+    title: {
+      ca: 'La Geganta Esperança a la Festa Major',
+      es: 'La Giganta Esperança en la Fiesta Mayor',
+      en: 'The Esperança Giantess at the Major Festival'
+    },
+    category: {
+      ca: 'Sant Miquel',
+      es: 'San Miguel',
+      en: 'Sant Miquel'
+    },
     image: './images/esperanca.jpg',
-    description: 'La senyora de Sant Miquel amb el ram de flors i els domassos del Patrocini de fons.'
+    description: {
+      ca: 'La senyora de Sant Miquel amb el ram de flors i els domassos del Patrocini de fons.',
+      es: 'La dama de Sant Miquel con el ramo de flores y los reposteros festivos de fondo.',
+      en: 'The noble lady of Sant Miquel holding her bouquet against festive festival tapestries.'
+    }
   },
   {
     id: 5,
-    title: 'El Gegant Romeu pel centre històric',
-    category: 'La Fira (1908)',
+    title: {
+      ca: 'El Gegant Romeu pel centre històric',
+      es: 'El Gigante Romeu por el casco antiguo',
+      en: 'The Romeu Giant through the historic center'
+    },
+    category: {
+      ca: 'La Fira (1908)',
+      es: 'La Fira (1908)',
+      en: 'La Fira (1908)'
+    },
     image: './images/romeu.jpg',
-    description: 'La segona figura més antiga de Cardona lluint l\'escut del card al pit pels carrers de la vila.'
+    description: {
+      ca: 'La segona figura més antiga de Cardona lluint l\'escut del card al pit pels carrers de la vila.',
+      es: 'La segunda figura más antigua de Cardona luciendo el escudo del cardo en el pecho por las calles de la villa.',
+      en: 'The second oldest figure of Cardona bearing the thistle crest through town streets.'
+    }
   },
   {
     id: 6,
-    title: 'La Comtessa Letgarda davant la Fortalesa',
-    category: 'Centenaris',
+    title: {
+      ca: 'La Comtessa Letgarda davant la Fortalesa',
+      es: 'La Condesa Letgarda ante la Fortaleza',
+      en: 'Countess Letgarda before the Fortress'
+    },
+    category: {
+      ca: 'Centenaris',
+      es: 'Centenarios',
+      en: 'Centenary Giants'
+    },
     image: './images/letgarda.jpg',
-    description: 'Elegància i sobirania medieval de la geganta del Barri Major de Cardona.'
+    description: {
+      ca: 'Elegància i sobirania medieval de la geganta del Barri Major de Cardona.',
+      es: 'Elegancia y soberanía medieval de la giganta del Barrio Mayor de Cardona.',
+      en: 'Medieval elegance and sovereignty of the Barri Major giantess of Cardona.'
+    }
   },
   {
     id: 7,
-    title: 'El Príncep Abdal·là davant el Castell',
-    category: 'Barri Nou',
+    title: {
+      ca: 'El Príncep Abdal·là davant el Castell',
+      es: 'El Príncipe Abdal·là ante el Castillo',
+      en: 'Prince Abdal·là before the Castle'
+    },
+    category: {
+      ca: 'Barri Nou',
+      es: 'Barrio Nuevo',
+      en: 'Barri Nou'
+    },
     image: './images/abdalla.jpg',
-    description: 'El noble guerrer sarraí de la llegenda de la Minyona amb la simitarra i l\'escut de la mitja lluna.'
+    description: {
+      ca: 'El noble guerrer sarraí de la llegenda de la Minyona amb la simitarra i l\'escut de la mitja lluna.',
+      es: 'El noble guerrero sarraceno de la leyenda de la Minyona con la cimitarra y el escudo de la media luna.',
+      en: 'The noble Saracen knight from the Minyona legend with curved scimitar and crescent shield.'
+    }
   },
   {
     id: 8,
-    title: 'La Geganta Adalés davant el Portal de Sant Miquel',
-    category: 'Barri Nou',
+    title: {
+      ca: 'La Geganta Adalés davant el Portal de Sant Miquel',
+      es: 'La Giganta Adalés ante el Portal de Sant Miquel',
+      en: 'The Adalés Giantess before Sant Miquel Gate'
+    },
+    category: {
+      ca: 'Barri Nou',
+      es: 'Barrio Nuevo',
+      en: 'Barri Nou'
+    },
     image: './images/adales.jpg',
-    description: 'La noble dama del Barri Nou i Minyona de Cardona amb el vestit medieval verd maragda i el llibre a la mà.'
+    description: {
+      ca: 'La noble dama del Barri Nou i Minyona de Cardona amb el vestit medieval verd maragda i el llibre a la mà.',
+      es: 'La noble dama del Barrio Nuevo y Minyona de Cardona con el vestido medieval verde esmeralda y el libro en mano.',
+      en: 'The noble lady of Barri Nou and Minyona of Cardona dressed in emerald medieval gown holding her book.'
+    }
   }
 ];
 
 export default function Gallery() {
+  const { t, loc } = useLanguage();
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
@@ -69,14 +167,14 @@ export default function Gallery() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
-            Moments Inoblidables
+            {t('gallery', 'tag')}
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
-            Galeria d'Imatges
+            {t('gallery', 'title')}
           </h2>
           <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
           <p className="text-gray-600 text-base sm:text-lg">
-            Recull fotogràfic de les sortides, balls solemnes i la màgia dels gegants als carrers de Cardona.
+            {t('gallery', 'subtitle')}
           </p>
         </div>
 
@@ -90,7 +188,7 @@ export default function Gallery() {
             >
               <img
                 src={photo.image}
-                alt={photo.title}
+                alt={loc(photo.title)}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
@@ -102,10 +200,10 @@ export default function Gallery() {
 
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <span className="text-xs font-semibold text-cardona-gold uppercase tracking-wider block mb-1">
-                  {photo.category}
+                  {loc(photo.category)}
                 </span>
                 <h4 className="font-serif text-lg font-bold">
-                  {photo.title}
+                  {loc(photo.title)}
                 </h4>
               </div>
             </div>
@@ -132,19 +230,19 @@ export default function Gallery() {
 
             <img
               src={selectedPhoto.image}
-              alt={selectedPhoto.title}
+              alt={loc(selectedPhoto.title)}
               className="w-full max-h-[70vh] object-cover"
             />
 
             <div className="p-6 text-white bg-cardona-burgundyDark">
               <span className="text-xs font-bold text-cardona-gold uppercase tracking-widest block mb-1">
-                {selectedPhoto.category}
+                {loc(selectedPhoto.category)}
               </span>
               <h3 className="font-serif text-2xl font-bold mb-2">
-                {selectedPhoto.title}
+                {loc(selectedPhoto.title)}
               </h3>
               <p className="text-sm text-amber-100/80">
-                {selectedPhoto.description}
+                {loc(selectedPhoto.description)}
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { HelpCircle, RefreshCw, Share2, Award, Sparkles, Check, ArrowRight } fro
 import { useLanguage } from '../context/LanguageContext';
 
 export default function CulturalQuiz() {
-  const { t, lang } = useLanguage();
+  const { t, lang, loc } = useLanguage();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false);
@@ -75,7 +75,11 @@ export default function CulturalQuiz() {
   const results = {
     borrell: {
       name: 'Borrell II',
-      title: 'Comte de Barcelona i Senyor de Cardona (Barri Major)',
+      title: {
+        ca: 'Comte de Barcelona i Senyor de Cardona (Barri Major)',
+        es: 'Conde de Barcelona y Señor de Cardona (Barrio Mayor)',
+        en: 'Count of Barcelona and Lord of Cardona (Barri Major)'
+      },
       image: './images/borrell.jpg',
       description: {
         ca: 'Tens ànima de líder natural. Igual que el noble comte que va atorgar la Carta de Poblament el 986, valores la comunitat, la història i el respecte per les arrels.',
@@ -85,7 +89,11 @@ export default function CulturalQuiz() {
     },
     letgarda: {
       name: 'Letgarda',
-      title: 'Comtessa consort de Cardona (Barri Major)',
+      title: {
+        ca: 'Comtessa consort de Cardona (Barri Major)',
+        es: 'Condesa consorte de Cardona (Barrio Mayor)',
+        en: 'Countess consort of Cardona (Barri Major)'
+      },
       image: './images/letgarda.jpg',
       description: {
         ca: 'Destaques per la teva elegància, serenor i saviesa. Ets la figura que aporta calma, equilibri i dignitat a cada celebració col·lectiva.',
@@ -95,7 +103,11 @@ export default function CulturalQuiz() {
     },
     abdalla: {
       name: 'Abdal·là',
-      title: 'El Príncep Sarraí (Barri Nou)',
+      title: {
+        ca: 'El Príncep Sarraí (Barri Nou)',
+        es: 'El Príncipe Sarraceno (Barrio Nuevo)',
+        en: 'The Saracen Prince (Barri Nou)'
+      },
       image: './images/abdalla.jpg',
       description: {
         ca: 'Ets passió pura i coratge. No hi ha muralla ni dificultat que freni la teva entrega per les persones que estimes i pels teus somnis més alts.',
@@ -105,7 +117,11 @@ export default function CulturalQuiz() {
     },
     adales: {
       name: 'Adalés',
-      title: 'La Minyona de Cardona (Barri Nou)',
+      title: {
+        ca: 'La Minyona de Cardona (Barri Nou)',
+        es: 'La Minyona de Cardona (Barrio Nuevo)',
+        en: 'The Minyona of Cardona (Barri Nou)'
+      },
       image: './images/adales.jpg',
       description: {
         ca: 'Sensible, lliure i amb un esperit poètic indomable. Fidel al teu cor i als teus ideals, el teu record ressona com un símbol immortal d\'amor i llibertat.',
@@ -115,7 +131,11 @@ export default function CulturalQuiz() {
     },
     nan: {
       name: 'Els Nans del Mercat (Minga i Agneta)',
-      title: 'Les figures més antigues i trapelles de Cardona',
+      title: {
+        ca: 'Les figures més antigues i trapelles de Cardona',
+        es: 'Las figuras más antiguas y traviesas de Cardona',
+        en: 'The oldest and most mischievous figures of Cardona'
+      },
       image: './images/nans-mercat.jpg',
       description: {
         ca: 'Ets pura alegria, tradició bicentenària i espontaneïtat. Com el Minga i l\'Agneta del Mercat, saps com arrencar un somriure i fer bategar el cor festiu de la vila a cada plaça.',
@@ -160,7 +180,12 @@ export default function CulturalQuiz() {
 
   const handleShare = () => {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(`He fet el Quiz dels Gegants de Cardona i sóc: ${resultFigure.name}! Fes-lo tu també a la web oficial.`);
+      const shareText = lang === 'es'
+        ? `¡He hecho el Quiz de los Gigantes de Cardona y soy: ${resultFigure.name}! Pruébalo tú también en la web oficial.`
+        : lang === 'en'
+        ? `I took the Cardona Giants Quiz and got: ${resultFigure.name}! Discover yours on the official site.`
+        : `He fet el Quiz dels Gegants de Cardona i sóc: ${resultFigure.name}! Fes-lo tu també a la web oficial.`;
+      navigator.clipboard.writeText(shareText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
@@ -202,7 +227,7 @@ export default function CulturalQuiz() {
 
               {/* Question Text */}
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-cardona-burgundyDark mb-8 leading-snug">
-                {questions[currentQuestion].text[lang] || questions[currentQuestion].text.ca}
+                {loc(questions[currentQuestion].text)}
               </h3>
 
               {/* Options */}
@@ -214,7 +239,7 @@ export default function CulturalQuiz() {
                     className="w-full text-left p-4 sm:p-5 rounded-2xl bg-white hover:bg-cardona-burgundy hover:text-white border border-gray-200 transition-all duration-200 shadow-sm flex items-center justify-between group transform hover:-translate-y-0.5"
                   >
                     <span className="text-sm sm:text-base font-medium text-gray-800 group-hover:text-white">
-                      {opt.label[lang] || opt.label.ca}
+                      {loc(opt.label)}
                     </span>
                     <ArrowRight className="w-4 h-4 text-cardona-gold shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </button>
@@ -241,10 +266,10 @@ export default function CulturalQuiz() {
                   {resultFigure.name}
                 </h3>
                 <p className="text-xs font-semibold text-amber-800 uppercase tracking-widest mb-4">
-                  {resultFigure.title}
+                  {loc(resultFigure.title)}
                 </p>
                 <p className="text-sm sm:text-base text-gray-700 max-w-lg mx-auto leading-relaxed">
-                  {resultFigure.description[lang] || resultFigure.description.ca}
+                  {loc(resultFigure.description)}
                 </p>
               </div>
 
@@ -254,7 +279,11 @@ export default function CulturalQuiz() {
                   className="px-6 py-3 rounded-full bg-cardona-burgundy hover:bg-cardona-burgundyDark text-white font-bold text-xs uppercase tracking-wider transition-all shadow flex items-center gap-2"
                 >
                   {copied ? <Check className="w-4 h-4 text-cardona-gold" /> : <Share2 className="w-4 h-4" />}
-                  <span>{copied ? 'Copiada al porta-retalls!' : t('quiz', 'share')}</span>
+                  <span>
+                    {copied 
+                      ? (lang === 'es' ? '¡Copiado al portapapeles!' : lang === 'en' ? 'Copied to clipboard!' : 'Copiada al porta-retalls!') 
+                      : t('quiz', 'share')}
+                  </span>
                 </button>
                 <button
                   onClick={restartQuiz}

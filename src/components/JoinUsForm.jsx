@@ -3,7 +3,7 @@ import { Send, CheckCircle, HeartHandshake, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function JoinUsForm() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,7 +34,7 @@ export default function JoinUsForm() {
               </h2>
               <div className="w-16 h-1 bg-cardona-gold mb-6 rounded-full" />
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                T'agradaria portar en Borrell II, el Batallador o l'Adalés? Tocar la gralla o el timbal? O donar un cop de mà a l'equip d'acompanyament? La colla dels Gegants de Cardona té les portes obertes per a tothom!
+                {t('contact', 'leadText')}
               </p>
             </div>
 
@@ -44,8 +44,12 @@ export default function JoinUsForm() {
                   <HeartHandshake className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-cardona-burgundyDark text-sm">Assajos i Trobades</h4>
-                  <p className="text-xs text-gray-500">Divendres a la tarda a Cardona. Tothom és benvingut, amb o sense experiència prèvia.</p>
+                  <h4 className="font-bold text-cardona-burgundyDark text-sm">
+                    {t('contact', 'rehearsalTitle')}
+                  </h4>
+                  <p className="text-xs text-gray-500">
+                    {t('contact', 'rehearsalDesc')}
+                  </p>
                 </div>
               </div>
 
@@ -54,8 +58,12 @@ export default function JoinUsForm() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-cardona-burgundyDark text-sm">Local de la Colla</h4>
-                  <p className="text-xs text-gray-500">Vila de Cardona (08261), Bages, Catalunya</p>
+                  <h4 className="font-bold text-cardona-burgundyDark text-sm">
+                    {t('contact', 'locationTitle')}
+                  </h4>
+                  <p className="text-xs text-gray-500">
+                    {t('contact', 'locationDesc')}
+                  </p>
                 </div>
               </div>
 
@@ -64,7 +72,9 @@ export default function JoinUsForm() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-cardona-burgundyDark text-sm">Correu de Contacte</h4>
+                  <h4 className="font-bold text-cardona-burgundyDark text-sm">
+                    {lang === 'es' ? 'Correo de Contacto' : lang === 'en' ? 'Contact Email' : 'Correu de Contacte'}
+                  </h4>
                   <p className="text-xs text-gray-500">gegantscardona@culturapopular.cat</p>
                 </div>
               </div>
@@ -88,7 +98,7 @@ export default function JoinUsForm() {
                   }}
                   className="mt-4 px-6 py-2.5 rounded-full bg-cardona-burgundy text-white text-xs font-bold uppercase tracking-wider hover:bg-cardona-burgundyDark transition-all"
                 >
-                  Tornar a enviar
+                  {lang === 'es' ? 'Volver a enviar' : lang === 'en' ? 'Send another response' : 'Tornar a enviar'}
                 </button>
               </div>
             ) : (
@@ -98,7 +108,11 @@ export default function JoinUsForm() {
                     {t('contact', 'formTitle')}
                   </h3>
                   <p className="text-xs text-gray-500 mb-6">
-                    Emplena aquest formulari i ens posarem en contacte amb tu.
+                    {lang === 'es' 
+                      ? 'Rellena este formulario y nos pondremos en contacto contigo.' 
+                      : lang === 'en' 
+                      ? 'Fill in this form and we will get back to you shortly.' 
+                      : 'Emplena aquest formulari i ens posarem en contacte amb tu.'}
                   </p>
                 </div>
 
@@ -110,7 +124,7 @@ export default function JoinUsForm() {
                     <input
                       type="text"
                       required
-                      placeholder="Ex. Jordi Soler"
+                      placeholder={lang === 'en' ? 'e.g. John Smith' : lang === 'es' ? 'Ej. Juan Soler' : 'Ex. Jordi Soler'}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cardona-burgundy focus:border-transparent text-sm"
@@ -123,7 +137,7 @@ export default function JoinUsForm() {
                     <input
                       type="email"
                       required
-                      placeholder="jordi@exemple.cat"
+                      placeholder="info@exemple.cat"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cardona-burgundy focus:border-transparent text-sm"
@@ -168,7 +182,13 @@ export default function JoinUsForm() {
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Explica'ns si tens experiència prèvia, disponibilitat o qualsevol dubte..."
+                    placeholder={
+                      lang === 'es'
+                        ? 'Cuéntanos si tienes experiencia previa, disponibilidad o cualquier duda...'
+                        : lang === 'en'
+                        ? 'Tell us about your experience, availability or any questions...'
+                        : 'Explica\'ns si tens experiència prèvia, disponibilitat o qualsevol dubte...'
+                    }
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cardona-burgundy focus:border-transparent text-sm"

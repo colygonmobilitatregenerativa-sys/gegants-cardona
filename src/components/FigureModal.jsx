@@ -3,7 +3,7 @@ import { X, Ruler, Scale, Calendar, User, Music, MapPin, Sparkles } from 'lucide
 import { useLanguage } from '../context/LanguageContext';
 
 export default function FigureModal({ figure, onClose }) {
-  const { t } = useLanguage();
+  const { t, loc } = useLanguage();
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -59,13 +59,13 @@ export default function FigureModal({ figure, onClose }) {
         <div className="flex-1 flex flex-col justify-between overflow-y-auto max-h-[calc(92vh-14rem)] md:max-h-[92vh] p-5 sm:p-7 md:p-8 bg-white">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-cardona-burgundy block mb-1">
-              {figure.categoryLabel}
+              {loc(figure.categoryLabel)}
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-cardona-burgundyDark mb-1">
               {figure.name}
             </h2>
             <p className="text-xs sm:text-sm font-semibold text-amber-800 mb-5">
-              {figure.subtitle}
+              {loc(figure.subtitle)}
             </p>
 
             {/* Quick Specs Grid */}
@@ -80,11 +80,11 @@ export default function FigureModal({ figure, onClose }) {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-cardona-goldDark shrink-0" />
-                <span><strong>{t('catalog', 'year')}:</strong> {figure.year}</span>
+                <span><strong>{t('catalog', 'year')}:</strong> {loc(figure.year)}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-cardona-goldDark shrink-0" />
-                <span><strong>Lloc:</strong> {figure.location}</span>
+                <span><strong>{t('catalog', 'location')}:</strong> {loc(figure.location)}</span>
               </div>
             </div>
 
@@ -92,39 +92,39 @@ export default function FigureModal({ figure, onClose }) {
             <div className="space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed mb-6">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1">
-                  Història i Significat:
+                  {t('catalog', 'historyTitle')}
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
-                  {figure.description}
+                  {loc(figure.description)}
                 </p>
               </div>
               
               <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1">
-                  Vestimenta i Atributs:
+                  {t('catalog', 'attireTitle')}
                 </h4>
                 <p className="text-gray-600 italic leading-relaxed">
-                  {figure.vestimenta}
+                  {loc(figure.vestimenta)}
                 </p>
               </div>
 
               <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1 flex items-center gap-1.5">
                   <Music className="w-3.5 h-3.5 text-cardona-goldDark shrink-0" />
-                  <span>Música i Ball propi:</span>
+                  <span>{t('catalog', 'musicTitle')}</span>
                 </h4>
                 <p className="text-gray-700 font-medium">
-                  {figure.ball}
+                  {loc(figure.ball)}
                 </p>
               </div>
 
               <div className="pt-3 border-t border-gray-100">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-cardona-burgundyDark mb-1 flex items-center gap-1.5">
                   <User className="w-3.5 h-3.5 text-cardona-goldDark shrink-0" />
-                  <span>Mestre Escultor / Taller:</span>
+                  <span>{t('catalog', 'sculptorTitle')}</span>
                 </h4>
                 <p className="text-gray-700">
-                  {figure.sculptor}
+                  {loc(figure.sculptor)}
                 </p>
               </div>
             </div>
