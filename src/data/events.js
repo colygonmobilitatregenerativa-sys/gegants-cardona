@@ -40,7 +40,7 @@ export const eventsData = [
     location: 'Castell de Cardona - Torre de la Minyona',
     type: 'Especial Nocturn',
     highlight: true,
-    description: 'Dansa sota els estels dels gegants Abdal·là i Adalgisa, recreant la llegenda medieval amb il·luminació especial i música en directe.',
+    description: 'Dansa sota els estels dels gegants Abdal·là i Adalés, recreant la llegenda medieval amb il·luminació especial i música en directe.',
     category: 'especial'
   },
   {

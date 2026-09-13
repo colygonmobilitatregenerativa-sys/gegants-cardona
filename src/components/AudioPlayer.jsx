@@ -1,10 +1,7 @@
 import React from 'react';
 import { ExternalLink, Radio, Music } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
 
 export default function AudioPlayer() {
-  const { t } = useLanguage();
-
   return (
     <section id="musica" className="py-20 bg-gradient-to-r from-cardona-burgundyDark via-cardona-burgundy to-cardona-burgundyDark text-white relative overflow-hidden border-y-2 border-cardona-gold/30">
       {/* Subtle background glow */}

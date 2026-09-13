@@ -34,7 +34,7 @@ export default function JoinUsForm() {
               </h2>
               <div className="w-16 h-1 bg-cardona-gold mb-6 rounded-full" />
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                T'agradaria portar en Borrell II o l'Adalgisa? Tocar la gralla o el timbal? O donar un cop de mà a l'equip d'acompanyament? La colla dels Gegants de Cardona té les portes obertes per a tothom!
+                T'agradaria portar en Borrell II, el Batallador o l'Adalés? Tocar la gralla o el timbal? O donar un cop de mà a l'equip d'acompanyament? La colla dels Gegants de Cardona té les portes obertes per a tothom!
               </p>
             </div>
 

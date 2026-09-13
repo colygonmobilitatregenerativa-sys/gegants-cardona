@@ -27,7 +27,7 @@ export default function Shop() {
     },
     {
       id: 3,
-      name: 'Figura de Goma: Adalgisa (Barri Nou)',
+      name: 'Figura de Goma: Adalés (Barri Nou)',
       price: 24.50,
       image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80',
       badge: 'Col·leccionable',
@@ -55,7 +55,7 @@ export default function Shop() {
       price: 8.50,
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
       badge: 'Pack 4 unitats',
-      description: 'Pins esmaltats de Borrell II, Letgarda, Abdal·là i Adalgisa per lluir a la solapa o a la motxilla.'
+      description: 'Pins esmaltats de Borrell II, Letgarda, Abdal·là i Adalés per lluir a la solapa o a la motxilla.'
     }
   ];
 

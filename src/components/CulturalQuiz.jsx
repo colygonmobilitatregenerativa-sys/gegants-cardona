@@ -21,7 +21,7 @@ export default function CulturalQuiz() {
         { label: { ca: 'Presidint el ball solemne amb respecte i orgull per la tradició', es: 'Presidiendo el baile solemne con respeto y orgullo por la tradición', en: 'Leading the solemn dance with pride and respect for heritage' }, type: 'borrell' },
         { label: { ca: 'Gaudiant de l\'ambient elegant i la música de gralles', es: 'Disfrutando del ambiente elegante y la música tradicional', en: 'Enjoying the elegant atmosphere and folk music' }, type: 'letgarda' },
         { label: { ca: 'Buscant l\'aventura i lluitant per allò que estimes amb passió', es: 'Buscando la aventura y luchando por lo que amas con pasión', en: 'Seeking romance and adventure, fighting for what you love' }, type: 'abdalla' },
-        { label: { ca: 'Observant la vila des del punt més alt del castell sota els estels', es: 'Observando el pueblo desde lo más alto del castillo bajo las estrellas', en: 'Gazing at the village from the highest tower under the stars' }, type: 'adalgisa' },
+        { label: { ca: 'Observant la vila des del punt més alt del castell sota els estels', es: 'Observando el pueblo desde lo más alto del castillo bajo las estrellas', en: 'Gazing at the village from the highest tower under the stars' }, type: 'adales' },
         { label: { ca: 'Fent riure els nens, saltant i fent bromes a tothom', es: 'Haciendo reír a los niños, corriendo y bromeando con la gente', en: 'Making kids laugh, running around and bringing pure mischief' }, type: 'nan' }
       ]
     },
@@ -36,7 +36,7 @@ export default function CulturalQuiz() {
         { label: { ca: 'L\'Església de Sant Vicenç del Castell i el pati d\'armes', es: 'La Iglesia románica de San Vicente y el patio de armas', en: 'The Romanesque Church of Sant Vicenç and castle courtyard' }, type: 'borrell' },
         { label: { ca: 'Els porxos de la Plaça del Mercat en ple dia de fira', es: 'Los pórticos de la Plaza del Mercado en día de feria', en: 'The medieval arcades of the Market Square on fair day' }, type: 'letgarda' },
         { label: { ca: 'El camí secret que creua la vall fins a les muralles', es: 'El camino secreto que cruza el valle hasta las murallas', en: 'The scenic pathway crossing the valley up to the walls' }, type: 'abdalla' },
-        { label: { ca: 'La finestra circular de la Torre de la Minyona', es: 'La ventana circular de la Torre de la Minyona', en: 'The circular window of the Minyona Tower' }, type: 'adalgisa' },
+        { label: { ca: 'La finestra circular de la Torre de la Minyona', es: 'La ventana circular de la Torre de la Minyona', en: 'The circular window of the Minyona Tower' }, type: 'adales' },
         { label: { ca: 'La Plaça de la Fira en ple enrenou de festa major', es: 'La Plaza de la Fira en pleno bullicio festivo', en: 'The crowded main square during peak festival celebration' }, type: 'nan' }
       ]
     },
@@ -51,7 +51,7 @@ export default function CulturalQuiz() {
         { label: { ca: 'Lideratge, fermesa i sentit del deure', es: 'Liderazgo, firmeza y sentido del deber', en: 'Leadership, determination, and duty' }, type: 'borrell' },
         { label: { ca: 'Dignitat, saviesa i generositat', es: 'Dignidad, sabiduría y generosidad', en: 'Grace, wisdom, and warmth' }, type: 'letgarda' },
         { label: { ca: 'Valenta indomable i esperit aventurer', es: 'Valentía indomable y espíritu aventurero', en: 'Fearless bravery and passionate heart' }, type: 'abdalla' },
-        { label: { ca: 'Sensibilitat artística i fidelitat als teus ideals', es: 'Sensibilidad artística y fidelidad a tus ideales', en: 'Artistic sensibility and deep romanticism' }, type: 'adalgisa' },
+        { label: { ca: 'Sensibilitat artística i fidelitat als teus ideals', es: 'Sensibilidad artística y fidelidad a tus ideales', en: 'Artistic sensibility and deep romanticism' }, type: 'adales' },
         { label: { ca: 'Humor espontani, trapelleria i vitalitat', es: 'Humor espontáneo, picardía y vitalidad', en: 'Spontaneous humor, mischief, and non-stop energy' }, type: 'nan' }
       ]
     },
@@ -66,7 +66,7 @@ export default function CulturalQuiz() {
         { label: { ca: 'La corona comtal i el pergamí de 986', es: 'La corona condal y el pergamino de 986', en: 'The count crown and founding parchment of 986' }, type: 'borrell' },
         { label: { ca: 'El mantell de brocat fi i el ram de flors nobles', es: 'El manto de brocado fino y el ramo de flores nobles', en: 'The fine brocade cloak and noble flowers bouquet' }, type: 'letgarda' },
         { label: { ca: 'El turbant cerimonial i el sabre de cavaller', es: 'El turbante ceremonial y el sable de caballero', en: 'The royal turban and knightly curved sabre' }, type: 'abdalla' },
-        { label: { ca: 'El llibre de memòries enquadernat en cuir i el vestit medieval verd', es: 'El libro de memorias encuadernado en cuero y el vestido medieval verde', en: 'The leather-bound book of memories and green medieval gown' }, type: 'adalgisa' },
+        { label: { ca: 'El llibre de memòries enquadernat en cuir i el vestit medieval verd', es: 'El libro de memorias encuadernado en cuero y el vestido medieval verde', en: 'The leather-bound book of memories and green medieval gown' }, type: 'adales' },
         { label: { ca: 'El barret de tres pics i una bona vara per ballar', es: 'El sombrero de tres picos y una vara para saltar', en: 'The tricorn hat and stick for dancing around' }, type: 'nan' }
       ]
     }
@@ -103,7 +103,7 @@ export default function CulturalQuiz() {
         en: 'You are fueled by passion and courage. No castle wall or obstacle can stop your loyalty to the people you love.'
       }
     },
-    adalgisa: {
+    adales: {
       name: 'Adalés',
       title: 'La Minyona de Cardona (Barri Nou)',
       image: './images/adales.jpg',

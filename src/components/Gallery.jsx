@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ZoomIn, Camera } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 const galleryPhotos = [
   {

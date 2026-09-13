@@ -108,7 +108,7 @@ export default function HistoryTimeline() {
             <div className="mt-8 pt-6 border-t border-cardona-gold/20 flex items-center gap-4">
               <Quote className="w-8 h-8 text-cardona-gold shrink-0 opacity-60" />
               <p className="text-xs sm:text-sm text-cardona-goldLight italic font-serif">
-                «A cada ballada a la plaça, Abdal·là i Adalgisa retroben la llibertat que la torre els va negar.»
+                «A cada ballada a la plaça, Abdal·là i Adalés retroben la llibertat que la torre els va negar.»
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function FiguresCatalog() {
 
   const filteredFigures = selectedCategory === 'all'
     ? figuresData
-    : figuresData.filter(fig => fig.category === selectedCategory || (selectedCategory === 'capgrossos' && fig.category === 'altres'));
+    : figuresData.filter(fig => fig.category === selectedCategory);
 
   return (
     <section id="figures" className="py-24 bg-cardona-sand relative">

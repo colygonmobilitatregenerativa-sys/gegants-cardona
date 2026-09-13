@@ -47,15 +47,11 @@ export const translations = {
       close: 'Tancar Fitxa'
     },
     audio: {
-      tag: 'Música Popular',
-      title: 'Sons de la Festa i Gralles',
-      play: 'Reproduir',
-      pause: 'Pausar',
-      nowPlaying: 'Sonant ara',
-      track1: 'Pasdoble dels Gegants de Cardona',
-      track2: 'Ball d\'Abdal·là i Adalgisa (Minyona)',
-      track3: 'Toc de Gralles i Matinades',
-      track4: 'Ball de Bastons i Correbous'
+      tag: 'Gravacions Oficials a Spotify',
+      title: 'Banda de Música de Cardona',
+      subtitle: 'Músiques de Cardona: Gegants, Balls de Bastons, Àliga i més',
+      albumBtn: 'Obrir Àlbum a Spotify',
+      bandBtn: 'Perfil de la Banda'
     },
     map: {
       tag: 'Cercavila Tradicional',
@@ -158,15 +154,11 @@ export const translations = {
       close: 'Cerrar Ficha'
     },
     audio: {
-      tag: 'Música Tradicional',
-      title: 'Sonidos de Fiesta y Dulzainas',
-      play: 'Reproducir',
-      pause: 'Pausar',
-      nowPlaying: 'Sonando ahora',
-      track1: 'Pasodoble de los Gigantes de Cardona',
-      track2: 'Baile de Abdal·là y Adalgisa (Minyona)',
-      track3: 'Toque de Grallas y Matinadas',
-      track4: 'Baile de Bastones y Correbous'
+      tag: 'Grabaciones Oficiales en Spotify',
+      title: 'Banda de Música de Cardona',
+      subtitle: 'Músicas de Cardona: Gigantes, Bailes de Bastones, Águila y más',
+      albumBtn: 'Abrir Álbum en Spotify',
+      bandBtn: 'Perfil de la Banda'
     },
     map: {
       tag: 'Pasacalles Tradicional',
@@ -269,15 +261,11 @@ export const translations = {
       close: 'Close Specs'
     },
     audio: {
-      tag: 'Traditional Music',
-      title: 'Sounds of the Festival & Gralles',
-      play: 'Play',
-      pause: 'Pause',
-      nowPlaying: 'Now playing',
-      track1: 'Cardona Giants Pasodoble',
-      track2: 'Dance of Abdal·là & Adalgisa (Minyona)',
-      track3: 'Morning Gralla Call & Fanfare',
-      track4: 'Stick Dance & Traditional Festivities'
+      tag: 'Official Spotify Recordings',
+      title: 'Cardona Music Band',
+      subtitle: 'Music of Cardona: Giants, Stick Dances, Eagle and more',
+      albumBtn: 'Open Album on Spotify',
+      bandBtn: 'Band Profile'
     },
     map: {
       tag: 'Traditional Parade',

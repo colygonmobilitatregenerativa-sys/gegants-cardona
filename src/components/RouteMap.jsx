@@ -14,7 +14,7 @@ export default function RouteMap() {
       time: '11:00 h',
       figures: 'Totes les figures de Cardona i colles convidades',
       description: 'Punt neuràlgic on s\'apleguen els gegants de tots els barris per a la tradicional plantada. Els més petits poden veure de prop els vestits, les corones i saludar els nans.',
-      image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80',
+      image: './images/romeu.jpg',
       coords: { x: '25%', y: '65%' }
     },
     {
@@ -24,7 +24,7 @@ export default function RouteMap() {
       time: '12:00 h',
       figures: 'Borrell II, Letgarda i Nans trapelles',
       description: 'L\'estretor dels carrers medievals fa ressonar les gralles com en cap altre lloc. Els gegants giren amb precisió arran dels balcons engalanats amb senyeres.',
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+      image: './images/borrell.jpg',
       coords: { x: '42%', y: '50%' }
     },
     {
@@ -34,7 +34,7 @@ export default function RouteMap() {
       time: '13:00 h',
       figures: 'Borrell II i Letgarda (Barri Major)',
       description: 'L\'escenari més emblemàtic per al Ball Pla. Sota els porxos gòtics, les figures centenàries de 1834 ofereixen la seva dansa protocol·lària davant les autoritats i el poble.',
-      image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
+      image: './images/nans-mercat.jpg',
       coords: { x: '58%', y: '40%' }
     },
     {
@@ -44,7 +44,7 @@ export default function RouteMap() {
       time: '18:00 h',
       figures: 'Tots els Gegants, Grallers i Colles convidades',
       description: 'Durant la Festa Major, la plaça es transforma per acollir la festa major cardonina. Els gegants fan una rotllana espectacular on ballen alhora amb tota la plaça plena de gom a gom.',
-      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80',
+      image: './images/batallador.jpg',
       coords: { x: '72%', y: '60%' }
     },
     {
@@ -52,9 +52,9 @@ export default function RouteMap() {
       name: 'Castell de Cardona & Torre de la Minyona',
       title: 'Dansa Llegentària sota els Estels',
       time: '21:30 h (Actes especials)',
-      figures: 'Abdal·là i Adalgisa (Barri Nou)',
+      figures: 'Abdal·là i Adalés (Barri Nou)',
       description: 'Pujada històrica a la fortalesa inexpugnable. Als peus de la Torre de la Minyona, es recrea l\'amor medieval immortalitzat per les figures del Barri Nou amb focs i música.',
-      image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
+      image: './images/adales.jpg',
       coords: { x: '88%', y: '25%' }
     }
   ];
