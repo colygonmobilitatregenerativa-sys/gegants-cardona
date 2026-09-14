@@ -3,6 +3,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AudioPlayer from './components/AudioPlayer';
+import Grallers from './components/Grallers';
 import FiguresCatalog from './components/FiguresCatalog';
 import HistoryTimeline from './components/HistoryTimeline';
 import RouteMap from './components/RouteMap';
@@ -23,6 +24,7 @@ export default function App() {
           <Hero />
           <FiguresCatalog />
           <AudioPlayer />
+          <Grallers />
           <HistoryTimeline />
           <RouteMap />
           <EventsCalendar />

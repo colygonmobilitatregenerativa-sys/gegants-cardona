@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Calendar, Users, History, Image as ImageIcon, HeartHandshake, Music, Navigation, ShoppingBag, HelpCircle, Film, Globe } from 'lucide-react';
+import { Menu, X, Shield, Calendar, Users, History, Image as ImageIcon, HeartHandshake, Music, Navigation, ShoppingBag, HelpCircle, Film, Globe, Drum } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
@@ -19,6 +19,7 @@ export default function Navbar() {
     { name: t('nav', 'inici'), href: '#inici', icon: Shield },
     { name: t('nav', 'figures'), href: '#figures', icon: Users },
     { name: t('nav', 'musica'), href: '#musica', icon: Music },
+    { name: t('nav', 'grallers'), href: '#grallers', icon: Drum },
     { name: t('nav', 'historia'), href: '#historia', icon: History },
     { name: t('nav', 'recorregut'), href: '#recorregut', icon: Navigation },
     { name: t('nav', 'calendari'), href: '#calendari', icon: Calendar },
