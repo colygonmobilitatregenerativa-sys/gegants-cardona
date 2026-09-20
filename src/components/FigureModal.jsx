@@ -50,7 +50,7 @@ export default function FigureModal({ figure, onClose }) {
           <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-10">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark shadow-md">
               <Sparkles className="w-3.5 h-3.5" />
-              {figure.badge}
+              {loc(figure.badge)}
             </span>
           </div>
         </div>

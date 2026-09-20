@@ -101,6 +101,25 @@ const galleryPhotos = [
   {
     id: 6,
     title: {
+      ca: 'La Geganta Julieta del Barri de la Fira',
+      es: 'La Giganta Julieta del Barrio de la Fira',
+      en: 'The Julieta Giantess of the Fira Quarter'
+    },
+    category: {
+      ca: 'La Fira (1908)',
+      es: 'La Fira (1908)',
+      en: 'La Fira (1908)'
+    },
+    image: './images/julieta.jpg',
+    description: {
+      ca: 'Figura centenària de 1908 amb el vestit senyorial de vellut carmesí, tela adamascada i el ram de flors silvestres.',
+      es: 'Figura centenaria de 1908 con el vestido señorial de terciopelo carmesí, tela adamascada y el ramo de flores silvestres.',
+      en: 'Centenary giantess from 1908 in crimson velvet gown, damask jacquard, holding her bouquet of wildflowers.'
+    }
+  },
+  {
+    id: 7,
+    title: {
       ca: 'La Comtessa Letgarda davant la Fortalesa',
       es: 'La Condesa Letgarda ante la Fortaleza',
       en: 'Countess Letgarda before the Fortress'
@@ -118,7 +137,7 @@ const galleryPhotos = [
     }
   },
   {
-    id: 7,
+    id: 8,
     title: {
       ca: 'El Príncep Abdal·là davant el Castell',
       es: 'El Príncipe Abdal·là ante el Castillo',
@@ -137,7 +156,7 @@ const galleryPhotos = [
     }
   },
   {
-    id: 8,
+    id: 9,
     title: {
       ca: 'La Geganta Adalés davant el Portal de Sant Miquel',
       es: 'La Giganta Adalés ante el Portal de Sant Miquel',
@@ -156,7 +175,7 @@ const galleryPhotos = [
     }
   },
   {
-    id: 9,
+    id: 10,
     title: {
       ca: 'La Plaça de Bous i el Correbous de Cardona',
       es: 'La Plaza de Toros y el Correbous de Cardona',

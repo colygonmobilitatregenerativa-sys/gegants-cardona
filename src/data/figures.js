@@ -270,6 +270,60 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'julieta',
+    name: 'Julieta',
+    subtitle: {
+      ca: 'Geganta Centenària del Barri de la Fira',
+      es: 'Giganta Centenaria del Barrio de la Fira',
+      en: 'Centenary Giantess of the Fira Quarter'
+    },
+    category: 'barri-fira',
+    categoryLabel: {
+      ca: 'Barri de la Fira (Centenària)',
+      es: 'Barrio de la Fira (Centenaria)',
+      en: 'Fira Quarter (Centenary Giantess)'
+    },
+    year: {
+      ca: '1908 (Estrena: Barri de la Fira)',
+      es: '1908 (Estreno: Barrio de la Fira)',
+      en: '1908 (Debut: Fira Quarter)'
+    },
+    sculptor: {
+      ca: 'Miquel Serra i Mosella ("Sabater Fraret")',
+      es: 'Miquel Serra i Mosella ("Sabater Fraret")',
+      en: 'Miquel Serra i Mosella ("Sabater Fraret")'
+    },
+    height: '3,15 m',
+    weight: '44 kg',
+    location: {
+      ca: 'Cardona - Barri de la Fira',
+      es: 'Cardona - Barrio de la Fira',
+      en: 'Cardona - Fira Quarter'
+    },
+    image: './images/julieta.jpg',
+    description: {
+      ca: 'La Geganta Julieta és la mítica companya del gegant Romeu i una de les figures centenàries més emblemàtiques i estimades de Cardona. Construïda l\'any 1908 pel sabater artesà Miquel Serra («Sabater Fraret») per a les festivitats del Barri de la Fira, està catalogada oficialment com a Geganta Centenària de Catalunya. Amb els seus ulls blaus expressius, mirada dolça i somriure afable, encarna la donzella noble i romàntica que enamora el poble a cada ballada de festa major.',
+      es: 'La Giganta Julieta es la mítica compañera del gigante Romeu y una de las figuras centenarias más emblemáticas y queridas de Cardona. Construida en el año 1908 por el zapatero artesano Miquel Serra («Sabater Fraret») para las festividades del Barrio de la Fira, está catalogada oficialmente como Giganta Centenaria de Cataluña. Con sus expresivos ojos azules, dulce mirada y sonrisa afable, encarna a la doncella noble y romántica que cautiva a la villa en cada baile de fiesta mayor.',
+      en: 'Julieta is the legendary companion of giant Romeu and one of Cardona’s most cherished centenary figures. Created in 1908 by local craftsman and shoemaker Miquel Serra ("Sabater Fraret") for the Fira quarter celebrations, she is officially registered as a Centenary Giantess of Catalonia. With her expressive blue eyes, gentle gaze, and sweet countenance, she personifies the noble romantic heroine that enchants the town during every festival dance.'
+    },
+    vestimenta: {
+      ca: 'Recollit noble d\'època ornat amb dues roses al capdamunt (una grana i una argentada), collaret de perles blanques i arracades a joc. Llueix un vestit senyorial amb cosset central de vellut carmesí decorat amb passamaneria platejada i calat de reixa inferior, combinat amb una rica tela adamascada platejada amb motius florals a les àmplies mànegues i faldilla. Porta a la cintura una bossa almoinera de gala a joc, i a la mà dreta sosté amb delicadesa un ramet de flors silvestres morades (lavanda) embolicat en tul violeta i cintes de la senyera.',
+      es: 'Elegante recogido noble con dos rosas en el tocado (una granate y otra plateada), collar de perlas blancas y pendientes a juego. Luce un vestido señorial con corpiño central de terciopelo carmesí decorado con cordoncillo plateado y calado de rejilla inferior, combinado con una rica tela adamascada plateada con motivos florales en las amplias mangas y falda. Lleva en la cintura una limosnera de gala a juego, y en la mano derecha sostiene con delicadeza un ramo de flores silvestres moradas (lavanda) envuelto en tul violeta y cintas de la senyera.',
+      en: 'Noble period updo adorned with a garnet and silver dual-rose headpiece, white pearl necklace, and matching drop earrings. She wears a stately gown with a crimson velvet central bodice decorated with silver cord trims and lower grid openwork, paired with silver-grey floral damask jacquard on the sweeping sleeves and skirt. A matching gala alms-purse hangs from her waist, and in her right hand she delicately holds a bouquet of purple lavender wrapped in violet tulle and Catalan senyera ribbons.'
+    },
+    ball: {
+      ca: 'Vals de la Fira (Romeu i Julieta)',
+      es: 'Vals de la Fira (Romeu y Julieta)',
+      en: 'Fira Waltz (Romeu & Julieta)'
+    },
+    badge: {
+      ca: 'Centenària (1908)',
+      es: 'Centenaria (1908)',
+      en: 'Centenary Giantess (1908)'
+    },
+    featured: true
+  },
+  {
     id: 'abdalla',
     name: 'Abdal·là',
     subtitle: {
