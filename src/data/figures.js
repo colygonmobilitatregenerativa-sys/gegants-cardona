@@ -327,6 +327,61 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'sabater-fraret',
+    name: 'El Sabater Fraret',
+    subtitle: {
+      ca: 'Miquel Serra i Mosella · Creador dels Gegants de la Fira (1908)',
+      es: 'Miquel Serra i Mosella · Creador de los Gigantes de la Fira (1908)',
+      en: 'Miquel Serra i Mosella · Creator of the Fira Giants (1908)'
+    },
+    category: 'barri-fira',
+    categoryLabel: {
+      ca: 'Barri de la Fira',
+      es: 'Barrio de la Fira',
+      en: 'La Fira Quarter'
+    },
+    year: {
+      ca: '1996 (Homenatge a l\'artesà de 1908)',
+      es: '1996 (Homenaje al artesano de 1908)',
+      en: '1996 (Tribute to the 1908 craftsman)'
+    },
+    sculptor: {
+      ca: 'Toni Mujal (taller artesà cardoní)',
+      es: 'Toni Mujal (taller artesano de Cardona)',
+      en: 'Toni Mujal (Cardona craft workshop)'
+    },
+    height: '3,20 m',
+    weight: '42 kg',
+    location: {
+      ca: 'Cardona - Barri de la Fira / Casa dels Gegants',
+      es: 'Cardona - Barrio de la Fira / Casa de los Gigantes',
+      en: 'Cardona - La Fira Quarter / House of Giants'
+    },
+    image: './images/sabater-fraret.jpg',
+    imagePosition: 'center 12%',
+    description: {
+      ca: 'Figura emblemàtica creada com a homenatge entranyable a Miquel Serra i Mosella, sabater artesà popularment conegut a Cardona com «el Sabater Fraret». L\'any 1908, mogut per l\'estimació al seu barri, Serra va construir amb les seves pròpies mans i recursos els mítics Gegants de la Fira —en Romeu i la Julieta—, iniciant una de les tradicions geganteres més estimades i centenàries de la vila. L\'any 1996, el mestre Toni Mujal va immortalitzar el sabater en aquesta figura gegantera que desfila amb orgull al costat de les seves pròpies creacions.',
+      es: 'Figura emblemática creada como entrañable homenaje a Miquel Serra i Mosella, zapatero artesano popularmente conocido en Cardona como «el Sabater Fraret». En el año 1908, movido por el cariño a su barrio, Serra construyó con sus propias manos y recursos los míticos Gigantes de la Fira —Romeu y Julieta—, iniciando una de las tradiciones de gigantes más queridas y centenarias de la villa. En 1996, el maestro Toni Mujal inmortalizó al zapatero en esta figura que desfila con orgullo junto a sus propias creaciones.',
+      en: 'An emblematic giant figure created as a heartfelt tribute to Miquel Serra i Mosella, a master shoemaker known locally in Cardona as "el Sabater Fraret". In 1908, inspired by dedication to his neighborhood, Serra built with his own hands and means the legendary Fira Giants —Romeu and Julieta— giving birth to one of Cardona’s most cherished centenary traditions. In 1996, master sculptor Toni Mujal immortalized the artisan in this figure, which proudly parades alongside his own creations.'
+    },
+    vestimenta: {
+      ca: 'Representa l\'artesà sabater al seu taller: casquet o gorra negra tradicional, cabell arrissat i celles expressives, camisa blanca de cotó amb coll camiser i botons, davantal llarg de cuir marró autèntic amb reixeta inferior (espieta), empunyant amb fermesa a la mà dreta el clàssic martell de sabater i sostenint sota el braç esquerre una gran bota de cuir artesanal que acaba de confeccionar.',
+      es: 'Representa al artesano zapatero en su taller: casquete o gorra negra tradicional, cabello rizado y cejas expresivas, camisa blanca de algodón con cuello camisero y botones, mandil largo de cuero marrón auténtico con mirilla inferior, empuñando con firmeza en la mano derecha el clásico martillo de zapatero y sosteniendo bajo el brazo izquierdo una gran bota de cuero artesanal recién confeccionada.',
+      en: 'Depicting the shoemaker at work in his atelier: traditional black workshop cap, dark curly hair and expressive gaze, white cotton shirt with button collar, long dark brown leather apron with viewing grille, firmly wielding a shoemaker’s hammer in his right hand while holding a freshly crafted leather work boot under his left arm.'
+    },
+    ball: {
+      ca: 'Ball del Sabater Fraret i cercaviles del Barri de la Fira',
+      es: 'Baile del Sabater Fraret y pasacalles del Barrio de la Fira',
+      en: 'Dance of Sabater Fraret & La Fira Quarter Parades'
+    },
+    badge: {
+      ca: 'Homenatge Artesà (1996)',
+      es: 'Homenaje Artesano (1996)',
+      en: 'Artisan Tribute (1996)'
+    },
+    featured: true
+  },
+  {
     id: 'abdalla',
     name: 'Abdal·là',
     subtitle: {
@@ -541,6 +596,61 @@ export const figuresData = [
       ca: 'Joan i Margarida (1969)',
       es: 'Joan y Margarida (1969)',
       en: 'Joan & Margarida (1969)'
+    },
+    featured: true
+  },
+  {
+    id: 'aliga-cardona',
+    name: 'L\'Àliga de Cardona',
+    subtitle: {
+      ca: 'Màxima figura solemne del bestiari històric municipal',
+      es: 'Máxima figura solemne del bestiario histórico municipal',
+      en: 'Supreme solemn figure of the historic municipal bestiary'
+    },
+    category: 'bestiari',
+    categoryLabel: {
+      ca: 'Bestiari Històric',
+      es: 'Bestiario Histórico',
+      en: 'Historic Bestiary'
+    },
+    year: {
+      ca: 'Segle XVIII (origen documentat) · Recuperada el 2013',
+      es: 'Siglo XVIII (origen documentado) · Recuperada en 2013',
+      en: '18th Century (documented origin) · Recovered in 2013'
+    },
+    sculptor: {
+      ca: 'Toni Mujal (2013) · Apadrinada per l\'Àliga de la Ciutat de Barcelona',
+      es: 'Toni Mujal (2013) · Apadrinada por el Águila de la Ciudad de Barcelona',
+      en: 'Toni Mujal (2013) · Godparented by the Eagle of Barcelona'
+    },
+    height: '2,60 m d\'alçada · 2,90 m d\'envergadura',
+    weight: '48 kg',
+    location: {
+      ca: 'Cardona - Vila Comtal / Casa dels Gegants',
+      es: 'Cardona - Villa Condal / Casa de los Gigantes',
+      en: 'Cardona - Ducal Town / House of Giants'
+    },
+    image: './images/aliga-cardona.jpg',
+    imagePosition: 'center 15%',
+    description: {
+      ca: 'L\'Àliga de Cardona és la màxima representant del bestiari festiu i protocol·lari de la vila. Figura de gran solemnitat i respecte històric, la peça original documentada es va perdre al segle XVIII arran de la Guerra de Successió. L\'any 1998, la troballa a les parets del Casal Graells d\'un antic gravat d\'una àliga —considerat una de les representacions d\'àliga festiva més velles de Catalunya— va encendre el desig popular de recuperar-la. Construïda magistralment el 2013 per l\'escultor Toni Mujal i apadrinada per l\'Àliga de Barcelona, porta al pit l\'escut de Cardona tallat en fusta autèntica del cèlebre Pi del Rèvol (de més de 300 anys) per vincular-la simbòlicament amb l\'època en què ballava l\'àliga antiga. El seu ball solemne s\'executa amb màxima reverència en presència de la Mare de Déu del Patrocini, patrona de la vila, durant la Festa Major.',
+      es: 'El Águila de Cardona es la máxima representante del bestiario festivo y protocolario de la villa. Figura de gran solemnidad y respeto histórico, la pieza original documentada se perdió en el siglo XVIII a raíz de la Guerra de Sucesión. En 1998, el hallazgo en las paredes del Casal Graells de un antiguo grabado de un águila —considerado uno de los testimonios de águila festiva más arcaicos de Cataluña— encendió el deseo popular de recuperarla. Construida magistralmente en 2013 por el escultor Toni Mujal y apadrinada por el Águila de Barcelona, luce en el pecho el escudo de Cardona tallado en madera auténtica del célebre Pino del Rèvol (de más de 300 años) para vincularla simbólicamente con la época en que bailaba la antigua águila. Su baile solemne se ejecuta con máxima reverencia ante la Virgen del Patrocinio, patrona de la villa, durante la Fiesta Mayor.',
+      en: 'The Eagle of Cardona is the supreme ceremonial figure of the town’s civic and festive bestiary. A symbol of profound historical dignity, the documented original eagle vanished in the 18th century after the War of the Spanish Succession. In 1998, the discovery on the walls of Casal Graells of an archaic eagle engraving —one of the earliest festive eagle depictions known in Catalonia— spurred its civic revival. Masterfully recreated in 2013 by sculptor Toni Mujal and sponsored by the Eagle of Barcelona, its chest medallion is carved from the timber of the monumental 300-year-old Rèvol Pine. Its majestic protocol dance is performed exclusively in honor of Our Lady of Patrocini, patron saint of Cardona, during the Major Festival.'
+    },
+    vestimenta: {
+      ca: 'Plomatge bronzejat i daurat esculpit minuciosament, corona ducal reial d\'or amb incrustacions de pedreria fina vermella i blava folrada de vellut carmesí, ulls ambre expressius, bec i urpes nobles, i el medalló central al pit amb l\'escut comtal oficial de Cardona esculpit expressament en fusta autèntica de l\'històric Pi del Rèvol.',
+      es: 'Plumaje bronceado y dorado esculpido minuciosamente, corona ducal real de oro con incrustaciones de pedrería fina roja y azul forrada de terciopelo carmesí, ojos ámbar expresivos, pico y garras nobles, y el medallón central en el pecho con el escudo condal oficial de Cardona esculpido expresamente en madera auténtica del histórico Pino del Rèvol.',
+      en: 'Finely carved bronzed and golden plumage, royal ducal gold crown inlaid with red and blue jewels over crimson velvet, sharp amber eyes, noble beak, and the chest medallion bearing Cardona’s heraldic coat of arms carved from the historic wood of the 300-year-old Rèvol Pine.'
+    },
+    ball: {
+      ca: 'Ball Solemne de l\'Àliga de Cardona en honor a la Mare de Déu del Patrocini',
+      es: 'Baile Solemne del Águila de Cardona en honor a la Virgen del Patrocinio',
+      en: 'Solemn Protocol Dance of the Eagle honoring Our Lady of Patrocini'
+    },
+    badge: {
+      ca: 'Bestiari Històric (2013)',
+      es: 'Bestiario Histórico (2013)',
+      en: 'Historic Bestiary (2013)'
     },
     featured: true
   },

@@ -235,6 +235,46 @@ const galleryPhotos = [
       es: 'La pareja de gigantes del barrio minero de la Coromina, creados por Manel Casserres en 1969 y bautizados con los nombres del célebre bandolero catalán y su esposa.',
       en: 'The giant couple of the mining quarter of La Coromina, created by Manel Casserres in 1969 depicting the celebrated Catalan bandit and his wife.'
     }
+  },
+  {
+    id: 13,
+    title: {
+      ca: 'El Sabater Fraret (Miquel Serra i Mosella)',
+      es: 'El Sabater Fraret (Miquel Serra i Mosella)',
+      en: 'The Sabater Fraret (Miquel Serra i Mosella)'
+    },
+    category: {
+      ca: 'La Fira (1996)',
+      es: 'La Fira (1996)',
+      en: 'La Fira (1996)'
+    },
+    image: './images/sabater-fraret.jpg',
+    imagePosition: 'center 12%',
+    description: {
+      ca: 'La figura que homenatja el sabater artesà que el 1908 va crear amb les seves mans els centenaris Romeu i Julieta de la Fira.',
+      es: 'La figura que homenajea al zapatero artesano que en 1908 creó con sus manos los centenarios Romeu y Julieta de la Fira.',
+      en: 'The figure honoring the craftsman shoemaker who in 1908 created by hand the centenary Romeu and Julieta of La Fira.'
+    }
+  },
+  {
+    id: 14,
+    title: {
+      ca: 'L\'Àliga de Cardona',
+      es: 'El Águila de Cardona',
+      en: 'The Eagle of Cardona'
+    },
+    category: {
+      ca: 'Bestiari Històric (2013)',
+      es: 'Bestiario Histórico (2013)',
+      en: 'Historic Bestiary (2013)'
+    },
+    image: './images/aliga-cardona.jpg',
+    imagePosition: 'center 15%',
+    description: {
+      ca: 'La màxima figura del bestiari festiu coronada d\'or i amb l\'escut esculpit en fusta autèntica del pi tricentenari del Rèvol.',
+      es: 'La máxima figura del bestiario festivo coronada de oro y con el escudo esculpido en madera auténtica del pino tricentenario del Rèvol.',
+      en: 'The supreme festive bestiary figure crowned in gold and bearing the crest carved from the 300-year-old Rèvol Pine.'
+    }
   }
 ];
 
