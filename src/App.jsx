@@ -26,6 +26,7 @@ export default function App() {
           <main className="flex-grow">
             <Hero />
             <FiguresCatalog />
+            <VideoGallery />
             <AudioPlayer />
             <Grallers />
             <HistoryTimeline />
@@ -34,7 +35,6 @@ export default function App() {
             <CulturalQuiz />
             <Shop />
             <Gallery />
-            <VideoGallery />
             <JoinUsForm />
           </main>
           <Footer />

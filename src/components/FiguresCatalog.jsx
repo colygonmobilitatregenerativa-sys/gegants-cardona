@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { figuresData } from '../data/figures';
 import FigureModal from './FigureModal';
-import { Ruler, Scale, Eye, Sparkles } from 'lucide-react';
+import { Ruler, Scale, Eye, Sparkles, Play } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function FiguresCatalog() {
-  const { t, loc } = useLanguage();
+  const { t, loc, lang } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [activeFigure, setActiveFigure] = useState(null);
 
@@ -134,6 +134,40 @@ export default function FiguresCatalog() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Callout towards Video Gallery */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-cardona-burgundyDark via-cardona-burgundy to-cardona-burgundyDark text-white border border-cardona-gold/30 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+            <div className="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-lg shrink-0">
+              <Play className="w-7 h-7 fill-current ml-0.5" />
+            </div>
+            <div>
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-cardona-goldLight">
+                {lang === 'es' 
+                  ? '¿Quieres ver a los gigantes bailando en directo?' 
+                  : lang === 'en' 
+                  ? 'Want to see the giants dancing live?' 
+                  : 'Vols veure els nostres gegants ballant en directe?'}
+              </h3>
+              <p className="text-amber-100/80 text-xs sm:text-sm mt-1 max-w-xl">
+                {lang === 'es'
+                  ? 'Disfruta de los pasacalles, la Casa de los Gigantes y los bailes solemnes en nuestra sección de vídeos.'
+                  : lang === 'en'
+                  ? 'Experience the gala parades, the House of Giants, and festive dances in our video gallery.'
+                  : 'Gaudeix dels cercaviles de Festa Major, la Casa dels Gegants i els balls solemnes a la nostra galeria de vídeos.'}
+              </p>
+            </div>
+          </div>
+          <a
+            href="#videos"
+            className="px-6 py-3.5 rounded-full bg-cardona-gold hover:bg-cardona-goldLight text-cardona-burgundyDark font-bold text-xs uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 group cursor-pointer"
+          >
+            <Play className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+            <span>
+              {lang === 'es' ? 'Ver Vídeos de la Fiesta' : lang === 'en' ? 'Watch Festival Videos' : 'Veure Vídeos de la Festa'}
+            </span>
+          </a>
         </div>
       </div>
 

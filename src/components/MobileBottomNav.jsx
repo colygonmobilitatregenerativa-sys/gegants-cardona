@@ -68,13 +68,13 @@ export default function MobileBottomNav() {
   ];
 
   const moreSections = [
+    { id: '#videos', label: t('nav', 'videos'), icon: Film, desc: 'En acció' },
     { id: '#musica', label: t('nav', 'musica'), icon: Music, desc: 'Spotify' },
     { id: '#grallers', label: t('nav', 'grallers'), icon: Drum, desc: 'Músics' },
     { id: '#historia', label: t('nav', 'historia'), icon: History, desc: 'Tradició' },
     { id: '#recorregut', label: t('nav', 'recorregut'), icon: Navigation, desc: 'Mapa' },
     { id: '#quiz', label: t('nav', 'quiz'), icon: HelpCircle, desc: 'Joc' },
     { id: '#galeria', label: t('nav', 'galeria'), icon: ImageIcon, desc: 'Fotos' },
-    { id: '#videos', label: t('nav', 'videos'), icon: Film, desc: 'Vídeos' },
     { id: '#contacte', label: t('nav', 'contacte'), icon: HeartHandshake, desc: 'Uneix-te' },
   ];
 

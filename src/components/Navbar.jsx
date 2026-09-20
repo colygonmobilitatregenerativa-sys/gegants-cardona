@@ -18,15 +18,15 @@ export default function Navbar() {
   const navLinks = [
     { name: t('nav', 'inici'), href: '#inici', icon: Shield },
     { name: t('nav', 'figures'), href: '#figures', icon: Users },
+    { name: t('nav', 'videos'), href: '#videos', icon: Film },
+    { name: t('nav', 'botiga'), href: '#botiga', icon: ShoppingBag },
+    { name: t('nav', 'calendari'), href: '#calendari', icon: Calendar },
     { name: t('nav', 'musica'), href: '#musica', icon: Music },
     { name: t('nav', 'grallers'), href: '#grallers', icon: Drum },
     { name: t('nav', 'historia'), href: '#historia', icon: History },
     { name: t('nav', 'recorregut'), href: '#recorregut', icon: Navigation },
-    { name: t('nav', 'calendari'), href: '#calendari', icon: Calendar },
     { name: t('nav', 'quiz'), href: '#quiz', icon: HelpCircle },
-    { name: t('nav', 'botiga'), href: '#botiga', icon: ShoppingBag },
     { name: t('nav', 'galeria'), href: '#galeria', icon: ImageIcon },
-    { name: t('nav', 'videos'), href: '#videos', icon: Film },
   ];
 
   const languages = [
