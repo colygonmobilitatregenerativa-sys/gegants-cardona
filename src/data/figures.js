@@ -432,6 +432,60 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'dimoni-raval',
+    name: 'El Dimoni del Raval',
+    subtitle: {
+      ca: 'Gegant del Raval de Sant Joan / Pont del Diable',
+      es: 'Gigante del Raval de San Juan / Puente del Diablo',
+      en: 'Giant of Raval de Sant Joan / Devil\'s Bridge'
+    },
+    category: 'barri-raval',
+    categoryLabel: {
+      ca: 'Barri del Raval (Sant Joan)',
+      es: 'Barrio del Raval (San Juan)',
+      en: 'Raval Quarter (Sant Joan)'
+    },
+    year: {
+      ca: '2009 (Estrena: Festes del Raval)',
+      es: '2009 (Estreno: Fiestas del Raval)',
+      en: '2009 (Debut: Raval Festivities)'
+    },
+    sculptor: {
+      ca: 'Toni Mujal (mestre geganter cardoní)',
+      es: 'Toni Mujal (maestro constructor cardonino)',
+      en: 'Toni Mujal (Cardona master craftsman)'
+    },
+    height: '3,60 m',
+    weight: '50 kg',
+    location: {
+      ca: 'Cardona - Raval de Sant Joan',
+      es: 'Cardona - Raval de San Juan',
+      en: 'Cardona - Raval de Sant Joan'
+    },
+    image: './images/dimoni-raval.jpg',
+    description: {
+      ca: 'Figura emblemàtica i carismàtica del Barri del Raval de Sant Joan de Cardona, construïda el 2009 pel mestre geganter cardoní Toni Mujal. Encarna el personatge de la cèlebre llegenda popular del Pont del Diable —monumental pont gòtic medieval inacabat del segle XIV sobre el riu Cardener que, segons la tradició oral, el dimoni va pactar aixecar en una sola nit abans que cantés el gall. Com a homenatge entranyable, el seu rostre rialler i expressiu amb ulleres va ser modelat a semblança d\'un veí molt estimat del barri.',
+      es: 'Figura emblemática y carismática del Barrio del Raval de San Juan de Cardona, construida en 2009 por el maestro de gigantes local Toni Mujal. Encarna al personaje de la célebre leyenda popular del Puente del Diablo —monumental puente gótico medieval inconcluso del siglo XIV sobre el río Cardener que, según la tradición oral, el diablo pactó levantar en una sola noche antes de que cantara el gallo. Como entrañable homenaje vecinal, su rostro risueño y expresivo con gafas fue modelado a semejanza de un vecino muy querido del barrio.',
+      en: 'An iconic and charismatic figure of Cardona’s Raval de Sant Joan quarter, created in 2009 by renowned Cardona master craftsman Toni Mujal. He embodies the devil from the local legend of the Pont del Diable (Devil’s Bridge) — the monumental 14th-century unfinished Gothic bridge over the Cardener river which, according to folklore, the devil pledged to build in a single night before the cock crowed. In an affectionate community tribute, his jovial bespectacled face was sculpted after a beloved local neighbor.'
+    },
+    vestimenta: {
+      ca: 'Elegància diabòlica singular: banyes fosques, orelles punxegudes i ulleres de muntura metàl·lica amb perilla riallera. Llueix frac i americana negra folrada de domàs vermell viu amb acabats en forma de flames, capa negra amb coll alt rígid en punta estil ales de ratpenat forrat en vermell, camisa blanca amb botons i llaç negre cordat, faldó de domàs vermell amb motius florals, gran anell daurat amb segell a la mà dreta i un imponent trident o forca de tres puntes argentada que sosté amb fermesa.',
+      es: 'Elegancia diabólica singular: cuernos oscuros, orejas puntiagudas y gafas de montura metálica con perilla sonriente. Viste frac y chaqueta negra forrada de damasco rojo vivo con solapas en forma de llamas, capa negra con cuello alto rígido en punta estilo alas de murciélago forrado en rojo, camisa blanca con botones y lazo negro cordado, faldón de damasco rojo con motivos florales, gran anillo dorado con sello en la mano derecha y un imponente tridente o forca plateada de tres puntas que sostiene con firmeza.',
+      en: 'A uniquely dapper devil: dark curved horns, pointed ears, wire-rimmed spectacles, and a cheerful goatee. He wears a black tuxedo jacket with flame-scalloped red damask lapels, a black cape with a high batwing-style crimson collar, crisp white buttoned shirt with a corded black bow tie, a rich red floral damask skirt, a large gold signet ring on his right hand, and a towering silver three-pronged pitchfork held firmly aloft.'
+    },
+    ball: {
+      ca: 'Ball del Dimoni del Raval i Vals del Pont del Diable',
+      es: 'Baile del Dimoni del Raval y Vals del Puente del Diablo',
+      en: 'Dance of the Raval Devil & Devil’s Bridge Waltz'
+    },
+    badge: {
+      ca: 'Llegenda del Pont (2009)',
+      es: 'Leyenda del Puente (2009)',
+      en: 'Bridge Legend (2009)'
+    },
+    featured: true
+  },
+  {
     id: 'gegants-coromina',
     name: 'Gegants de la Coromina',
     subtitle: {

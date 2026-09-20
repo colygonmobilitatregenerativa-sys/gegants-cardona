@@ -177,6 +177,25 @@ const galleryPhotos = [
   {
     id: 10,
     title: {
+      ca: 'El Dimoni del Raval de Cardona',
+      es: 'El Dimoni del Raval de Cardona',
+      en: 'The Dimoni of the Raval of Cardona'
+    },
+    category: {
+      ca: 'El Raval (2009)',
+      es: 'El Raval (2009)',
+      en: 'El Raval (2009)'
+    },
+    image: './images/dimoni-raval.jpg',
+    description: {
+      ca: 'La singular figura del barri del Raval de Sant Joan amb el trident argentat, capa de vellut i ulleres característiques.',
+      es: 'La singular figura del barrio del Raval de San Juan con el tridente plateado, capa de terciopelo y gafas características.',
+      en: 'The distinctive figure of the Raval de Sant Joan quarter with silver trident, velvet cape, and spectacles.'
+    }
+  },
+  {
+    id: 11,
+    title: {
       ca: 'La Plaça de Bous i el Correbous de Cardona',
       es: 'La Plaza de Toros y el Correbous de Cardona',
       en: 'Bullring Square & the Cardona Correbous'
