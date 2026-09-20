@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Calendar, Users, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, Calendar, Users, ShieldCheck, ShoppingBag } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
@@ -58,7 +58,7 @@ export default function Hero() {
         </p>
 
         {/* Call to actions */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 flex-wrap">
           <a
             href="#figures"
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-cardona-gold hover:bg-cardona-goldLight text-cardona-burgundyDark font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-cardona-gold/20 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
@@ -72,6 +72,13 @@ export default function Hero() {
           >
             <Calendar className="w-4 h-4 text-cardona-gold" />
             <span>{t('hero', 'btnCalendar')}</span>
+          </a>
+          <a
+            href="#botiga"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm uppercase tracking-wider border border-white/20 backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            <ShoppingBag className="w-4 h-4 text-cardona-gold" />
+            <span>{t('hero', 'btnShop')}</span>
           </a>
         </div>
 
