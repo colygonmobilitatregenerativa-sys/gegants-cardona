@@ -317,6 +317,26 @@ const galleryPhotos = [
       es: 'La dama noble y Minyona de Cardona original de 1980 con el vestido verde menta de raso satinado, trenzas morenas y ramo de flores.',
       en: 'The original 1980 noble lady and Minyona of Cardona with mint-green satin gown, brunette braids, and flower bouquet.'
     }
+  },
+  {
+    id: 17,
+    title: {
+      ca: 'Els Gegants de Planès i Bergús: El Migsenyor i la Graueta',
+      es: 'Los Gigantes de Planès y Bergús: El Migsenyor y la Graueta',
+      en: 'The Giants of Planès & Bergús: El Migsenyor & La Graueta'
+    },
+    category: {
+      ca: 'Planès i Bergús (1983)',
+      es: 'Planès y Bergús (1983)',
+      en: 'Planès & Bergús (1983)'
+    },
+    image: './images/gegants-bergus-planes.jpg',
+    imagePosition: 'center 10%',
+    description: {
+      ca: 'La parella del barri de Planès i Bergús creada per Toni Mujal inspirant-se en dos personatges populars del veïnat, lluint els distintius de l\'Aplec de Planes.',
+      es: 'La pareja del barrio de Planès y Bergús creada por Toni Mujal inspirándose en dos personajes populares del vecindario, luciendo los distintivos del Aplec de Planes.',
+      en: 'The couple of the Planès & Bergús quarter created by Toni Mujal inspired by two real townsfolk, bearing the badges of the Aplec de Planes.'
+    }
   }
 ];
 

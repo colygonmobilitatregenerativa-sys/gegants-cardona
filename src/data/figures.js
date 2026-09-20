@@ -713,6 +713,61 @@ export const figuresData = [
     featured: true
   },
   {
+    id: 'gegants-bergus-planes',
+    name: 'Gegants de Planès i Bergús',
+    subtitle: {
+      ca: 'El Migsenyor i la Graueta (Barri de Planès i Bergús)',
+      es: 'El Migsenyor y la Graueta (Barrio de Planès y Bergús)',
+      en: 'El Migsenyor & La Graueta (Planès & Bergús Quarter)'
+    },
+    category: 'barri-bergus',
+    categoryLabel: {
+      ca: 'Barri de Planès i Bergús',
+      es: 'Barrio de Planès y Bergús',
+      en: 'Planès & Bergús Quarter'
+    },
+    year: {
+      ca: '1983-1985 (Estrena oficial al barri)',
+      es: '1983-1985 (Estreno oficial en el barrio)',
+      en: '1983-1985 (Official neighborhood debut)'
+    },
+    sculptor: {
+      ca: 'Toni Mujal (taller artesà cardoní) · Fuster: Lluís Roset · Modistes: Montserrat Cots i Montserrat Roset',
+      es: 'Toni Mujal (taller artesano cardonino) · Carpintero: Lluís Roset · Modistas: Montserrat Cots y Montserrat Roset',
+      en: 'Toni Mujal (Cardona master craftsman) · Carpenter: Lluís Roset · Tailors: Montserrat Cots & Montserrat Roset'
+    },
+    height: '4,00 m (Migsenyor) / 3,80 m (Graueta)',
+    weight: '66 kg / 35 kg',
+    location: {
+      ca: 'Cardona - Barri de Planès i Bergús / Casa dels Gegants',
+      es: 'Cardona - Barrio de Planès y Bergús / Casa dels Gegants',
+      en: 'Cardona - Planès & Bergús Quarter / Giants House'
+    },
+    image: './images/gegants-bergus-planes.jpg',
+    imagePosition: 'center 10%',
+    description: {
+      ca: 'Els Gegants de Planès i Bergús són una de les parelles més singulars, estimades i arrelades de Cardona, batejats amb els noms d\'El Migsenyor i la Graueta. Construïts entre 1983 i 1985 per l\'escultor cardoní Toni Mujal amb la col·laboració del fuster Lluís Roset i les modistes Montserrat Cots i Montserrat Roset, tenen la particularitat d\'estar inspirats en dos personatges reals que van viure al barri: en Migsenyor (conegut perquè els dies festius vestia com un senyor de cintura en amunt i de treballador de cintura en avall) i la Graueta (una dona gran molt carinyosa que demanava caritat amb gran dignitat). L\'any 2009 van ser escollits com a padrins d\'honor del Dimoni del Raval.',
+      es: 'Los Gigantes de Planès y Bergús son una de las parejas más singulares, queridas y arraigadas de Cardona, bautizados con los nombres de El Migsenyor y la Graueta. Construidos entre 1983 y 1985 por el escultor cardonino Toni Mujal con la colaboración del carpintero Lluís Roset y las modistas Montserrat Cots y Montserrat Roset, tienen la particularidad de estar inspirados en dos personajes reales que vivieron en el barrio: en Migsenyor (conocido porque los días festivos vestía como un señor de cintura para arriba y de obrero de cintura para abajo) y la Graueta (una entrañable mujer que pedía caridad con gran dignidad). En 2009 fueron elegidos como padrinos de honor del Dimoni del Raval.',
+      en: 'The Giants of Planès & Bergús are one of Cardona\'s most unique and beloved figures, named El Migsenyor and La Graueta. Created between 1983 and 1985 by master craftsman Toni Mujal alongside carpenter Lluís Roset and seamstresses Montserrat Cots and Montserrat Roset, they are inspired by two real historical characters from the neighborhood: Migsenyor (known for wearing noble attire from the waist up and work clothes from the waist down on holidays) and Graueta (an affectionate elderly local who asked for charity with dignified humility). In 2009, they were honored as godparents at the baptism of the Dimoni del Raval.'
+    },
+    vestimenta: {
+      ca: 'El Migsenyor llueix barretina morada caragolada amb vora negra, bigoti negre espès, camisa blanca amb llacet blau marí, elegant americana de vellut marró amb tres grans botons, mocador blanc de butxaca, distintiu de l\'Aplec de Planes i Bergús al pit i faldó de vellut marró amb espieta. La Graueta llueix mocador i diadema al cap, arracades vermelles, mantó sobre les espatlles amb serrells i agulla fermall de joieria, medalla brodada de l\'Aplec de Planes - Bergús, vestit de seda setinada verd aigua amb motius d\'aigües i puntes al coll, i a la mà dreta un ram de flors grogues silvestres amb tul daurat.',
+      es: 'El Migsenyor luce barretina morada con borde negro, bigote negro espeso, camisa blanca con lazo azul marino, elegante chaqueta de terciopelo marrón con tres botones grandes, pañuelo blanco de bolsillo, distintivo del Aplec de Planes y Bergús en el pecho y faldón de terciopelo marrón con mirilla. La Graueta luce pañuelo y diadema en la cabeza, pendientes rojos, mantón sobre los hombros con flecos y broche central de joyería, medalla bordada del Aplec de Planes - Bergús, vestido de seda satinada verde agua con ribetes de encaje, y en la mano derecha un ramo de flores amarillas silvestres con tul dorado.',
+      en: 'El Migsenyor wears a curled purple barretina cap with black trim, full mustache, crisp white shirt with dark blue tie, brown velvet suit jacket with large buttons, breast-pocket square, embroidered Aplec de Planes - Bergús badge, and velvet skirt with viewing grille. La Graueta wears a headscarf, red drop earrings, fringed shawl pinned with a jewel brooch, embroidered Aplec de Planes - Bergús medallion, sea-green watered silk gown with delicate lace collar, and holds a bouquet of yellow wildflowers with golden tulle in her right hand.'
+    },
+    ball: {
+      ca: 'Ball de Gegants de Planès i Bergús (Música composta per Mn. Josep Maria Casafont i Joan Roure)',
+      es: 'Baile de Gigantes de Planès y Bergús (Música compuesta por Mn. Josep Maria Casafont y Joan Roure)',
+      en: 'Planès & Bergús Giants Dance (Music composed by Rev. Josep Maria Casafont & Joan Roure)'
+    },
+    badge: {
+      ca: 'Migsenyor i Graueta (1983)',
+      es: 'Migsenyor y Graueta (1983)',
+      en: 'Migsenyor & Graueta (1983)'
+    },
+    featured: true
+  },
+  {
     id: 'aliga-cardona',
     name: 'L\'Àliga de Cardona',
     subtitle: {
