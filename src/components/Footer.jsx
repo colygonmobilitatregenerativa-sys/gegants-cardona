@@ -16,9 +16,9 @@ export default function Footer() {
           {/* Col 1: Brand & Slogan */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-11 flex items-center justify-center shrink-0 drop-shadow-md">
+              <div className="w-9 h-12 flex items-center justify-center shrink-0 drop-shadow-md">
                 <img
-                  src="./escut-cardona.svg"
+                  src="./images/escut-cardona.png"
                   alt="Escut de Cardona"
                   className="w-full h-full object-contain"
                 />

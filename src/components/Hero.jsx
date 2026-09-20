@@ -20,21 +20,21 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        {/* Escut Oficial de Cardona */}
-        <div className="flex justify-center mb-6">
-          <div className="relative group">
-            {/* Ambient gold glow */}
-            <div className="absolute -inset-3 bg-gradient-to-r from-cardona-gold/30 via-amber-400/40 to-cardona-gold/30 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Escut Històric Oficial de Cardona */}
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="relative group cursor-pointer">
+            {/* Ambient gold aura glow */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-cardona-gold/30 via-amber-400/40 to-cardona-gold/30 rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
             
-            {/* Medalló heràldic */}
+            {/* Medalló heràldic amb vidre fumat i rivets d'or */}
             <div 
-              className="relative p-3 sm:p-3.5 rounded-3xl bg-cardona-burgundyDark/85 backdrop-blur-md border border-cardona-gold/40 shadow-[0_12px_36px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-cardona-gold flex items-center justify-center"
-              title="Escut de Cardona: De gules, un card de tres flors d'or"
+              className="relative px-3.5 py-3 sm:px-5 sm:py-4 rounded-3xl bg-cardona-burgundyDark/70 backdrop-blur-md border border-cardona-gold/35 shadow-[0_16px_40px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-cardona-gold flex items-center justify-center"
+              title="Escut Històric de Cardona: Senatvs Popvliqve Cardonensis Insignia"
             >
               <img
-                src="./escut-cardona.svg"
-                alt="Escut Oficial de Cardona"
-                className="w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]"
+                src="./images/escut-cardona.png"
+                alt="Escut Històric de Cardona - Senatvs Popvliqve Cardonensis Insignia"
+                className="w-20 h-28 sm:w-24 sm:h-32 md:w-28 md:h-36 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]"
               />
             </div>
           </div>

@@ -46,9 +46,9 @@ export default function Navbar() {
           
           {/* Brand Logo */}
           <a href="#inici" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="w-8 h-10 sm:w-9 sm:h-11 flex items-center justify-center transform group-hover:scale-110 transition-transform shrink-0 drop-shadow-md">
+            <div className="w-8 h-10 sm:w-9 sm:h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform shrink-0 drop-shadow-md">
               <img
-                src="./escut-cardona.svg"
+                src="./images/escut-cardona.png"
                 alt="Escut de Cardona"
                 className="w-full h-full object-contain"
               />
