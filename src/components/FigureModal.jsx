@@ -43,7 +43,7 @@ export default function FigureModal({ figure, onClose }) {
           <img
             src={figure.image}
             alt={figure.name}
-            style={!isFullView ? { objectPosition: figure.imagePosition || 'center top' } : undefined}
+            style={!isFullView ? { objectPosition: figure.imagePosition || 'center center' } : undefined}
             className={`w-full h-full transition-all duration-300 ${
               isFullView ? 'object-contain p-3' : 'object-cover'
             }`}

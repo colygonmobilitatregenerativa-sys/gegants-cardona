@@ -31,6 +31,7 @@ export const figuresData = [
       en: 'Cardona - Sant Miquel Quarter'
     },
     image: './images/batallador.jpg',
+    imagePosition: 'center 55%',
     description: {
       ca: 'El Gegant Batallador és la figura guerrera i senyorial del Barri de Sant Miquel de Cardona. Estrenat solemnement el 16 de juny de 1957 gràcies a la iniciativa veïnal i finançat per Jaume Vendrell Rosas, forma parella històrica amb la geganta l\'Esperança. Encarna la valentia militar i l\'esperit heroic dels defensors de la fortalesa del Castell de Cardona al llarg dels segles.',
       es: 'El Gigante Batallador es la figura guerrera y señorial del Barrio de San Miguel de Cardona. Estrenado solemnemente el 16 de junio de 1957 gracias a la iniciativa vecinal y financiado por Jaume Vendrell Rosas, forma pareja histórica con la giganta l\'Esperança. Encarna la valentía militar y el espíritu heroico de los defensores de la fortaleza del Castillo de Cardona a lo largo de los siglos.',
@@ -85,6 +86,7 @@ export const figuresData = [
       en: 'Cardona - Sant Miquel Quarter'
     },
     image: './images/esperanca.jpg',
+    imagePosition: 'center 48%',
     description: {
       ca: 'La geganta Esperança és la dama senyorial del Barri de Sant Miquel de Cardona i parella inseparable d\'El Batallador. Estrenada solemnement el 16 de juny de 1957 gràcies a la iniciativa veïnal finançada per Jaume Vendrell Rosas, simbolitza la concòrdia, la bellesa i la virtut que acompanyen el caràcter heroic del guerrer cardoní.',
       es: 'La giganta Esperança es la dama señorial del Barrio de San Miguel de Cardona y pareja inseparable de El Batallador. Estrenada solemnemente el 16 de junio de 1957 gracias a la iniciativa vecinal financiada por Jaume Vendrell Rosas, simboliza la concordia, la belleza y la virtud que acompañan el carácter heroico del guerrero cardonino.',
@@ -301,7 +303,7 @@ export const figuresData = [
       en: 'Cardona - Fira Quarter'
     },
     image: './images/julieta.jpg',
-    imagePosition: 'center 8%',
+    imagePosition: 'center 12%',
     description: {
       ca: 'La Geganta Julieta és la mítica companya del gegant Romeu i una de les figures centenàries més emblemàtiques i estimades de Cardona. Construïda l\'any 1908 pel sabater artesà Miquel Serra («Sabater Fraret») per a les festivitats del Barri de la Fira, està catalogada oficialment com a Geganta Centenària de Catalunya. Amb els seus ulls blaus expressius, mirada dolça i somriure afable, encarna la donzella noble i romàntica que enamora el poble a cada ballada de festa major.',
       es: 'La Giganta Julieta es la mítica compañera del gigante Romeu y una de las figuras centenarias más emblemáticas y queridas de Cardona. Construida en el año 1908 por el zapatero artesano Miquel Serra («Sabater Fraret») para las festividades del Barrio de la Fira, está catalogada oficialmente como Giganta Centenaria de Cataluña. Con sus expresivos ojos azules, dulce mirada y sonrisa afable, encarna a la doncella noble y romántica que cautiva a la villa en cada baile de fiesta mayor.',
@@ -464,7 +466,7 @@ export const figuresData = [
       en: 'Cardona - Raval de Sant Joan'
     },
     image: './images/dimoni-raval.jpg',
-    imagePosition: 'center 4%',
+    imagePosition: 'center 10%',
     description: {
       ca: 'Figura emblemàtica i carismàtica del Barri del Raval de Sant Joan de Cardona, construïda el 2009 pel mestre geganter cardoní Toni Mujal. Encarna el personatge de la cèlebre llegenda popular del Pont del Diable —monumental pont gòtic medieval inacabat del segle XIV sobre el riu Cardener que, segons la tradició oral, el dimoni va pactar aixecar en una sola nit abans que cantés el gall. Com a homenatge entranyable, el seu rostre rialler i expressiu amb ulleres va ser modelat a semblança d\'un veí molt estimat del barri.',
       es: 'Figura emblemática y carismática del Barrio del Raval de San Juan de Cardona, construida en 2009 por el maestro de gigantes local Toni Mujal. Encarna al personaje de la célebre leyenda popular del Puente del Diablo —monumental puente gótico medieval inconcluso del siglo XIV sobre el río Cardener que, según la tradición oral, el diablo pactó levantar en una sola noche antes de que cantara el gallo. Como entrañable homenaje vecinal, su rostro risueño y expresivo con gafas fue modelado a semejanza de un vecino muy querido del barrio.',

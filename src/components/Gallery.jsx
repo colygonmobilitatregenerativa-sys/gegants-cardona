@@ -35,7 +35,7 @@ const galleryPhotos = [
       en: 'Sant Miquel'
     },
     image: './images/batallador.jpg',
-    imagePosition: 'center 12%',
+    imagePosition: 'center 55%',
     description: {
       ca: 'El guerrer de Sant Miquel sostenint la destral cerimonial amb el Castell al fons.',
       es: 'El guerrero de Sant Miquel sosteniendo el hacha ceremonial con el Castillo al fondo.',
@@ -74,7 +74,7 @@ const galleryPhotos = [
       en: 'Sant Miquel'
     },
     image: './images/esperanca.jpg',
-    imagePosition: 'center 10%',
+    imagePosition: 'center 48%',
     description: {
       ca: 'La senyora de Sant Miquel amb el ram de flors i els domassos del Patrocini de fons.',
       es: 'La dama de Sant Miquel con el ramo de flores y los reposteros festivos de fondo.',
@@ -113,7 +113,7 @@ const galleryPhotos = [
       en: 'La Fira (1908)'
     },
     image: './images/julieta.jpg',
-    imagePosition: 'center 8%',
+    imagePosition: 'center 12%',
     description: {
       ca: 'Figura centenària de 1908 amb el vestit senyorial de vellut carmesí, tela adamascada i el ram de flors silvestres.',
       es: 'Figura centenaria de 1908 con el vestido señorial de terciopelo carmesí, tela adamascada y el ramo de flores silvestres.',
@@ -190,7 +190,7 @@ const galleryPhotos = [
       en: 'El Raval (2009)'
     },
     image: './images/dimoni-raval.jpg',
-    imagePosition: 'center 4%',
+    imagePosition: 'center 10%',
     description: {
       ca: 'La singular figura del barri del Raval de Sant Joan amb el trident argentat, capa de vellut i ulleres característiques.',
       es: 'La singular figura del barrio del Raval de San Juan con el tridente plateado, capa de terciopelo y gafas características.',
@@ -250,7 +250,7 @@ export default function Gallery() {
               <img
                 src={photo.image}
                 alt={loc(photo.title)}
-                style={{ objectPosition: photo.imagePosition || 'center 20%' }}
+                style={{ objectPosition: photo.imagePosition || 'center center' }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
