@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart } from 'lucide-react';
+import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart, MessageCircle, Store, Truck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+
+// Telèfon de contacte directe per a comandes de marxandatge via WhatsApp (test actual: usuari)
+const COLLA_WHATSAPP_PHONE = '34630037870';
 
 export default function Shop() {
   const { t, loc } = useLanguage();
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  const [customerName, setCustomerName] = useState('');
+  const [deliveryType, setDeliveryType] = useState('recollida');
+  const [notes, setNotes] = useState('');
 
   const products = [
     {
@@ -160,12 +166,35 @@ export default function Shop() {
   const totalItemsCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
   const handleCheckout = () => {
+    if (cart.length === 0) return;
+
+    const itemsList = cart.map(it => `• ${it.qty}x ${loc(it.name)} (${(it.price * it.qty).toFixed(2)} €)`).join('\n');
+    const deliveryLabel = deliveryType === 'recollida'
+      ? t('shop', 'deliveryPickup')
+      : t('shop', 'deliveryShipping');
+
+    let text = `👋 Hola! Vull fer una comanda de la botiga dels Gegants de Cardona:\n\n` +
+      `📦 *Productes:*\n${itemsList}\n\n` +
+      `💰 *Total:* ${totalAmount.toFixed(2)} €\n` +
+      `👤 *Nom:* ${customerName.trim() || 'Client web'}\n` +
+      `🚚 *Modalitat d'entrega:* ${deliveryLabel}`;
+
+    if (notes.trim()) {
+      text += `\n📝 *Notes/Talles:* ${notes.trim()}`;
+    }
+
+    text += `\n\nCom podem fer el pagament per Bizum i coordinar l'entrega? Moltes gràcies!`;
+
+    const url = `https://wa.me/${COLLA_WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
     setOrderComplete(true);
     setTimeout(() => {
       setCart([]);
       setOrderComplete(false);
       setIsCartOpen(false);
-    }, 3000);
+      setCustomerName('');
+      setNotes('');
+    }, 3500);
   };
 
   return (
@@ -256,33 +285,34 @@ export default function Shop() {
       {/* Cart Drawer Modal */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden bg-black/60 backdrop-blur-sm flex justify-end animate-fadeIn">
-          <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between p-6 sm:p-8 animate-slideLeft">
+          <div className="w-full max-w-lg bg-white h-full shadow-2xl flex flex-col justify-between p-6 sm:p-8 animate-slideLeft">
             
             {/* Header */}
-            <div>
-              <div className="flex items-center justify-between pb-4 border-b border-gray-100 mb-6">
-                <div className="flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5 text-cardona-burgundy" />
-                  <h3 className="font-serif text-2xl font-bold text-cardona-burgundyDark">
-                    {t('shop', 'cartTitle')}
-                  </h3>
-                </div>
-                <button
-                  onClick={() => setIsCartOpen(false)}
-                  className="p-2 rounded-full hover:bg-gray-100 text-gray-500"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+            <div className="flex items-center justify-between pb-4 border-b border-gray-100 shrink-0">
+              <div className="flex items-center gap-2">
+                <ShoppingBag className="w-5 h-5 text-cardona-burgundy" />
+                <h3 className="font-serif text-2xl font-bold text-cardona-burgundyDark">
+                  {t('shop', 'cartTitle')}
+                </h3>
               </div>
+              <button
+                onClick={() => setIsCartOpen(false)}
+                className="p-2 rounded-full hover:bg-gray-100 text-gray-500"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              {/* Items List */}
-              {cart.length === 0 ? (
-                <div className="text-center py-16 text-gray-400">
-                  <ShoppingBag className="w-12 h-12 mx-auto mb-3 opacity-40" />
-                  <p className="text-sm font-medium">{t('shop', 'emptyCart')}</p>
-                </div>
-              ) : (
-                <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-1">
+            {/* Scrollable Content Body */}
+            {cart.length === 0 ? (
+              <div className="flex-1 flex flex-col items-center justify-center py-16 text-gray-400">
+                <ShoppingBag className="w-16 h-16 mx-auto mb-3 opacity-30 text-cardona-burgundy" />
+                <p className="text-base font-semibold text-gray-500">{t('shop', 'emptyCart')}</p>
+              </div>
+            ) : (
+              <div className="flex-1 overflow-y-auto pr-1 my-4 space-y-5">
+                {/* Items List */}
+                <div className="space-y-3">
                   {cart.map((it) => (
                     <div key={it.id} className="flex items-center justify-between gap-3 p-3 rounded-xl bg-cardona-sand border border-cardona-stone">
                       <img src={it.image} alt={loc(it.name)} className="w-14 h-14 rounded-lg object-cover" />
@@ -292,14 +322,14 @@ export default function Shop() {
                         <div className="flex items-center gap-2 mt-1">
                           <button
                             onClick={() => updateQuantity(it.id, -1)}
-                            className="w-5 h-5 rounded bg-white border border-gray-200 flex items-center justify-center text-xs"
+                            className="w-5 h-5 rounded bg-white border border-gray-200 flex items-center justify-center text-xs hover:border-cardona-burgundy"
                           >
                             <Minus className="w-3 h-3" />
                           </button>
                           <span className="text-xs font-bold text-gray-700">{it.qty}</span>
                           <button
                             onClick={() => updateQuantity(it.id, 1)}
-                            className="w-5 h-5 rounded bg-white border border-gray-200 flex items-center justify-center text-xs"
+                            className="w-5 h-5 rounded bg-white border border-gray-200 flex items-center justify-center text-xs hover:border-cardona-burgundy"
                           >
                             <Plus className="w-3 h-3" />
                           </button>
@@ -307,19 +337,89 @@ export default function Shop() {
                       </div>
                       <button
                         onClick={() => removeFromCart(it.id)}
-                        className="text-gray-400 hover:text-red-500 p-1"
+                        className="text-gray-400 hover:text-red-500 p-1 transition-colors"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>
                   ))}
                 </div>
-              )}
-            </div>
 
-            {/* Footer / Total */}
+                {/* Delivery Option */}
+                <div className="pt-2 border-t border-gray-100">
+                  <label className="block text-xs font-bold text-gray-700 mb-2">
+                    {t('shop', 'deliveryLabel')}
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setDeliveryType('recollida')}
+                      className={`p-3 rounded-xl border text-left flex items-start gap-2.5 transition-all text-xs ${
+                        deliveryType === 'recollida'
+                          ? 'border-cardona-burgundy bg-cardona-burgundy/5 text-cardona-burgundy font-bold shadow-sm'
+                          : 'border-gray-200 text-gray-600 hover:border-gray-300 bg-white'
+                      }`}
+                    >
+                      <Store className="w-4 h-4 shrink-0 text-cardona-gold mt-0.5" />
+                      <span className="leading-tight">{t('shop', 'deliveryPickup')}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setDeliveryType('enviament')}
+                      className={`p-3 rounded-xl border text-left flex items-start gap-2.5 transition-all text-xs ${
+                        deliveryType === 'enviament'
+                          ? 'border-cardona-burgundy bg-cardona-burgundy/5 text-cardona-burgundy font-bold shadow-sm'
+                          : 'border-gray-200 text-gray-600 hover:border-gray-300 bg-white'
+                      }`}
+                    >
+                      <Truck className="w-4 h-4 shrink-0 text-cardona-gold mt-0.5" />
+                      <span className="leading-tight">{t('shop', 'deliveryShipping')}</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Customer Details Form */}
+                <div className="space-y-3 pt-2 border-t border-gray-100">
+                  <div>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">
+                      {t('shop', 'nameLabel')}
+                    </label>
+                    <input
+                      type="text"
+                      value={customerName}
+                      onChange={(e) => setCustomerName(e.target.value)}
+                      placeholder={t('shop', 'namePlaceholder')}
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-cardona-burgundy transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">
+                      {t('shop', 'notesLabel')}
+                    </label>
+                    <input
+                      type="text"
+                      value={notes}
+                      onChange={(e) => setNotes(e.target.value)}
+                      placeholder={t('shop', 'notesPlaceholder')}
+                      className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-cardona-burgundy transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Direct info badge */}
+                <div className="p-3.5 bg-cardona-sand/70 rounded-xl border border-cardona-stone text-[11px] text-gray-700 flex items-start gap-2.5">
+                  <Sparkles className="w-4 h-4 text-cardona-gold shrink-0 mt-0.5" />
+                  <p className="leading-relaxed">
+                    {t('shop', 'directHelp')}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Footer / Total & WhatsApp Button */}
             {cart.length > 0 && (
-              <div className="pt-6 border-t border-gray-100">
+              <div className="pt-4 border-t border-gray-100 shrink-0">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-bold text-gray-600">{t('shop', 'total')}</span>
                   <span className="font-serif text-2xl font-black text-cardona-burgundyDark">
@@ -328,15 +428,16 @@ export default function Shop() {
                 </div>
 
                 {orderComplete ? (
-                  <div className="p-3 bg-green-50 text-green-700 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" />
+                  <div className="p-3.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-2 animate-fadeIn">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                     <span>{t('shop', 'orderSuccess')}</span>
                   </div>
                 ) : (
                   <button
                     onClick={handleCheckout}
-                    className="w-full py-4 rounded-xl bg-cardona-burgundy hover:bg-cardona-burgundyDark text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-emerald-600/30 flex items-center justify-center gap-2 group cursor-pointer"
                   >
+                    <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     <span>{t('shop', 'checkout')}</span>
                   </button>
                 )}
