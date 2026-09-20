@@ -1,0 +1,23 @@
+{
+  "name": "Gegants de Cardona · Web Oficial",
+  "short_name": "Gegants Cardona",
+  "description": "Patrimoni festiu i cultural dels Gegants de Cardona: figures centenàries, música, calendari i botiga oficial.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#34070e",
+  "theme_color": "#4a0e17",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

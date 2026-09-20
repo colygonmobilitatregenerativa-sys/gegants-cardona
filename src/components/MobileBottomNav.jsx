@@ -19,9 +19,11 @@ import {
   Sparkles
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useCart } from '../context/CartContext';
 
 export default function MobileBottomNav() {
   const { lang, setLang, t } = useLanguage();
+  const { totalItemsCount, setIsCartOpen } = useCart();
   const [activeSection, setActiveSection] = useState('inici');
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -127,13 +129,24 @@ export default function MobileBottomNav() {
           {/* 3. Botiga (Featured Center Pill - Puntal bàsic) */}
           <a
             href="#botiga"
-            onClick={() => handleNavClick('botiga')}
+            onClick={() => {
+              handleNavClick('botiga');
+              if (totalItemsCount > 0) {
+                setIsCartOpen(true);
+              }
+            }}
             className="flex flex-col items-center -top-3.5 relative group active:scale-95 transition-transform"
           >
             <div className="relative w-12 h-12 rounded-full bg-gradient-to-tr from-cardona-burgundy via-cardona-burgundyDark to-amber-700 border-2 border-cardona-gold shadow-[0_6px_20px_rgba(0,0,0,0.6)] flex items-center justify-center text-cardona-gold group-hover:scale-105 transition-transform">
               <ShoppingBag className="w-5 h-5 drop-shadow" />
               {/* Subtle gold ring pulse */}
               <span className="absolute -inset-0.5 rounded-full border border-cardona-gold/40 animate-ping opacity-30" />
+              {/* Live cart items counter badge */}
+              {totalItemsCount > 0 && (
+                <span className="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-cardona-gold text-cardona-burgundyDark font-black text-[10px] shadow-md border border-cardona-burgundy animate-bounce leading-none">
+                  {totalItemsCount}
+                </span>
+              )}
             </div>
             <span className="text-[10px] font-extrabold text-cardona-gold tracking-tight mt-0.5 drop-shadow">
               {t('nav', 'botiga')}

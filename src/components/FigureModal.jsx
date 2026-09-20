@@ -1,10 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { X, Ruler, Scale, Calendar, User, Music, MapPin, Sparkles, Maximize2, Minimize2 } from 'lucide-react';
+import { X, Ruler, Scale, Calendar, User, Music, MapPin, Sparkles, Maximize2, Minimize2, Share2, Check } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function FigureModal({ figure, onClose }) {
   const { t, loc } = useLanguage();
   const [isFullView, setIsFullView] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleShare = async () => {
+    const shareData = {
+      title: `${figure.name} - Gegants de Cardona`,
+      text: `Mira la fitxa de ${figure.name} dels Gegants de Cardona (${figure.height}, ${figure.weight})!`,
+      url: window.location.href.split('#')[0] + '#figures'
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (err) {
+        // cancelled or unsupported
+      }
+    }
+
+    const waText = encodeURIComponent(
+      `👋 Mira la fitxa de *${figure.name}* dels Gegants de Cardona (${figure.height}, ${figure.weight})!\n${shareData.url}`
+    );
+    window.open(`https://wa.me/?text=${waText}`, '_blank');
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3000);
+  };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -155,8 +180,25 @@ export default function FigureModal({ figure, onClose }) {
             </div>
           </div>
 
-          {/* Close button in footer */}
-          <div className="pt-4 border-t border-gray-100 flex justify-end">
+          {/* Action Buttons in footer */}
+          <div className="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+            <button
+              onClick={handleShare}
+              className="px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
+            >
+              {isCopied ? (
+                <>
+                  <Check className="w-4 h-4 text-emerald-200" />
+                  <span>{t('catalog', 'shareCopied')}</span>
+                </>
+              ) : (
+                <>
+                  <Share2 className="w-4 h-4" />
+                  <span>{t('catalog', 'shareFigure')}</span>
+                </>
+              )}
+            </button>
+
             <button
               onClick={onClose}
               className="px-6 py-2.5 rounded-full bg-cardona-burgundy hover:bg-cardona-burgundyDark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-md"

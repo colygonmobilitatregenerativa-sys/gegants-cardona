@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { eventsData } from '../data/events';
-import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight, Users2, Mail } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight, Users2, Mail, CalendarPlus } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { downloadIcsFile, openGoogleCalendar } from '../utils/calendar';
 
 export default function EventsCalendar() {
   const { t, loc } = useLanguage();
@@ -37,7 +38,7 @@ export default function EventsCalendar() {
 
         {/* Big Festa Major Banner */}
         <div className="mb-14 p-8 rounded-3xl bg-gradient-to-br from-cardona-burgundy to-cardona-burgundyDark text-white shadow-xl border border-cardona-gold/30 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2">
+          <div className="space-y-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark shadow-sm">
               <Sparkles className="w-3.5 h-3.5" />
               {t('calendar', 'bannerTag')}
@@ -48,6 +49,35 @@ export default function EventsCalendar() {
             <p className="text-sm text-amber-100/90 max-w-xl">
               {t('calendar', 'bannerText')}
             </p>
+            {/* Quick Calendar Export Buttons */}
+            <div className="pt-2 flex flex-wrap gap-2.5">
+              <button
+                onClick={() => downloadIcsFile({
+                  title: loc({ ca: 'Festa Major de Cardona 2026', es: 'Fiesta Mayor de Cardona 2026', en: 'Cardona Major Festival 2026' }),
+                  description: loc({ ca: 'Ball de Gegants a la plaça, cercavila i tradició festiva.', es: 'Baile de Gigantes en la plaza, pasacalles y tradición festiva.', en: 'Giant dances in the town square and festive parade.' }),
+                  location: 'Cardona (Bages, Catalunya)',
+                  startDate: '20260912T100000Z',
+                  endDate: '20260915T220000Z'
+                })}
+                className="px-4 py-2 rounded-xl bg-cardona-gold hover:bg-cardona-goldLight text-cardona-burgundyDark font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm active:scale-95 cursor-pointer"
+              >
+                <CalendarPlus className="w-3.5 h-3.5" />
+                <span>{t('calendar', 'bannerCalBtn')} (.ics)</span>
+              </button>
+              <button
+                onClick={() => openGoogleCalendar({
+                  title: loc({ ca: 'Festa Major de Cardona 2026', es: 'Fiesta Mayor de Cardona 2026', en: 'Cardona Major Festival 2026' }),
+                  description: loc({ ca: 'Ball de Gegants a la plaça, cercavila i tradició festiva.', es: 'Baile de Gigantes en la plaza, pasacalles y tradición festiva.', en: 'Giant dances in the town square and festive parade.' }),
+                  location: 'Cardona (Bages, Catalunya)',
+                  startDate: '20260912T100000Z',
+                  endDate: '20260915T220000Z'
+                })}
+                className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer"
+              >
+                <Calendar className="w-3.5 h-3.5 text-cardona-gold" />
+                <span>{t('calendar', 'googleCal')} ↗</span>
+              </button>
+            </div>
           </div>
           <div className="shrink-0 text-center bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20">
             <span className="text-xs text-amber-200 uppercase tracking-widest block font-medium">
@@ -119,6 +149,36 @@ export default function EventsCalendar() {
                   <MapPin className="w-3.5 h-3.5 text-cardona-burgundy" />
                   <span>{loc(evt.location)}</span>
                 </div>
+              </div>
+
+              {/* Event Calendar Export Action */}
+              <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between gap-2">
+                <button
+                  onClick={() => downloadIcsFile({
+                    title: loc(evt.title),
+                    description: loc(evt.description),
+                    location: loc(evt.location),
+                    startDate: '20260912T100000Z',
+                    endDate: '20260912T200000Z'
+                  })}
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-cardona-burgundy hover:text-cardona-burgundyDark transition-colors active:scale-95 cursor-pointer"
+                  title={t('calendar', 'appleCal')}
+                >
+                  <CalendarPlus className="w-3.5 h-3.5 text-cardona-gold" />
+                  <span>{t('calendar', 'addToCalendar')}</span>
+                </button>
+                <button
+                  onClick={() => openGoogleCalendar({
+                    title: loc(evt.title),
+                    description: loc(evt.description),
+                    location: loc(evt.location),
+                    startDate: '20260912T100000Z',
+                    endDate: '20260912T200000Z'
+                  })}
+                  className="text-[11px] text-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
+                >
+                  Google Cal ↗
+                </button>
               </div>
             </div>
           ))}

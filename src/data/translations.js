@@ -57,7 +57,9 @@ export const translations = {
       historyTitle: 'Història i Significat:',
       attireTitle: 'Vestimenta i Atributs:',
       musicTitle: 'Música i Ball propi:',
-      sculptorTitle: 'Mestre Escultor / Taller:'
+      sculptorTitle: 'Mestre Escultor / Taller:',
+      shareFigure: 'Comparteix la fitxa',
+      shareCopied: 'Enllaç copiat!'
     },
     grallers: {
       tag: 'El Batec Sonor de la Festa',
@@ -120,6 +122,10 @@ export const translations = {
       filterMajor: 'Festa Major',
       filterTrobades: 'Trobades',
       filterSortides: 'Sortides Locals',
+      addToCalendar: 'Afegeix a l\'agenda',
+      googleCal: 'Google Calendar',
+      appleCal: 'Descarregar .ics (Apple / Android)',
+      bannerCalBtn: 'Guardar al teu calendari',
       collaBannerTag: 'Intercanvis i Trobades',
       collaBannerTitle: 'Sou una colla gegantera? Coordinem sortides per a l\'any que ve!',
       collaBannerText: 'Voleu convidar els Gegants de Cardona a la vostra vila o participar en les nostres cercaviles i a la Festa Major? Ja estem coordinant el calendari d\'actuacions i intercanvis de la propera temporada.',
@@ -267,7 +273,9 @@ export const translations = {
       historyTitle: 'Historia y Significado:',
       attireTitle: 'Vestimenta y Atributos:',
       musicTitle: 'Música y Baile propio:',
-      sculptorTitle: 'Maestro Escultor / Taller:'
+      sculptorTitle: 'Maestro Escultor / Taller:',
+      shareFigure: 'Compartir ficha',
+      shareCopied: '¡Enlace copiado!'
     },
     grallers: {
       tag: 'El Latido Sonoro de la Fiesta',
@@ -330,6 +338,10 @@ export const translations = {
       filterMajor: 'Fiesta Mayor',
       filterTrobades: 'Encuentros',
       filterSortides: 'Salidas Locales',
+      addToCalendar: 'Añadir a la agenda',
+      googleCal: 'Google Calendar',
+      appleCal: 'Descargar .ics (Apple / Android)',
+      bannerCalBtn: 'Guardar en tu calendario',
       collaBannerTag: 'Intercambios y Encuentros',
       collaBannerTitle: '¿Sois una colla gegantera? ¡Coordinemos salidas para el año que viene!',
       collaBannerText: '¿Queréis invitar a los Gigantes de Cardona a vuestro pueblo o participar en nuestros pasacalles y en la Fiesta Mayor? Ya estamos coordinando el calendario de actuaciones e intercambios de la próxima temporada.',
@@ -477,7 +489,9 @@ export const translations = {
       historyTitle: 'History & Significance:',
       attireTitle: 'Attire & Attributes:',
       musicTitle: 'Music & Signature Dance:',
-      sculptorTitle: 'Master Sculptor / Workshop:'
+      sculptorTitle: 'Master Sculptor / Workshop:',
+      shareFigure: 'Share Figure',
+      shareCopied: 'Link copied!'
     },
     grallers: {
       tag: 'The Living Beat of the Festival',
@@ -540,6 +554,10 @@ export const translations = {
       filterMajor: 'Main Festival',
       filterTrobades: 'Gatherings',
       filterSortides: 'Local Outings',
+      addToCalendar: 'Add to Calendar',
+      googleCal: 'Google Calendar',
+      appleCal: 'Download .ics (Apple / Android)',
+      bannerCalBtn: 'Save dates to calendar',
       collaBannerTag: 'Troupe Exchanges & Tours',
       collaBannerTitle: 'Are you a giant troupe? Let\'s coordinate joint outings for next year!',
       collaBannerText: 'Would you like to invite the Giants of Cardona to your town or take part in our parades and the Festa Major? We are already organizing our schedule and troupe exchanges for the upcoming season.',

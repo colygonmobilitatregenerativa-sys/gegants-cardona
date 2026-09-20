@@ -1,5 +1,6 @@
 import React from 'react';
 import { LanguageProvider } from './context/LanguageContext';
+import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AudioPlayer from './components/AudioPlayer';
@@ -19,25 +20,27 @@ import MobileBottomNav from './components/MobileBottomNav';
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen flex flex-col bg-[#faf8f5]">
-        <Navbar />
-        <main className="flex-grow">
-          <Hero />
-          <FiguresCatalog />
-          <AudioPlayer />
-          <Grallers />
-          <HistoryTimeline />
-          <RouteMap />
-          <EventsCalendar />
-          <CulturalQuiz />
-          <Shop />
-          <Gallery />
-          <VideoGallery />
-          <JoinUsForm />
-        </main>
-        <Footer />
-        <MobileBottomNav />
-      </div>
+      <CartProvider>
+        <div className="min-h-screen flex flex-col bg-[#faf8f5]">
+          <Navbar />
+          <main className="flex-grow">
+            <Hero />
+            <FiguresCatalog />
+            <AudioPlayer />
+            <Grallers />
+            <HistoryTimeline />
+            <RouteMap />
+            <EventsCalendar />
+            <CulturalQuiz />
+            <Shop />
+            <Gallery />
+            <VideoGallery />
+            <JoinUsForm />
+          </main>
+          <Footer />
+          <MobileBottomNav />
+        </div>
+      </CartProvider>
     </LanguageProvider>
   );
 }

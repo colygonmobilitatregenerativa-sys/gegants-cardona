@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart, MessageCircle, Store, Truck, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useCart } from '../context/CartContext';
 
 // Contactes oficials de la Colla per a comandes i xarxes
 const COLLA_WHATSAPP_PHONE = '34630037870';
@@ -9,8 +10,18 @@ const COLLA_INSTAGRAM_URL = 'https://www.instagram.com/gegantscardona';
 
 export default function Shop() {
   const { t, loc } = useLanguage();
-  const [cart, setCart] = useState([]);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { 
+    cart, 
+    setCart, 
+    isCartOpen, 
+    setIsCartOpen, 
+    addToCart, 
+    updateQuantity, 
+    removeFromCart, 
+    totalAmount, 
+    totalItemsCount 
+  } = useCart();
+
   const [orderComplete, setOrderComplete] = useState(false);
   const [instagramCopied, setInstagramCopied] = useState(false);
   const [customerName, setCustomerName] = useState('');
@@ -140,33 +151,7 @@ export default function Shop() {
     }
   ];
 
-  const addToCart = (product) => {
-    setCart(prev => {
-      const existing = prev.find(item => item.id === product.id);
-      if (existing) {
-        return prev.map(item => item.id === product.id ? { ...item, qty: item.qty + 1 } : item);
-      }
-      return [...prev, { ...product, qty: 1 }];
-    });
-    setIsCartOpen(true);
-  };
 
-  const updateQuantity = (id, delta) => {
-    setCart(prev => prev.map(item => {
-      if (item.id === id) {
-        const newQty = item.qty + delta;
-        return newQty > 0 ? { ...item, qty: newQty } : null;
-      }
-      return item;
-    }).filter(Boolean));
-  };
-
-  const removeFromCart = (id) => {
-    setCart(prev => prev.filter(item => item.id !== id));
-  };
-
-  const totalAmount = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-  const totalItemsCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
   const generateOrderText = () => {
     const itemsList = cart.map(it => `• ${it.qty}x ${loc(it.name)} (${(it.price * it.qty).toFixed(2)} €)`).join('\n');
