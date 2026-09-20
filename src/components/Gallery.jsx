@@ -142,39 +142,41 @@ const galleryPhotos = [
   {
     id: 8,
     title: {
-      ca: 'El Príncep Abdal·là davant el Castell',
-      es: 'El Príncipe Abdal·là ante el Castillo',
-      en: 'Prince Abdal·là before the Castle'
+      ca: 'El Príncep Abdal·là (Gegants Nous del Barri Nou)',
+      es: 'El Príncipe Abdal·là (Gigantes Nuevos del Barri Nou)',
+      en: 'Prince Abdal·là (New Giants of Barri Nou)'
     },
     category: {
-      ca: 'Barri Nou',
-      es: 'Barrio Nuevo',
-      en: 'Barri Nou'
+      ca: 'Barri Nou (2019)',
+      es: 'Barrio Nuevo (2019)',
+      en: 'Barri Nou (2019)'
     },
     image: './images/abdalla.jpg',
+    imagePosition: 'center 8%',
     description: {
-      ca: 'El noble guerrer sarraí de la llegenda de la Minyona amb la simitarra i l\'escut de la mitja lluna.',
-      es: 'El noble guerrero sarraceno de la leyenda de la Minyona con la cimitarra y el escudo de la media luna.',
-      en: 'The noble Saracen knight from the Minyona legend with curved scimitar and crescent shield.'
+      ca: 'El noble guerrer sarraí de la llegenda de la Minyona en la figura nova creada el 2019 per Toni Mujal.',
+      es: 'El noble guerrero sarraceno de la leyenda de la Minyona en la figura nueva creada en 2019 por Toni Mujal.',
+      en: 'The noble Saracen knight of the Minyona legend depicted in the new 2019 figure by Toni Mujal.'
     }
   },
   {
     id: 9,
     title: {
-      ca: 'La Geganta Adalés davant el Portal de Sant Miquel',
-      es: 'La Giganta Adalés ante el Portal de Sant Miquel',
-      en: 'The Adalés Giantess before Sant Miquel Gate'
+      ca: 'La Geganta Adalés (Gegants Nous del Barri Nou)',
+      es: 'La Giganta Adalés (Gigantes Nuevos del Barri Nou)',
+      en: 'The Adalés Giantess (New Giants of Barri Nou)'
     },
     category: {
-      ca: 'Barri Nou',
-      es: 'Barrio Nuevo',
-      en: 'Barri Nou'
+      ca: 'Barri Nou (2019)',
+      es: 'Barrio Nuevo (2019)',
+      en: 'Barri Nou (2019)'
     },
     image: './images/adales.jpg',
+    imagePosition: 'center 8%',
     description: {
-      ca: 'La noble dama del Barri Nou i Minyona de Cardona amb el vestit medieval verd maragda i el llibre a la mà.',
-      es: 'La noble dama del Barrio Nuevo y Minyona de Cardona con el vestido medieval verde esmeralda y el libro en mano.',
-      en: 'The noble lady of Barri Nou and Minyona of Cardona dressed in emerald medieval gown holding her book.'
+      ca: 'La donzella i Minyona de Cardona en la figura nova creada el 2019 per Toni Mujal amb trenes rosses i llibre.',
+      es: 'La doncella y Minyona de Cardona en la figura nueva creada en 2019 por Toni Mujal con trenzas rubias y libro.',
+      en: 'The maiden and Minyona of Cardona depicted in the new 2019 figure by Toni Mujal with blonde braids and book.'
     }
   },
   {

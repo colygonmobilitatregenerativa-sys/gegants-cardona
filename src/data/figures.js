@@ -396,14 +396,14 @@ export const figuresData = [
       en: 'Barri Nou Quarter'
     },
     year: {
-      ca: '1980 (renovació Toni Mujal, 2019)',
-      es: '1980 (renovación Toni Mujal, 2019)',
-      en: '1980 (renewed by Toni Mujal, 2019)'
+      ca: '1980 (Gegants originals) · 2019 (Gegants Nous de Toni Mujal)',
+      es: '1980 (Gigantes originales) · 2019 (Gigantes Nuevos de Toni Mujal)',
+      en: '1980 (Original giants) · 2019 (New Giants by Toni Mujal)'
     },
     sculptor: {
-      ca: 'Toni Mujal (taller cardoní)',
-      es: 'Toni Mujal (taller cardonino)',
-      en: 'Toni Mujal (Cardona workshop)'
+      ca: 'Toni Mujal (Gegants Nous de 2019) · Joan Orrit i Salvador Clotet (originals de 1980)',
+      es: 'Toni Mujal (Gigantes Nuevos de 2019) · Joan Orrit y Salvador Clotet (originales de 1980)',
+      en: 'Toni Mujal (2019 New Giants) · Joan Orrit & Salvador Clotet (1980 originals)'
     },
     height: '3,90 m',
     weight: '64 kg',
@@ -413,15 +413,16 @@ export const figuresData = [
       en: 'Cardona - Barri Nou'
     },
     image: './images/abdalla.jpg',
+    imagePosition: 'center 8%',
     description: {
-      ca: 'Protagonista de la immortal llegenda de la Torre de la Minyona del Castell de Cardona. Abdal·là, noble i valent príncep sarraí, va caure presoner d\'amor per la jove Adalés, la filla del vescomte de Cardona, desencadenant una de les històries d\'amor i tragèdia més profundes i estimades del patrimoni popular cardoní.',
-      es: 'Protagonista de la inmortal leyenda de la Torre de la Minyona del Castillo de Cardona. Abdal·là, noble y valiente príncipe sarraceno, cayó prisionero de amor por la joven Adalés, hija del vizconde de Cardona, desencadenando una de las historias de amor y tragedia más profundas y queridas del patrimonio popular de Cardona.',
-      en: 'Hero of the immortal legend of the Minyona Tower at Cardona Castle. Abdal·là, a noble and valiant Saracen prince, fell deeply in love with young Adalés, daughter of the Viscount of Cardona, sparking one of the most poignant romantic legends in Catalan folklore.'
+      ca: 'Protagonista de la immortal llegenda de la Torre de la Minyona del Castell de Cardona. Abdal·là, noble i valent príncep sarraí, va caure presoner d\'amor per la jove Adalés, la filla del vescomte de Cardona, desencadenant una de les històries d\'amor i tragèdia més profundes i estimades del patrimoni popular cardoní. Les noves figures, creades el 2019 per l\'escultor Toni Mujal, prenen el relleu de la parella original de 1980 per ballar amb esplendor als carrers de Cardona.',
+      es: 'Protagonista de la inmortal leyenda de la Torre de la Minyona del Castillo de Cardona. Abdal·là, noble y valiente príncipe sarraceno, cayó prisionero de amor por la joven Adalés, hija del vizconde de Cardona, desencadenando una de las historias de amor y tragedia más profundas y queridas del patrimonio popular de Cardona. Las nuevas figuras, creadas en 2019 por el escultor Toni Mujal, toman el relevo de la pareja original de 1980 para bailar con esplendor en las calles de Cardona.',
+      en: 'Hero of the immortal legend of the Minyona Tower at Cardona Castle. Abdal·là, a noble and valiant Saracen prince, fell deeply in love with young Adalés, daughter of the Viscount of Cardona, sparking one of the most poignant romantic legends in Catalan folklore. The new figures, crafted in 2019 by master sculptor Toni Mujal, succeed the 1980 originals to dance proudly through town.'
     },
     vestimenta: {
-      ca: 'Casc metàl·lic de guerrer amb turbant d\'or i teixits nobles, cota de malla i armadura daurada sobre túnica carmesí. Empunya amb fermesa a la mà dreta una imponent espasa corba o simitarra sarraïna, i porta al braç esquerre un gran escut rodó fosc ornat amb la mitja lluna daurada en relleu, dret i senyorial davant els murs del Castell de Cardona.',
-      es: 'Casco metálico de guerrero con turbante de oro y tejidos nobles, cota de malla y armadura dorada sobre túnica carmesí. Empuña con firmeza en su mano derecha una imponente espada curva o cimitarra sarracena, y lleva en el brazo izquierdo un gran escudo redondo oscuro adornado con la media luna dorada en relieve, erguido y señorial ante los muros del Castillo de Cardona.',
-      en: 'Warrior metal helm with golden turban and noble fabrics, chainmail and gold armor over a crimson tunic. He holds firmly in his right hand an imposing curved scimitar, and carries on his left arm a large round dark shield emblazoned with a golden crescent in relief.'
+      ca: 'Indumentària noble sarraïna dels Gegants Nous de 2019: turbant blanc amb remat cònic argentat al cim, cota d\'escates metàl·liques amb rivet daurat sobre túnica daurada, cinturó decoratiu amb xapa central que llueix l\'emblema del card, faixa blanca nuada, gran capa de vellut vermellós sobre les espatlles, espasa corba o punyal a la mà dreta i escut rodó metàl·lic de combat a l\'esquerra.',
+      es: 'Indumentaria noble sarracena de los Gigantes Nuevos de 2019: turbante blanco con remate cónico plateado en la cúspide, cota de escamas metálicas con ribete dorado sobre túnica dorada, cinturón decorativo con chapa central que luce el emblema del cardo, faja blanca anudada, gran capa de terciopelo rojizo sobre los hombros, espada curva o puñal en la mano derecha y escudo redondo metálico de combate en la izquierda.',
+      en: 'Noble Saracen attire of the 2019 New Giants: white turban with silver conical peak, metallic scale armor with gold border over golden tunic, decorative wide belt with central thistle emblem buckle, white knotted sash, rich red velvet cape, curved dagger in right hand and round battle shield on left arm.'
     },
     ball: {
       ca: 'Dansa Morisca i Ball dels Gegants Nous',
@@ -429,9 +430,9 @@ export const figuresData = [
       en: 'Moorish Dance and New Giants Dance'
     },
     badge: {
-      ca: 'Llegenda del Castell',
-      es: 'Leyenda del Castillo',
-      en: 'Castle Legend'
+      ca: 'Gegants Nous (2019)',
+      es: 'Gigantes Nuevos (2019)',
+      en: 'New Giants (2019)'
     },
     featured: true
   },
@@ -450,14 +451,14 @@ export const figuresData = [
       en: 'Barri Nou Quarter'
     },
     year: {
-      ca: '1980 (renovació Toni Mujal, 2019)',
-      es: '1980 (renovación Toni Mujal, 2019)',
-      en: '1980 (renewed by Toni Mujal, 2019)'
+      ca: '1980 (Gegants originals) · 2019 (Gegants Nous de Toni Mujal)',
+      es: '1980 (Gigantes originales) · 2019 (Gigantes Nuevos de Toni Mujal)',
+      en: '1980 (Original giants) · 2019 (New Giants by Toni Mujal)'
     },
     sculptor: {
-      ca: 'Toni Mujal (taller cardoní)',
-      es: 'Toni Mujal (taller cardonino)',
-      en: 'Toni Mujal (Cardona workshop)'
+      ca: 'Toni Mujal (Gegants Nous de 2019) · Joan Orrit i Salvador Clotet (originals de 1980)',
+      es: 'Toni Mujal (Gigantes Nuevos de 2019) · Joan Orrit y Salvador Clotet (originales de 1980)',
+      en: 'Toni Mujal (2019 New Giants) · Joan Orrit & Salvador Clotet (1980 originals)'
     },
     height: '3,78 m',
     weight: '59 kg',
@@ -467,15 +468,16 @@ export const figuresData = [
       en: 'Cardona - Barri Nou'
     },
     image: './images/adales.jpg',
+    imagePosition: 'center 8%',
     description: {
-      ca: 'La donzella Adalés (coneguda també en la tradició com la Minyona de Cardona) és la noble dama del Barri Nou i protagonista de la cèlebre llegenda de la Torre de la Minyona del Castell de Cardona. Filla del vescomte de Cardona, el seu amor secret pel príncep sarraí Abdal·là va desafiar les rivalitats de l\'època. Avui dia, tots dos gegants dansen lliures i units als carrers i places de la vila com a màxim símbol d\'amor, llibertat i concòrdia.',
-      es: 'La doncella Adalés (conocida también en la tradición como la Minyona de Cardona) es la noble dama del Barrio Nuevo y protagonista de la célebre leyenda de la Torre de la Minyona del Castillo de Cardona. Hija del vizconde de Cardona, su amor secreto por el príncipe sarraceno Abdal·là desafió las rivalidades de la época. Hoy en día, ambos gigantes danzan libres y unidos en las calles y plazas de la villa como máximo símbolo de amor, libertad y concordia.',
-      en: 'The maiden Adalés (traditionally known as the Minyona of Cardona) is the noble lady of Barri Nou and heroine of the celebrated Torre de la Minyona legend. Daughter of the Viscount of Cardona, her secret romance with Saracen prince Abdal·là defied contemporary rivalries. Today, both giants dance freely reunited in Cardona’s streets as a supreme symbol of love, freedom, and fellowship.'
+      ca: 'La donzella Adalés (coneguda també en la tradició com la Minyona de Cardona) és la noble dama del Barri Nou i protagonista de la cèlebre llegenda de la Torre de la Minyona del Castell de Cardona. Filla del vescomte de Cardona, el seu amor secret pel príncep sarraí Abdal·là va desafiar les rivalitats de l\'època. Avui dia, la parella renovada per Toni Mujal el 2019 dansa lliure i unida als carrers i places de la vila com a màxim símbol d\'amor, llibertat i concòrdia.',
+      es: 'La doncella Adalés (conocida también en la tradición como la Minyona de Cardona) es la noble dama del Barrio Nuevo y protagonista de la célebre leyenda de la Torre de la Minyona del Castillo de Cardona. Hija del vizconde de Cardona, su amor secreto por el príncipe sarraceno Abdal·là desafió las rivalidades de la época. Hoy en día, la pareja renovada por Toni Mujal en 2019 danza libre y unida en las calles y plazas de la villa como máximo símbolo de amor, libertad y concordia.',
+      en: 'The maiden Adalés (traditionally known as the Minyona of Cardona) is the noble lady of Barri Nou and heroine of the celebrated Torre de la Minyona legend. Daughter of the Viscount of Cardona, her secret romance with Saracen prince Abdal·là defied contemporary rivalries. Today, the new couple crafted by Toni Mujal in 2019 dances reunited through Cardona’s streets as a supreme symbol of love, freedom, and fellowship.'
     },
     vestimenta: {
-      ca: 'Pentinat clàssic amb llargues trenes castanyes daurades sobre les espatlles enllaçades amb vetes blanques i penjoll noble al coll. Llueix un vestit medieval d\'època en to verd maragda i vellut oliva amb amples mànigues acampanades, cosset ajustat amb sanefes d\'or i sanefa geomètrica de rombes a la faldilla. Sosté a la mà dreta un llibre enquadernat en cuir antic, capturada al costat d\'Abdal·là davant el portal gòtic de Sant Miquel de Cardona.',
-      es: 'Peinado clásico con largas trenzas castañas doradas sobre los hombros entrelazadas con cintas blancas y colgante noble en el cuello. Luce un vestido medieval de época en tono verde esmeralda y terciopelo oliva con amplias mangas acampanadas, corpiño ajustado con cenefas de oro y cenefa geométrica de rombos en la falda. Sostiene en la mano derecha un libro encuadernado en cuero antiguo, junto a Abdal·là ante el portal gótico de San Miguel de Cardona.',
-      en: 'Classic hairstyle featuring long golden-chestnut braids over her shoulders entwined with white ribbons and a noble pendant necklace. She wears an emerald-green and olive-velvet medieval dress with bell sleeves, fitted bodice with golden trim, and diamond-patterned skirt hem, holding an ancient leather-bound book in her right hand.'
+      ca: 'Indumentària medieval senyorial dels Gegants Nous de 2019: llargues trenes rosses daurades que cauen sobre les espatlles entrellaçades amb vetes blanques, perla al front, penjoll de medalla daurada al coll, sumptuós vestit medieval de domàs blau verdós combinat amb vellut verd oliva, amples mànigues acampanades, faixa prisada daurada a la cintura amb espieta romboïdal i llibre antic enquadernat en cuir amb tancaments a la mà dreta.',
+      es: 'Indumentaria medieval señorial de los Gigantes Nuevos de 2019: largas trenzas rubias doradas que caen sobre los hombros entrelazadas con cintas blancas, perla en la frente, colgante de medalla dorada al cuello, suntuoso vestido medieval de damasco azul verdoso combinado con terciopelo verde oliva, amplias mangas acampanadas, faja plisada dorada en la cintura con mirilla romboidal y libro antiguo encuadernado en cuero con cierres en la mano derecha.',
+      en: 'Noble medieval attire of the 2019 New Giants: long golden-blonde braids draped over shoulders entwined with white ribbons, pearl forehead jewel, gold medallion necklace, magnificent blue-green damask and olive-velvet gown with flared sleeves, gold pleated sash with diamond viewing grille, and leather-bound book with clasps held in right hand.'
     },
     ball: {
       ca: 'Dansa d\'Adalés i Abdal·là i Vals del Barri Nou',
@@ -483,9 +485,9 @@ export const figuresData = [
       en: 'Dance of Adalés & Abdal·là and Barri Nou Waltz'
     },
     badge: {
-      ca: 'Llegenda del Castell',
-      es: 'Leyenda del Castillo',
-      en: 'Castle Legend'
+      ca: 'Gegants Nous (2019)',
+      es: 'Gigantes Nuevos (2019)',
+      en: 'New Giants (2019)'
     },
     featured: true
   },
