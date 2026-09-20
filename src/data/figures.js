@@ -383,7 +383,7 @@ export const figuresData = [
   },
   {
     id: 'abdalla',
-    name: 'Abdal·là',
+    name: 'Abdal·là (Gegant Nou)',
     subtitle: {
       ca: 'Príncep Sarraí / Barri Nou',
       es: 'Príncipe Sarraceno / Barrio Nuevo',
@@ -396,9 +396,9 @@ export const figuresData = [
       en: 'Barri Nou Quarter'
     },
     year: {
-      ca: '1980 (Gegants originals) · 2019 (Gegants Nous de Toni Mujal)',
-      es: '1980 (Gigantes originales) · 2019 (Gigantes Nuevos de Toni Mujal)',
-      en: '1980 (Original giants) · 2019 (New Giants by Toni Mujal)'
+      ca: '2019 (Gegants Nous de Toni Mujal) · 1980 (originals)',
+      es: '2019 (Gigantes Nuevos de Toni Mujal) · 1980 (originales)',
+      en: '2019 (New Giants by Toni Mujal) · 1980 (originals)'
     },
     sculptor: {
       ca: 'Toni Mujal (Gegants Nous de 2019) · Joan Orrit i Salvador Clotet (originals de 1980)',
@@ -430,15 +430,15 @@ export const figuresData = [
       en: 'Moorish Dance and New Giants Dance'
     },
     badge: {
-      ca: 'Gegants Nous (2019)',
-      es: 'Gigantes Nuevos (2019)',
-      en: 'New Giants (2019)'
+      ca: 'Gegant Nou (2019)',
+      es: 'Gigante Nuevo (2019)',
+      en: 'New Giant (2019)'
     },
     featured: true
   },
   {
     id: 'adales',
-    name: 'Adalés',
+    name: 'Adalés (Geganta Nova)',
     subtitle: {
       ca: 'La Minyona de Cardona / Barri Nou',
       es: 'La Minyona de Cardona / Barrio Nuevo',
@@ -451,9 +451,9 @@ export const figuresData = [
       en: 'Barri Nou Quarter'
     },
     year: {
-      ca: '1980 (Gegants originals) · 2019 (Gegants Nous de Toni Mujal)',
-      es: '1980 (Gigantes originales) · 2019 (Gigantes Nuevos de Toni Mujal)',
-      en: '1980 (Original giants) · 2019 (New Giants by Toni Mujal)'
+      ca: '2019 (Gegants Nous de Toni Mujal) · 1980 (originals)',
+      es: '2019 (Gigantes Nuevos de Toni Mujal) · 1980 (originales)',
+      en: '2019 (New Giants by Toni Mujal) · 1980 (originals)'
     },
     sculptor: {
       ca: 'Toni Mujal (Gegants Nous de 2019) · Joan Orrit i Salvador Clotet (originals de 1980)',
@@ -485,12 +485,123 @@ export const figuresData = [
       en: 'Dance of Adalés & Abdal·là and Barri Nou Waltz'
     },
     badge: {
-      ca: 'Gegants Nous (2019)',
-      es: 'Gigantes Nuevos (2019)',
-      en: 'New Giants (2019)'
+      ca: 'Geganta Nova (2019)',
+      es: 'Giganta Nueva (2019)',
+      en: 'New Giantess (2019)'
     },
     featured: true
   },
+  {
+    id: 'abdalla-vell',
+    name: 'Abdal·là (Gegant Vell)',
+    subtitle: {
+      ca: 'Príncep Sarraí / Barri Nou (Figura Històrica)',
+      es: 'Príncipe Sarraceno / Barrio Nuevo (Figura Histórica)',
+      en: 'Saracen Prince / Barri Nou (Historic Figure)'
+    },
+    category: 'barri-nou',
+    categoryLabel: {
+      ca: 'Barri Nou',
+      es: 'Barrio Nuevo',
+      en: 'Barri Nou Quarter'
+    },
+    year: {
+      ca: '1980 (Estrena per la festivitat de Corpus)',
+      es: '1980 (Estreno por la festividad de Corpus)',
+      en: '1980 (Debut for Corpus Christi festivities)'
+    },
+    sculptor: {
+      ca: 'Joan Orrit Morist i Salvador Clotet Bastardas',
+      es: 'Joan Orrit Morist y Salvador Clotet Bastardas',
+      en: 'Joan Orrit Morist & Salvador Clotet Bastardas'
+    },
+    height: '3,85 m',
+    weight: '62 kg',
+    location: {
+      ca: 'Cardona - Casa dels Gegants / Barri Nou',
+      es: 'Cardona - Casa dels Gegants / Barrio Nuevo',
+      en: 'Cardona - Giants House / Barri Nou'
+    },
+    image: './images/abdalla-vell.jpg',
+    imagePosition: 'center 8%',
+    description: {
+      ca: 'L\'Abdal·là Vell és la figura original creada el 1980 per Joan Orrit i Salvador Clotet per a la festivitat de Corpus, representant el príncep sarraí protagonista de la llegenda de la Torre de la Minyona del Castell de Cardona. Durant gairebé quatre dècades va ballar pels carrers i places de Cardona amb la seva estimada Adalés al so de la Dansa Morisca de Joan Roure. Amb l\'arribada de les rèpliques de 2019 de Toni Mujal, la figura original es conserva i s\'exposa a la Casa dels Gegants com a patrimoni viu de la vila.',
+      es: 'El Abdal·là Vell es la figura original creada en 1980 por Joan Orrit y Salvador Clotet para la festividad de Corpus, representando al príncipe sarraceno protagonista de la leyenda de la Torre de la Minyona del Castillo de Cardona. Durante casi cuatro décadas bailó por las calles y plazas de Cardona con su amada Adalés al son de la Dansa Morisca de Joan Roure. Con la llegada de las réplicas de 2019 de Toni Mujal, la figura original se conserva y expone en la Casa dels Gegants como patrimonio vivo de la villa.',
+      en: 'The Abdal·là Vell is the original 1980 figure created by Joan Orrit and Salvador Clotet for the Corpus Christi festivities, depicting the Saracen prince of the Torre de la Minyona legend at Cardona Castle. For nearly four decades, he danced through the streets of Cardona alongside his beloved Adalés to the sound of Joan Roure\'s Moorish Dance. Following the 2019 replicas by Toni Mujal, the original figure is preserved and displayed at the Casa dels Gegants as town heritage.'
+    },
+    vestimenta: {
+      ca: 'Indumentària noble sarraïna històrica de 1980: gran turbant blanc amb plecs tradicionals, cota de malla i armadura amb rivetes daurades sobre túnica daurada/ocre, capa vermella subjectada al pit amb fermalls, espasa corba tradicional (simitarra) enfundada al cinyell i faixa verda i daurada nuada a la cintura.',
+      es: 'Indumentaria noble sarracena histórica de 1980: gran turbante blanco con pliegues tradicionales, cota de malla y armadura con ribetes dorados sobre túnica dorada/ocre, capa roja sujeta al pecho con broches, espada curva tradicional (cimitarra) enfundada en el talabarte y faja verde y dorada anudada a la cintura.',
+      en: 'Historic 1980 noble Saracen attire: large traditional draped white turban, mail armor and scale tunic with gold trim over golden/ochre gown, red cape fastened with chest brooches, scimitar curved sword at his hip, and green and gold sash knotted at the waist.'
+    },
+    ball: {
+      ca: 'Dansa Morisca del Barri Nou (Joan Roure i Jané, 1980)',
+      es: 'Danza Morisca del Barrio Nuevo (Joan Roure i Jané, 1980)',
+      en: 'Moorish Dance of Barri Nou (Joan Roure i Jané, 1980)'
+    },
+    badge: {
+      ca: 'Gegant Vell (1980)',
+      es: 'Gigante Viejo (1980)',
+      en: 'Historic Giant (1980)'
+    },
+    featured: true
+  },
+  {
+    id: 'adales-vella',
+    name: 'Adalés (Geganta Vella)',
+    subtitle: {
+      ca: 'La Minyona de Cardona / Barri Nou (Figura Històrica)',
+      es: 'La Minyona de Cardona / Barrio Nuevo (Figura Histórica)',
+      en: 'The Minyona of Cardona / Barri Nou (Historic Figure)'
+    },
+    category: 'barri-nou',
+    categoryLabel: {
+      ca: 'Barri Nou',
+      es: 'Barrio Nuevo',
+      en: 'Barri Nou Quarter'
+    },
+    year: {
+      ca: '1980 (Estrena per la festivitat de Corpus)',
+      es: '1980 (Estreno por la festividad de Corpus)',
+      en: '1980 (Debut for Corpus Christi festivities)'
+    },
+    sculptor: {
+      ca: 'Joan Orrit Morist i Salvador Clotet Bastardas',
+      es: 'Joan Orrit Morist y Salvador Clotet Bastardas',
+      en: 'Joan Orrit Morist & Salvador Clotet Bastardas'
+    },
+    height: '3,75 m',
+    weight: '58 kg',
+    location: {
+      ca: 'Cardona - Casa dels Gegants / Barri Nou',
+      es: 'Cardona - Casa dels Gegants / Barrio Nuevo',
+      en: 'Cardona - Giants House / Barri Nou'
+    },
+    image: './images/adales-vella.jpg',
+    imagePosition: 'center 8%',
+    description: {
+      ca: 'L\'Adalés Vella és la geganta original construïda l\'any 1980 per Joan Orrit i Salvador Clotet, donant vida a la donzella de la llegenda de la Torre de la Minyona del Castell de Cardona. Durant gairebé quatre dècades va fascinar grans i petits ballant el cèlebre Vals d\'Adalés compost pel mestre Joan Roure. Després de la construcció dels Gegants Nous de 2019, aquesta estimada figura històrica gaudeix d\'un lloc d\'honor a la Casa dels Gegants de Cardona.',
+      es: 'La Adalés Vella es la giganta original construida en el año 1980 por Joan Orrit y Salvador Clotet, dando vida a la doncella de la leyenda de la Torre de la Minyona del Castillo de Cardona. Durante casi cuatro décadas fascinó a grandes y pequeños bailando el célebre Vals de Adalés compuesto por el maestro Joan Roure. Tras la construcción de los Gigantes Nuevos de 2019, esta entrañable figura histórica disfruta de un lugar de honor en la Casa dels Gegants de Cardona.',
+      en: 'The Adalés Vella is the original giantess built in 1980 by Joan Orrit and Salvador Clotet, bringing to life the maiden of the Torre de la Minyona legend at Cardona Castle. For nearly four decades she enchanted audiences dancing the famous Vals d\'Adalés composed by maestro Joan Roure. Since the creation of the 2019 New Giants, this beloved historical figure holds a place of honor at the Casa dels Gegants.'
+    },
+    vestimenta: {
+      ca: 'Indumentària clàssica senyorial de 1980: llarga cabellera bruna amb dues trenes que baixen pel pit, diadema i collaret de perles, vestit de ras setinat en to verd clar menta amb sanefes florals brodades i mànigues bombades, mantellina o xal sobre les espatlles, mocador de puntes a la mà esquerra i delicat ram de flors a la dreta.',
+      es: 'Indumentaria clásica señorial de 1980: larga melena morena con dos trenzas que descienden por el pecho, diadema y collar de perlas, vestido de raso satinado en tono verde claro menta con cenefas florales bordadas y mangas abullonadas, mantilla o chal sobre los hombros, pañuelo de encajes en la mano izquierda y delicado ramo de flores en la derecha.',
+      en: 'Classic noble 1980 attire: long brunette hair styled into two braids falling over the chest, pearl tiara and necklace, pale mint-green satin gown with embroidered floral trim and puffed sleeves, delicate shawl over shoulders, lace handkerchief in left hand and bouquet of flowers in right.'
+    },
+    ball: {
+      ca: 'Vals d\'Adalés i Dansa del Barri Nou (Joan Roure i Jané, 1980)',
+      es: 'Vals de Adalés y Danza del Barrio Nuevo (Joan Roure i Jané, 1980)',
+      en: 'Vals d\'Adalés and Barri Nou Dance (Joan Roure i Jané, 1980)'
+    },
+    badge: {
+      ca: 'Geganta Vella (1980)',
+      es: 'Giganta Vieja (1980)',
+      en: 'Historic Giantess (1980)'
+    },
+    featured: true
+  },
+
   {
     id: 'dimoni-raval',
     name: 'El Dimoni del Raval',

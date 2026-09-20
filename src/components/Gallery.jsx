@@ -277,6 +277,46 @@ const galleryPhotos = [
       es: 'La máxima figura del bestiario festivo coronada de oro y con el escudo esculpido en madera auténtica del pino tricentenario del Rèvol.',
       en: 'The supreme festive bestiary figure crowned in gold and bearing the crest carved from the 300-year-old Rèvol Pine.'
     }
+  },
+  {
+    id: 15,
+    title: {
+      ca: 'El Príncep Abdal·là (Gegants Vells del Barri Nou)',
+      es: 'El Príncipe Abdal·là (Gigantes Viejos del Barri Nou)',
+      en: 'Prince Abdal·là (Historic Giants of Barri Nou)'
+    },
+    category: {
+      ca: 'Barri Nou (1980)',
+      es: 'Barrio Nuevo (1980)',
+      en: 'Barri Nou (1980)'
+    },
+    image: './images/abdalla-vell.jpg',
+    imagePosition: 'center 8%',
+    description: {
+      ca: 'La figura original de 1980 creada per Joan Orrit i Salvador Clotet abillada com a príncep sarraí amb turbant blanc i simitarra.',
+      es: 'La figura original de 1980 creada por Joan Orrit y Salvador Clotet ataviada como príncipe sarraceno con turbante blanco y cimitarra.',
+      en: 'The original 1980 figure created by Joan Orrit and Salvador Clotet dressed as the Saracen prince with white turban and scimitar.'
+    }
+  },
+  {
+    id: 16,
+    title: {
+      ca: 'La Geganta Adalés (Gegants Vells del Barri Nou)',
+      es: 'La Giganta Adalés (Gigantes Viejos del Barri Nou)',
+      en: 'The Adalés Giantess (Historic Giants of Barri Nou)'
+    },
+    category: {
+      ca: 'Barri Nou (1980)',
+      es: 'Barrio Nuevo (1980)',
+      en: 'Barri Nou (1980)'
+    },
+    image: './images/adales-vella.jpg',
+    imagePosition: 'center 8%',
+    description: {
+      ca: 'La dama noble i Minyona de Cardona original de 1980 amb el vestit verd menta de ras setinat, trenes brunes i ram de flors.',
+      es: 'La dama noble y Minyona de Cardona original de 1980 con el vestido verde menta de raso satinado, trenzas morenas y ramo de flores.',
+      en: 'The original 1980 noble lady and Minyona of Cardona with mint-green satin gown, brunette braids, and flower bouquet.'
+    }
   }
 ];
 
