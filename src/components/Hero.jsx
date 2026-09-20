@@ -20,6 +20,26 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+        {/* Escut Oficial de Cardona */}
+        <div className="flex justify-center mb-6">
+          <div className="relative group">
+            {/* Ambient gold glow */}
+            <div className="absolute -inset-3 bg-gradient-to-r from-cardona-gold/30 via-amber-400/40 to-cardona-gold/30 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Medalló heràldic */}
+            <div 
+              className="relative p-3 sm:p-3.5 rounded-3xl bg-cardona-burgundyDark/85 backdrop-blur-md border border-cardona-gold/40 shadow-[0_12px_36px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-cardona-gold flex items-center justify-center"
+              title="Escut de Cardona: De gules, un card de tres flors d'or"
+            >
+              <img
+                src="./escut-cardona.svg"
+                alt="Escut Oficial de Cardona"
+                className="w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardona-gold/15 border border-cardona-gold/40 text-cardona-goldLight text-xs sm:text-sm font-medium mb-6 backdrop-blur-sm shadow-inner">
           <Sparkles className="w-4 h-4 text-cardona-gold animate-pulse" />
