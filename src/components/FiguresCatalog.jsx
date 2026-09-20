@@ -65,23 +65,24 @@ export default function FiguresCatalog() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 flex flex-col group"
             >
               {/* Image with overlay badge */}
-              <div className="relative h-72 overflow-hidden bg-cardona-burgundyDark">
+              <div className="relative h-80 sm:h-84 overflow-hidden bg-cardona-burgundyDark">
                 <img
                   src={fig.image}
                   alt={fig.name}
+                  style={{ objectPosition: fig.imagePosition || 'center top' }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent pointer-events-none" />
                 
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold/90 text-cardona-burgundyDark backdrop-blur-sm shadow">
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cardona-gold text-cardona-burgundyDark backdrop-blur-sm shadow-md">
                     <Sparkles className="w-3 h-3" />
                     {loc(fig.badge)}
                   </span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 text-white">
+                <div className="absolute bottom-4 left-4 right-4 text-white z-10">
                   <span className="text-xs font-semibold tracking-wider text-cardona-gold uppercase block">
                     {loc(fig.categoryLabel)}
                   </span>
