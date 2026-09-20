@@ -493,55 +493,56 @@ export const figuresData = [
     id: 'gegants-coromina',
     name: 'Gegants de la Coromina',
     subtitle: {
-      ca: 'Barri miner i saliner de Cardona',
-      es: 'Barrio minero y salinero de Cardona',
-      en: 'Mining and Salt Quarter of Cardona'
+      ca: 'Joan de Serrallonga i Margarida (Barri de la Coromina)',
+      es: 'Joan de Serrallonga y Margarida (Barrio de la Coromina)',
+      en: 'Joan de Serrallonga & Margarida (La Coromina Quarter)'
     },
-    category: 'altres',
+    category: 'barri-coromina',
     categoryLabel: {
-      ca: 'Altres Barris',
-      es: 'Otros Barrios',
-      en: 'Other Quarters'
+      ca: 'Barri de la Coromina',
+      es: 'Barrio de la Coromina',
+      en: 'La Coromina Quarter'
     },
     year: {
-      ca: 'Tradició popular consolidada',
-      es: 'Tradición popular consolidada',
-      en: 'Longstanding Folk Tradition'
+      ca: '1969-1970 (Estrena oficial: Festa Major de la Coromina 1970)',
+      es: '1969-1970 (Estreno oficial: Fiesta Mayor de la Coromina 1970)',
+      en: '1969-1970 (Official debut: La Coromina Festival 1970)'
     },
     sculptor: {
-      ca: 'Artesans locals de Cardona',
-      es: 'Artesanos locales de Cardona',
-      en: 'Local Cardona Craftsmen'
+      ca: 'Manel Casserres i Boix (plànols, caps i mans) i iniciativa veïnal · Modistes: Paquita Muixí i Àngela Godino',
+      es: 'Manel Casserres i Boix (planos, cabezas y manos) e iniciativa vecinal · Modistas: Paquita Muixí y Àngela Godino',
+      en: 'Manel Casserres i Boix (design, heads & hands) & local neighborhood initiative · Dressmakers: Paquita Muixí & Àngela Godino'
     },
-    height: '3,60 m',
-    weight: '52 kg',
+    height: '3,55 m (Joan) / 3,45 m (Margarida)',
+    weight: '52 kg / 48 kg',
     location: {
       ca: 'Cardona - Barri de la Coromina',
       es: 'Cardona - Barrio de la Coromina',
       en: 'Cardona - La Coromina Quarter'
     },
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80',
+    image: './images/gegants-coromina.jpg',
+    imagePosition: 'center 10%',
     description: {
-      ca: 'Figures que reten homenatge al veïnat obrer i a les famílies mineres de la vall salina de Cardona. Aporten alegria i empenta popular a totes les cercaviles de la Festa Major.',
-      es: 'Figuras que rinden homenaje a los vecinos obreros y a las familias mineras del valle salino de Cardona. Aportan alegría y fuerza popular a todos los pasacalles de la Fiesta Mayor.',
-      en: 'Giant figures honoring the working-class residents and mining families of Cardona’s salt valley, bringing vibrant popular energy to every festival parade.'
+      ca: 'Els Gegants de la Coromina representen la llegendària figura del cèlebre bandoler català del segle XVII Joan de Serrallonga i la seva muller, Margarida de Serrallonga (també citada com a Leonor de Sicília en algunes fonts). Construïts entre 1969 i 1970 per iniciativa i recaptació popular dels veïns del barri miner i obrer de la Coromina, van comptar amb la mestria de l\'escultor solsoní Manel Casserres i Boix —qui en va modelar els caps i les mans prenent com a referència els històrics Gegants del Pi de Barcelona. Es van presentar oficialment el diumenge de la Festa Major de la Coromina de 1970 acompanyats pel Drac i el Bou, i han celebrat més de mig segle de vida aportant caràcter, orgull i tradició popular a les festes de Cardona.',
+      es: 'Los Gigantes de la Coromina representan la mítica figura del célebre bandolero catalán del siglo XVII Joan de Serrallonga y su esposa, Margarida de Serrallonga (también citada como Leonor de Sicilia en algunas fuentes). Construidos entre 1969 y 1970 por iniciativa y suscripción popular de los vecinos del barrio minero y obrero de la Coromina, contaron con la maestría del escultor solsonense Manel Casserres i Boix —quien modeló las cabezas y manos tomando como referencia los históricos Gigantes del Pi de Barcelona. Se presentaron oficialmente el domingo de la Fiesta Mayor de la Coromina de 1970 acompañados por el Dragón y el Buey, y han celebrado más de medio siglo de vida aportando carácter, arraigo y tradición popular a las fiestas de Cardona.',
+      en: 'The Giants of La Coromina depict the legendary 17th-century Catalan bandit Joan de Serrallonga and his wife Margarida de Serrallonga (also referred to as Leonor de Sicília in some records). Crafted between 1969 and 1970 through the fundraising initiative of the mining community of La Coromina, they were created with the guidance of master sculptor Manel Casserres i Boix from Solsona, who sculpted their heads and hands inspired by the historic Pi Giants of Barcelona. They officially debuted at the 1970 Coromina Festival alongside the Dragon and the Bull, celebrating more than fifty years of proud festive tradition in Cardona.'
     },
     vestimenta: {
-      ca: 'Roba tradicional catalana amb motius saliners i faixes de color viu.',
-      es: 'Indumentaria tradicional catalana con motivos salineros y fajas de color vivo.',
-      en: 'Traditional Catalan festive attire with salt-mining motifs and vibrant sashes.'
+      ca: 'Indumentària tradicional catalana renovada per al seu 50è aniversari (2021). En Joan llueix barretina vermella, barba i bigoti foscos, camisa blanca amb coll obert, armilla de vellut carmesí amb vius vermells i tancaments tradicionals de passamaneria, faixa vermella viva, corretja de bandoler a la mà dreta i faldó de vellut amb espieta. La Margarida llueix pentinat recollit amb gandalla i llaç de vellut negre, arracades vermelles de gota, cosset d\'estampat floral primaveral, gran mantó de puntes i blonda blanca amb serrells subjectat amb fermall d\'orfebreria antiga, davantal de vellut negre amb rivet calat, mitenes negres als braços, faldilla prisada verd fosc i ramet de flors silvestres seques i espígol.',
+      es: 'Indumentaria tradicional catalana renovada con motivo de su 50 aniversario (2021). Joan luce barretina roja, barba y bigote oscuros, camisa blanca con cuello abierto, chaleco de terciopelo carmesí con vivos rojos y botones tradicionales de pasamanería, faja roja brillante, correa en mano derecha y faldón de terciopelo con mirilla. Margarida luce cabello recogido con redecilla y lazo de terciopelo negro, pendientes rojos en gota, corpiño de estampado floral primaveral, gran mantón de encaje y blonda blanca con flecos cerrado con broche de orfebrería antigua, delantal de terciopelo negro ribeteado, mitones negros en los brazos, falda plisada verde oscuro y ramo de flores silvestres y lavanda.',
+      en: 'Traditional Catalan festive attire renewed for their 50th anniversary (2021). Joan wears a classic red barretina cap, dark beard and mustache, open-collar white shirt, crimson velvet waistcoat with vibrant red piping and passementerie fasteners, bright red sash, strap in hand, and velvet gown with viewing grille. Margarida features hair gathered in a black velvet snood, red drop earrings, floral bodice, exquisite white lace fringe shawl secured with an antique brooch, black velvet apron, black lace fingerless mitts, pleated dark green skirt, and a wildflower and lavender bouquet.'
     },
     ball: {
-      ca: 'Ball de Plaça de la Coromina',
-      es: 'Baile de Plaza de la Coromina',
-      en: 'La Coromina Square Dance'
+      ca: 'Ball de Gegants de la Coromina (Música pròpia composta pel veí Antoni Ribas)',
+      es: 'Baile de Gigantes de la Coromina (Música propia compuesta por el vecino Antoni Ribas)',
+      en: 'La Coromina Giants Dance (Original music composed by local neighbor Antoni Ribas)'
     },
     badge: {
-      ca: 'Tradició Salinera',
-      es: 'Tradición Salinera',
-      en: 'Salt Mining Tradition'
+      ca: 'Joan i Margarida (1969)',
+      es: 'Joan y Margarida (1969)',
+      en: 'Joan & Margarida (1969)'
     },
-    featured: false
+    featured: true
   },
   {
     id: 'nans-mercat',

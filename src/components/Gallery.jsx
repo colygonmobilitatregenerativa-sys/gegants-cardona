@@ -215,6 +215,26 @@ const galleryPhotos = [
       es: 'La tradicional plaza con los tablados de madera y el vibrante ambiente festivo durante la Fiesta Mayor.',
       en: 'The historic square with wooden railings packed with spectators during Cardona’s Major Festival.'
     }
+  },
+  {
+    id: 12,
+    title: {
+      ca: 'Els Gegants de la Coromina: Joan de Serrallonga i Margarida',
+      es: 'Los Gigantes de la Coromina: Joan de Serrallonga y Margarida',
+      en: 'The Giants of La Coromina: Joan de Serrallonga & Margarida'
+    },
+    category: {
+      ca: 'La Coromina (1970)',
+      es: 'La Coromina (1970)',
+      en: 'La Coromina (1970)'
+    },
+    image: './images/gegants-coromina.jpg',
+    imagePosition: 'center 10%',
+    description: {
+      ca: 'La parella de gegants del barri miner de la Coromina, creats per Manel Casserres l\'any 1969 i batejats amb els noms del cèlebre bandoler català i la seva muller.',
+      es: 'La pareja de gigantes del barrio minero de la Coromina, creados por Manel Casserres en 1969 y bautizados con los nombres del célebre bandolero catalán y su esposa.',
+      en: 'The giant couple of the mining quarter of La Coromina, created by Manel Casserres in 1969 depicting the celebrated Catalan bandit and his wife.'
+    }
   }
 ];
 

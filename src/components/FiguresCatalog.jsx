@@ -16,6 +16,7 @@ export default function FiguresCatalog() {
     { id: 'sant-miquel', label: t('catalog', 'filterSantMiquel') },
     { id: 'barri-nou', label: t('catalog', 'filterNou') },
     { id: 'barri-raval', label: t('catalog', 'filterRaval') },
+    { id: 'barri-coromina', label: t('catalog', 'filterCoromina') },
     { id: 'capgrossos', label: t('catalog', 'filterCapgrossos') },
   ];
 
