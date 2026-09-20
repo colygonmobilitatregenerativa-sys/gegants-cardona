@@ -14,6 +14,8 @@ export const translations = {
       videos: 'Vídeos',
       contacte: 'Fes-te Geganer',
       joinBtn: 'Uneix-te a la Colla',
+      mes: 'Més',
+      menuTitle: 'Menú & Seccions',
     },
     hero: {
       badge: 'Patrimoni Festiu i Cultural de Cardona',
@@ -222,6 +224,8 @@ export const translations = {
       videos: 'Vídeos',
       contacte: 'Hazte Geganer',
       joinBtn: 'Únete a la Colla',
+      mes: 'Más',
+      menuTitle: 'Menú & Secciones',
     },
     hero: {
       badge: 'Patrimonio Festivo y Cultural de Cardona',
@@ -430,6 +434,8 @@ export const translations = {
       videos: 'Videos',
       contacte: 'Join Us',
       joinBtn: 'Join the Troupe',
+      mes: 'More',
+      menuTitle: 'Menu & Sections',
     },
     hero: {
       badge: 'Festive & Cultural Heritage of Cardona',

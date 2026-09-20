@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-cardona-burgundyDark text-white pt-16 pb-12 border-t-2 border-cardona-gold/30">
+    <footer className="bg-cardona-burgundyDark text-white pt-16 pb-28 lg:pb-12 border-t-2 border-cardona-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Col 1: Brand & Slogan */}

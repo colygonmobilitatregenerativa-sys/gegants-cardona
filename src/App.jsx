@@ -14,6 +14,7 @@ import Gallery from './components/Gallery';
 import VideoGallery from './components/VideoGallery';
 import JoinUsForm from './components/JoinUsForm';
 import Footer from './components/Footer';
+import MobileBottomNav from './components/MobileBottomNav';
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <JoinUsForm />
         </main>
         <Footer />
+        <MobileBottomNav />
       </div>
     </LanguageProvider>
   );
