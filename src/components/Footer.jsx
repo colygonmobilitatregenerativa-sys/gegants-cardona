@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Heart, ArrowUp } from 'lucide-react';
+import { Shield, Heart, ArrowUp, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
@@ -76,6 +76,12 @@ export default function Footer() {
               <li>
                 <a href="https://open.spotify.com/intl-es/album/6W9HqagD6qrbTnailiDLJw" target="_blank" rel="noopener noreferrer" className="text-[#1ed760] hover:text-white flex items-center gap-1.5 transition-colors font-medium">
                   <span>{t('footer', 'spotifyLink')}</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gegantscardona" target="_blank" rel="noopener noreferrer" className="text-[#e1306c] hover:text-white flex items-center gap-1.5 transition-colors font-medium">
+                  <Instagram className="w-4 h-4 text-[#e1306c]" />
+                  <span>{t('footer', 'instagramLink')}</span>
                 </a>
               </li>
             </ul>

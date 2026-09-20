@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart, MessageCircle, Store, Truck } from 'lucide-react';
+import { ShoppingBag, Plus, Minus, Trash2, CheckCircle2, X, Sparkles, Heart, MessageCircle, Store, Truck, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-// Telèfon de contacte directe per a comandes de marxandatge via WhatsApp (test actual: usuari)
+// Contactes oficials de la Colla per a comandes i xarxes
 const COLLA_WHATSAPP_PHONE = '34630037870';
+const COLLA_INSTAGRAM_DM = 'https://ig.me/m/gegantscardona';
+const COLLA_INSTAGRAM_URL = 'https://www.instagram.com/gegantscardona';
 
 export default function Shop() {
   const { t, loc } = useLanguage();
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  const [instagramCopied, setInstagramCopied] = useState(false);
   const [customerName, setCustomerName] = useState('');
   const [deliveryType, setDeliveryType] = useState('recollida');
   const [notes, setNotes] = useState('');
@@ -165,9 +168,7 @@ export default function Shop() {
   const totalAmount = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const totalItemsCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
-  const handleCheckout = () => {
-    if (cart.length === 0) return;
-
+  const generateOrderText = () => {
     const itemsList = cart.map(it => `• ${it.qty}x ${loc(it.name)} (${(it.price * it.qty).toFixed(2)} €)`).join('\n');
     const deliveryLabel = deliveryType === 'recollida'
       ? t('shop', 'deliveryPickup')
@@ -184,7 +185,12 @@ export default function Shop() {
     }
 
     text += `\n\nCom podem fer el pagament per Bizum i coordinar l'entrega? Moltes gràcies!`;
+    return text;
+  };
 
+  const handleWhatsAppCheckout = () => {
+    if (cart.length === 0) return;
+    const text = generateOrderText();
     const url = `https://wa.me/${COLLA_WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
     setOrderComplete(true);
@@ -195,6 +201,20 @@ export default function Shop() {
       setCustomerName('');
       setNotes('');
     }, 3500);
+  };
+
+  const handleInstagramCheckout = async () => {
+    if (cart.length === 0) return;
+    const text = generateOrderText();
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      }
+    } catch (e) {
+      console.warn('Clipboard write error', e);
+    }
+    setInstagramCopied(true);
+    window.open(COLLA_INSTAGRAM_DM, '_blank');
   };
 
   return (
@@ -279,6 +299,32 @@ export default function Shop() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Instagram Colla Banner */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-950/5 via-pink-900/5 to-amber-900/5 border border-pink-200/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#833ab4] via-[#fd1d1d] to-[#fcb045] flex items-center justify-center text-white shadow-md shrink-0">
+              <Instagram className="w-7 h-7" />
+            </div>
+            <div>
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-cardona-burgundyDark">
+                {t('shop', 'instagramBannerTitle')}
+              </h3>
+              <p className="text-gray-600 text-xs sm:text-sm max-w-xl mt-1">
+                {t('shop', 'instagramBannerText')}
+              </p>
+            </div>
+          </div>
+          <a
+            href={COLLA_INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shrink-0 flex items-center gap-2 group cursor-pointer"
+          >
+            <Instagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            <span>{t('shop', 'instagramBannerBtn')}</span>
+          </a>
         </div>
       </div>
 
@@ -417,7 +463,7 @@ export default function Shop() {
               </div>
             )}
 
-            {/* Footer / Total & WhatsApp Button */}
+            {/* Footer / Total & Checkout Buttons */}
             {cart.length > 0 && (
               <div className="pt-4 border-t border-gray-100 shrink-0">
                 <div className="flex items-center justify-between mb-4">
@@ -427,20 +473,37 @@ export default function Shop() {
                   </span>
                 </div>
 
-                {orderComplete ? (
-                  <div className="p-3.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-2 animate-fadeIn">
+                {orderComplete && (
+                  <div className="p-3.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-2 mb-3 animate-fadeIn">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                     <span>{t('shop', 'orderSuccess')}</span>
                   </div>
-                ) : (
+                )}
+
+                {instagramCopied && (
+                  <div className="p-3 bg-purple-50 text-purple-900 border border-purple-200 rounded-xl text-xs font-medium flex items-start gap-2 mb-3 animate-fadeIn">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                    <span>{t('shop', 'instagramCopied')}</span>
+                  </div>
+                )}
+
+                <div className="space-y-2">
                   <button
-                    onClick={handleCheckout}
-                    className="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-emerald-600/30 flex items-center justify-center gap-2 group cursor-pointer"
+                    onClick={handleWhatsAppCheckout}
+                    className="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-emerald-600/30 flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    <span>{t('shop', 'checkout')}</span>
+                    <span>{t('shop', 'checkoutWhatsApp')}</span>
                   </button>
-                )}
+
+                  <button
+                    onClick={handleInstagramCheckout}
+                    className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-pink-500/25 flex items-center justify-center gap-2 group cursor-pointer"
+                  >
+                    <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span>{t('shop', 'checkoutInstagram')}</span>
+                  </button>
+                </div>
               </div>
             )}
 
