@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Calendar, Users, History, Image as ImageIcon, HeartHandshake, Music, Navigation, ShoppingBag, HelpCircle, Film, Globe, Drum } from 'lucide-react';
+import { Menu, X, Shield, Calendar, Users, History, Image as ImageIcon, HeartHandshake, Music, Navigation, ShoppingBag, HelpCircle, Film, Globe, Drum, Search } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
@@ -77,8 +77,22 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Controls: Language Selector + CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Right Controls: Search + Language Selector + CTA */}
+          <div className="hidden lg:flex items-center gap-2.5">
+            {/* Spotlight Search Trigger */}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-global-search'))}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/25 hover:bg-black/45 border border-cardona-gold/30 text-amber-100 hover:text-white transition-all text-xs group shadow-xs"
+              title="Cercar (Ctrl+K o ⌘K)"
+              aria-label="Cercador global"
+            >
+              <Search className="w-3.5 h-3.5 text-cardona-gold group-hover:scale-110 transition-transform" />
+              <span className="text-[11px] font-medium text-amber-100/90">{t('search', 'btnLabel') || 'Cercar...'}</span>
+              <kbd className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-white/10 text-amber-200 border border-white/10">
+                ⌘K
+              </kbd>
+            </button>
+
             {/* Language Switcher */}
             <div className="flex items-center gap-1 bg-black/25 p-1 rounded-full border border-cardona-gold/30">
               <Globe className="w-3.5 h-3.5 text-cardona-gold ml-1.5 mr-0.5" />
@@ -105,8 +119,17 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile menu and lang toggle */}
+          {/* Mobile menu, search and lang toggle */}
           <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-global-search'))}
+              className="p-1.5 rounded-full bg-black/30 border border-cardona-gold/30 text-cardona-gold hover:text-white"
+              aria-label="Cercador global"
+              title="Cercar"
+            >
+              <Search className="w-4 h-4" />
+            </button>
+
             {/* Mobile Lang switcher */}
             <div className="flex items-center bg-black/30 px-2 py-1 rounded-full border border-cardona-gold/30 text-[10px]">
               {languages.map((l) => (

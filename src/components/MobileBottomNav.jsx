@@ -16,7 +16,8 @@ import {
   HeartHandshake, 
   Instagram, 
   Globe,
-  Sparkles
+  Sparkles,
+  Search
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useCart } from '../context/CartContext';
@@ -227,6 +228,32 @@ export default function MobileBottomNav() {
                 <X className="w-5 h-5" />
               </button>
             </div>
+
+            {/* Quick Spotlight Search Trigger */}
+            <button
+              onClick={() => {
+                setIsSheetOpen(false);
+                window.dispatchEvent(new CustomEvent('open-global-search'));
+              }}
+              className="w-full flex items-center justify-between px-4 py-3 rounded-2xl bg-cardona-gold/15 hover:bg-cardona-gold/25 border border-cardona-gold/40 text-cardona-goldLight transition-all mb-4 group shadow-sm active:scale-98 text-left"
+            >
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-xl bg-cardona-gold text-cardona-burgundyDark shadow-xs">
+                  <Search className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-white">
+                    {t('search', 'title') || 'Cercador de Cardona'}
+                  </div>
+                  <div className="text-[10px] text-amber-200/70">
+                    {t('search', 'placeholder') || 'Figures, botiga, músiques, agenda...'}
+                  </div>
+                </div>
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/10 text-amber-200 border border-white/10">
+                ⌘K
+              </span>
+            </button>
 
             {/* Grid of Sections */}
             <div className="grid grid-cols-2 gap-3 mb-6">

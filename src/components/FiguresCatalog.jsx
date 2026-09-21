@@ -9,6 +9,25 @@ export default function FiguresCatalog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [activeFigure, setActiveFigure] = useState(null);
 
+  React.useEffect(() => {
+    const handleOpenFigure = (e) => {
+      const figureId = e.detail;
+      const fig = figuresData.find(f => f.id === figureId);
+      if (fig) {
+        setSelectedCategory('all');
+        setActiveFigure(fig);
+        setTimeout(() => {
+          const el = document.getElementById(`figure-${fig.id}`);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 200);
+      }
+    };
+    window.addEventListener('open-figure-modal', handleOpenFigure);
+    return () => window.removeEventListener('open-figure-modal', handleOpenFigure);
+  }, []);
+
   const categories = [
     { id: 'all', label: t('catalog', 'filterAll') },
     { id: 'barri-major', label: t('catalog', 'filterMajor') },
@@ -65,7 +84,8 @@ export default function FiguresCatalog() {
           {filteredFigures.map((fig) => (
             <div
               key={fig.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 flex flex-col group"
+              id={`figure-${fig.id}`}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 flex flex-col group scroll-mt-24"
             >
               {/* Image with overlay badge */}
               <div className="relative h-80 sm:h-84 overflow-hidden bg-cardona-burgundyDark">
