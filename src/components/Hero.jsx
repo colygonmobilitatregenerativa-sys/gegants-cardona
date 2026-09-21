@@ -7,16 +7,16 @@ export default function Hero() {
 
   return (
     <section id="inici" className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-cardona-burgundyDark text-white">
-      {/* Background with overlay */}
+      {/* Background with overlay - Castell de Cardona */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity scale-105 transition-transform duration-1000 ease-out"
+        className="absolute inset-0 bg-cover bg-[center_35%] opacity-35 scale-105 transition-transform duration-1000 ease-out"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1920&q=80')`
+          backgroundImage: `url('./images/castell-cardona-hero.jpg')`
         }}
       />
       {/* Decorative gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-cardona-burgundyDark via-cardona-burgundyDark/70 to-cardona-burgundyDark/85" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0,transparent_70%)]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-cardona-burgundyDark via-cardona-burgundyDark/75 to-cardona-burgundyDark/85" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0,transparent_75%)]" />
 
       {/* Hero Content */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
