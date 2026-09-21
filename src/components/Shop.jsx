@@ -37,7 +37,7 @@ export default function Shop() {
         en: 'Official T-Shirt of the Troupes'
       },
       price: 16.00,
-      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/samarreta-oficial.jpg',
       badge: {
         ca: '100% Cotó Orgànic',
         es: '100% Algodón Orgánico',
@@ -57,7 +57,7 @@ export default function Shop() {
         en: 'Rubber Figure: Borrell II (Centenary)'
       },
       price: 24.50,
-      image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/figura-borrell.jpg',
       badge: {
         ca: 'Col·leccionable',
         es: 'Coleccionable',
@@ -77,7 +77,7 @@ export default function Shop() {
         en: 'Rubber Figure: Adalés (Barri Nou)'
       },
       price: 24.50,
-      image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/figura-adales.jpg',
       badge: {
         ca: 'Col·leccionable',
         es: 'Coleccionable',
@@ -97,7 +97,7 @@ export default function Shop() {
         en: 'Traditional Major Festival Neckerchief'
       },
       price: 6.00,
-      image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/mocador-festa-major.jpg',
       badge: {
         ca: 'Festa Popular',
         es: 'Fiesta Popular',
@@ -117,7 +117,7 @@ export default function Shop() {
         en: 'Book: "History and Legends of the Giants"'
       },
       price: 18.00,
-      image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/llibre-gegants.jpg',
       badge: {
         ca: 'Edició Il·lustrada',
         es: 'Edición Ilustrada',
@@ -137,7 +137,7 @@ export default function Shop() {
         en: '4-Pin Metal Collector Set'
       },
       price: 8.50,
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
+      image: './images/shop/pack-pins-figures.jpg',
       badge: {
         ca: 'Pack 4 unitats',
         es: 'Pack 4 unidades',
