@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Brand Logo */}
-          <a href="#inici" className="flex items-center gap-2.5 sm:gap-3 group">
+          <a href="#inici" className="flex items-center gap-2 sm:gap-3 group min-w-0 max-w-[60%] sm:max-w-none">
             <div className="w-8 h-10 sm:w-9 sm:h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform shrink-0 drop-shadow-md">
               <img
                 src="./images/escut-cardona.png"
@@ -53,11 +53,11 @@ export default function Navbar() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div>
-              <span className="font-serif font-bold text-base sm:text-lg tracking-wider text-cardona-goldLight block leading-tight">
+            <div className="min-w-0">
+              <span className="font-serif font-bold text-sm sm:text-lg tracking-wider text-cardona-goldLight block leading-tight truncate">
                 GEGANTS DE CARDONA
               </span>
-              <span className="text-[10px] sm:text-xs text-amber-200/80 tracking-widest uppercase block font-sans">
+              <span className="text-[10px] sm:text-xs text-amber-200/80 tracking-widest uppercase block font-sans truncate">
                 Vila Comtal · 1834
               </span>
             </div>

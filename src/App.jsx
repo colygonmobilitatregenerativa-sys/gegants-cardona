@@ -22,9 +22,9 @@ export default function App() {
   return (
     <LanguageProvider>
       <CartProvider>
-        <div className="min-h-screen flex flex-col bg-[#faf8f5]">
+        <div className="min-h-screen flex flex-col bg-[#faf8f5] overflow-x-hidden w-full max-w-full">
           <Navbar />
-          <main className="flex-grow">
+          <main className="flex-grow w-full max-w-full overflow-x-hidden">
             <Hero />
             <FiguresCatalog />
             <VideoGallery />
