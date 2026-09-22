@@ -73,7 +73,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://cardonaturisme.com" target="_blank" rel="noopener noreferrer" className="hover:text-cardona-gold transition-colors">
+                <a href="https://cardonaturisme.cat/" target="_blank" rel="noopener noreferrer" className="hover:text-cardona-gold transition-colors">
                   {t('footer', 'turisme')}
                 </a>
               </li>
