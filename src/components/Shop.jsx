@@ -10,7 +10,7 @@ const COLLA_INSTAGRAM_DM = 'https://ig.me/m/gegantscardona';
 const COLLA_INSTAGRAM_URL = 'https://www.instagram.com/gegantscardona';
 
 export default function Shop() {
-  const { t, loc } = useLanguage();
+  const { t, loc, lang } = useLanguage();
   const { 
     cart, 
     setCart, 
@@ -31,25 +31,45 @@ export default function Shop() {
 
   const products = shopProducts;
 
-
-
   const generateOrderText = () => {
     const itemsList = cart.map(it => `• ${it.qty}x ${loc(it.name)} (${(it.price * it.qty).toFixed(2)} €)`).join('\n');
     const deliveryLabel = deliveryType === 'recollida'
       ? t('shop', 'deliveryPickup')
       : t('shop', 'deliveryShipping');
 
-    let text = `👋 Hola! Vull fer una comanda de la botiga dels Gegants de Cardona:\n\n` +
-      `📦 *Productes:*\n${itemsList}\n\n` +
-      `💰 *Total:* ${totalAmount.toFixed(2)} €\n` +
-      `👤 *Nom:* ${customerName.trim() || 'Client web'}\n` +
-      `🚚 *Modalitat d'entrega:* ${deliveryLabel}`;
-
-    if (notes.trim()) {
-      text += `\n📝 *Notes/Talles:* ${notes.trim()}`;
+    let text = '';
+    if (lang === 'es') {
+      text = `👋 ¡Hola! Quiero hacer un pedido en la tienda de los Gegants de Cardona:\n\n` +
+        `📦 *Productos:*\n${itemsList}\n\n` +
+        `💰 *Total:* ${totalAmount.toFixed(2)} €\n` +
+        `👤 *Nombre:* ${customerName.trim() || 'Cliente web'}\n` +
+        `🚚 *Modalidad de entrega:* ${deliveryLabel}`;
+      if (notes.trim()) {
+        text += `\n📝 *Notas/Tallas:* ${notes.trim()}`;
+      }
+      text += `\n\n¿Cómo podemos realizar el pago por Bizum y coordinar la entrega? ¡Muchas gracias!`;
+    } else if (lang === 'en') {
+      text = `👋 Hello! I would like to place an order from the Cardona Giants shop:\n\n` +
+        `📦 *Items:*\n${itemsList}\n\n` +
+        `💰 *Total:* ${totalAmount.toFixed(2)} €\n` +
+        `👤 *Name:* ${customerName.trim() || 'Web customer'}\n` +
+        `🚚 *Delivery method:* ${deliveryLabel}`;
+      if (notes.trim()) {
+        text += `\n📝 *Notes/Sizes:* ${notes.trim()}`;
+      }
+      text += `\n\nHow can we arrange payment and delivery? Thank you very much!`;
+    } else {
+      text = `👋 Hola! Vull fer una comanda de la botiga dels Gegants de Cardona:\n\n` +
+        `📦 *Productes:*\n${itemsList}\n\n` +
+        `💰 *Total:* ${totalAmount.toFixed(2)} €\n` +
+        `👤 *Nom:* ${customerName.trim() || 'Client web'}\n` +
+        `🚚 *Modalitat d'entrega:* ${deliveryLabel}`;
+      if (notes.trim()) {
+        text += `\n📝 *Notes/Talles:* ${notes.trim()}`;
+      }
+      text += `\n\nCom podem fer el pagament per Bizum i coordinar l'entrega? Moltes gràcies!`;
     }
 
-    text += `\n\nCom podem fer el pagament per Bizum i coordinar l'entrega? Moltes gràcies!`;
     return text;
   };
 

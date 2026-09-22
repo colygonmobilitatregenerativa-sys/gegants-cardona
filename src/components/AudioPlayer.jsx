@@ -3,7 +3,7 @@ import { ExternalLink, Radio, Music } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function AudioPlayer() {
-  const { t } = useLanguage();
+  const { t, loc } = useLanguage();
 
   return (
     <section id="musica" className="py-20 bg-gradient-to-r from-cardona-burgundyDark via-cardona-burgundy to-cardona-burgundyDark text-white relative overflow-hidden border-y-2 border-cardona-gold/30">
@@ -70,7 +70,11 @@ export default function AudioPlayer() {
               allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
-              title="Spotify - Músiques de Cardona"
+              title={loc({
+                ca: 'Spotify - Músiques de Cardona',
+                es: 'Spotify - Músicas de Cardona',
+                en: 'Spotify - Cardona Traditional Music'
+              })}
             />
           </div>
 

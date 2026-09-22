@@ -83,7 +83,7 @@ export default function JoinUsForm() {
                 </div>
                 <div>
                   <h4 className="font-bold text-cardona-burgundyDark text-sm">
-                    {lang === 'es' ? 'Correo de Contacto' : lang === 'en' ? 'Contact Email' : 'Correu de Contacte'}
+                    {t('contact', 'emailTitle')}
                   </h4>
                   <p className="text-xs text-gray-500">gegantscardona@culturapopular.cat</p>
                 </div>
@@ -147,7 +147,7 @@ export default function JoinUsForm() {
                     <input
                       type="email"
                       required
-                      placeholder="info@exemple.cat"
+                      placeholder={t('contact', 'emailPlaceholder')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cardona-burgundy focus:border-transparent text-sm"
@@ -162,7 +162,7 @@ export default function JoinUsForm() {
                     </label>
                     <input
                       type="tel"
-                      placeholder="600 00 00 00"
+                      placeholder={t('contact', 'phonePlaceholder')}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cardona-burgundy focus:border-transparent text-sm"

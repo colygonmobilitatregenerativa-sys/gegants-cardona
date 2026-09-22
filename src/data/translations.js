@@ -12,10 +12,21 @@ export const translations = {
       botiga: 'Botiga',
       galeria: 'Galeria',
       videos: 'Vídeos',
-      contacte: 'Fes-te Geganer',
+      contacte: 'Fes-te Geganter',
       joinBtn: 'Uneix-te a la Colla',
       mes: 'Més',
       menuTitle: 'Menú & Seccions',
+      language: 'Idioma',
+      menu: 'Menú principal',
+      officialInstagram: 'Instagram Oficial @gegantscardona',
+      descVideos: 'En acció',
+      descMusica: 'Spotify',
+      descGrallers: 'Músics',
+      descHistoria: 'Tradició',
+      descRecorregut: 'Mapa',
+      descQuiz: 'Joc',
+      descGaleria: 'Fotos',
+      descContacte: 'Uneix-te',
     },
     hero: {
       badge: 'Patrimoni Festiu i Cultural de Cardona',
@@ -59,7 +70,11 @@ export const translations = {
       musicTitle: 'Música i Ball propi:',
       sculptorTitle: 'Mestre Escultor / Taller:',
       shareFigure: 'Comparteix la fitxa',
-      shareCopied: 'Enllaç copiat!'
+      shareCopied: 'Enllaç copiat!',
+      viewCloseUp: 'Primer pla',
+      viewFullFigure: 'Figura sencera',
+      shareTitle: '{name} - Gegants de Cardona',
+      shareText: 'Mira la fitxa de {name} dels Gegants de Cardona ({height}, {weight})!'
     },
     grallers: {
       tag: 'El Batec Sonor de la Festa',
@@ -198,7 +213,10 @@ export const translations = {
       roleBooking: 'Contractació per a festes o trobades',
       message: 'Missatge o Comentaris',
       send: 'Enviar Sol·licitud',
-      success: 'Gràcies per sumar-te! Ben aviat ens posarem en contacte amb tu.'
+      success: 'Gràcies per sumar-te! Ben aviat ens posarem en contacte amb tu.',
+      emailTitle: 'Correu de Contacte',
+      emailPlaceholder: 'info@exemple.cat',
+      phonePlaceholder: '600 00 00 00'
     },
     footer: {
       description: 'Associació i colla gegantera dedicada a la conservació, dansa i difusió de les figures històriques i centenàries de la Vila de Cardona (Bages, Catalunya).',
@@ -242,6 +260,10 @@ export const translations = {
       badgeEvent: 'Agenda',
       badgeVideo: 'Vídeo',
       badgeSection: 'Secció',
+      clearText: 'Esborrar text',
+      closeModal: 'Tancar (Esc)',
+      singleItem: 'element',
+      multipleItems: 'elements',
     }
   },
   es: {
@@ -257,10 +279,21 @@ export const translations = {
       botiga: 'Tienda',
       galeria: 'Galería',
       videos: 'Vídeos',
-      contacte: 'Hazte Geganer',
+      contacte: 'Hazte Gegantero',
       joinBtn: 'Únete a la Colla',
       mes: 'Más',
       menuTitle: 'Menú & Secciones',
+      language: 'Idioma',
+      menu: 'Menú principal',
+      officialInstagram: 'Instagram Oficial @gegantscardona',
+      descVideos: 'En acción',
+      descMusica: 'Spotify',
+      descGrallers: 'Músicos',
+      descHistoria: 'Tradición',
+      descRecorregut: 'Mapa',
+      descQuiz: 'Juego',
+      descGaleria: 'Fotos',
+      descContacte: 'Únete',
     },
     hero: {
       badge: 'Patrimonio Festivo y Cultural de Cardona',
@@ -304,7 +337,11 @@ export const translations = {
       musicTitle: 'Música y Baile propio:',
       sculptorTitle: 'Maestro Escultor / Taller:',
       shareFigure: 'Compartir ficha',
-      shareCopied: '¡Enlace copiado!'
+      shareCopied: '¡Enlace copiado!',
+      viewCloseUp: 'Primer plano',
+      viewFullFigure: 'Figura completa',
+      shareTitle: '{name} - Gigantes de Cardona',
+      shareText: '¡Mira la ficha de {name} de los Gigantes de Cardona ({height}, {weight})!'
     },
     grallers: {
       tag: 'El Latido Sonoro de la Fiesta',
@@ -443,7 +480,10 @@ export const translations = {
       roleBooking: 'Contratación para fiestas o desfiles',
       message: 'Mensaje o Comentarios',
       send: 'Enviar Solicitud',
-      success: '¡Gracias por unirte! Muy pronto nos pondremos en contacto contigo.'
+      success: '¡Gracias por unirte! Muy pronto nos pondremos en contacto contigo.',
+      emailTitle: 'Correo de Contacto',
+      emailPlaceholder: 'info@ejemplo.com',
+      phonePlaceholder: '600 00 00 00'
     },
     footer: {
       description: 'Asociación de gigantes dedicada a la conservación, baile y difusión de las figuras históricas y centenarias de la Villa de Cardona (Bages, Cataluña).',
@@ -451,7 +491,7 @@ export const translations = {
       navTitle: 'Navegación',
       linksTitle: 'Patrimonio y Villa',
       ajuntament: 'Ayuntamiento de Cardona',
-      agrupacio: 'Agrupación de Collas Geganreras',
+      agrupacio: 'Agrupación de Collas Geganteras',
       turisme: 'Castillo y Montaña de Sal',
       spotifyLink: 'Banda de Cardona en Spotify ↗',
       instagramLink: 'Instagram @gegantscardona ↗',
@@ -487,6 +527,10 @@ export const translations = {
       badgeEvent: 'Agenda',
       badgeVideo: 'Vídeo',
       badgeSection: 'Sección',
+      clearText: 'Borrar texto',
+      closeModal: 'Cerrar (Esc)',
+      singleItem: 'resultado',
+      multipleItems: 'resultados',
     }
   },
   en: {
@@ -506,6 +550,17 @@ export const translations = {
       joinBtn: 'Join the Troupe',
       mes: 'More',
       menuTitle: 'Menu & Sections',
+      language: 'Language',
+      menu: 'Main menu',
+      officialInstagram: 'Official Instagram @gegantscardona',
+      descVideos: 'In Action',
+      descMusica: 'Spotify',
+      descGrallers: 'Musicians',
+      descHistoria: 'Tradition',
+      descRecorregut: 'Map',
+      descQuiz: 'Game',
+      descGaleria: 'Photos',
+      descContacte: 'Join Us',
     },
     hero: {
       badge: 'Festive & Cultural Heritage of Cardona',
@@ -549,7 +604,11 @@ export const translations = {
       musicTitle: 'Music & Signature Dance:',
       sculptorTitle: 'Master Sculptor / Workshop:',
       shareFigure: 'Share Figure',
-      shareCopied: 'Link copied!'
+      shareCopied: 'Link copied!',
+      viewCloseUp: 'Close-up',
+      viewFullFigure: 'Full figure',
+      shareTitle: '{name} - Cardona Giants',
+      shareText: 'Check out {name} from the Cardona Giants ({height}, {weight})!'
     },
     grallers: {
       tag: 'The Living Beat of the Festival',
@@ -688,7 +747,10 @@ export const translations = {
       roleBooking: 'Booking for Festivities / Parades',
       message: 'Message / Notes',
       send: 'Send Application',
-      success: 'Thank you for joining! We will get in touch with you very soon.'
+      success: 'Thank you for joining! We will get in touch with you very soon.',
+      emailTitle: 'Contact Email',
+      emailPlaceholder: 'info@example.com',
+      phonePlaceholder: '+34 600 00 00 00'
     },
     footer: {
       description: 'Giant troupe dedicated to the preservation, dance, and celebration of the historic and centenarian giants of Cardona (Catalonia).',
@@ -732,6 +794,10 @@ export const translations = {
       badgeEvent: 'Event',
       badgeVideo: 'Video',
       badgeSection: 'Section',
+      clearText: 'Clear text',
+      closeModal: 'Close (Esc)',
+      singleItem: 'result',
+      multipleItems: 'results',
     }
   }
 };

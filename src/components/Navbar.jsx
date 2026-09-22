@@ -83,8 +83,8 @@ export default function Navbar() {
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-global-search'))}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/25 hover:bg-black/45 border border-cardona-gold/30 text-amber-100 hover:text-white transition-all text-xs group shadow-xs"
-              title="Cercar (Ctrl+K o ⌘K)"
-              aria-label="Cercador global"
+              title={`${t('search', 'title')} (${t('search', 'shortcutKey')})`}
+              aria-label={t('search', 'title')}
             >
               <Search className="w-3.5 h-3.5 text-cardona-gold group-hover:scale-110 transition-transform" />
               <span className="text-[11px] font-medium text-amber-100/90">{t('search', 'btnLabel') || 'Cercar...'}</span>
@@ -124,8 +124,8 @@ export default function Navbar() {
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-global-search'))}
               className="p-1.5 rounded-full bg-black/30 border border-cardona-gold/30 text-cardona-gold hover:text-white"
-              aria-label="Cercador global"
-              title="Cercar"
+              aria-label={t('search', 'title')}
+              title={t('search', 'title')}
             >
               <Search className="w-4 h-4" />
             </button>
@@ -148,7 +148,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-amber-100 hover:text-white hover:bg-cardona-burgundyLight/50 focus:outline-none"
-              aria-label="Menú principal"
+              aria-label={t('nav', 'menu') || 'Menú principal'}
             >
               {isOpen ? <X className="w-6 h-6 text-cardona-gold" /> : <Menu className="w-6 h-6" />}
             </button>

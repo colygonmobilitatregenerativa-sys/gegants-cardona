@@ -43,10 +43,14 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-amber-100/80">
               <li><a href="#inici" className="hover:text-cardona-gold transition-colors">{t('nav', 'inici')}</a></li>
               <li><a href="#figures" className="hover:text-cardona-gold transition-colors">{t('nav', 'figures')}</a></li>
+              <li><a href="#videos" className="hover:text-cardona-gold transition-colors">{t('nav', 'videos')}</a></li>
+              <li><a href="#botiga" className="hover:text-cardona-gold transition-colors">{t('nav', 'botiga')}</a></li>
+              <li><a href="#calendari" className="hover:text-cardona-gold transition-colors">{t('nav', 'calendari')}</a></li>
               <li><a href="#musica" className="hover:text-cardona-gold transition-colors">{t('nav', 'musica')}</a></li>
               <li><a href="#grallers" className="hover:text-cardona-gold transition-colors">{t('nav', 'grallers')}</a></li>
               <li><a href="#historia" className="hover:text-cardona-gold transition-colors">{t('nav', 'historia')}</a></li>
-              <li><a href="#calendari" className="hover:text-cardona-gold transition-colors">{t('nav', 'calendari')}</a></li>
+              <li><a href="#recorregut" className="hover:text-cardona-gold transition-colors">{t('nav', 'recorregut')}</a></li>
+              <li><a href="#quiz" className="hover:text-cardona-gold transition-colors">{t('nav', 'quiz')}</a></li>
               <li><a href="#galeria" className="hover:text-cardona-gold transition-colors">{t('nav', 'galeria')}</a></li>
               <li><a href="#contacte" className="hover:text-cardona-gold transition-colors">{t('nav', 'contacte')}</a></li>
             </ul>

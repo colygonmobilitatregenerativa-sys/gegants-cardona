@@ -69,14 +69,14 @@ export default function MobileBottomNav() {
   ];
 
   const moreSections = [
-    { id: '#videos', label: t('nav', 'videos'), icon: Film, desc: 'En acció' },
-    { id: '#musica', label: t('nav', 'musica'), icon: Music, desc: 'Spotify' },
-    { id: '#grallers', label: t('nav', 'grallers'), icon: Drum, desc: 'Músics' },
-    { id: '#historia', label: t('nav', 'historia'), icon: History, desc: 'Tradició' },
-    { id: '#recorregut', label: t('nav', 'recorregut'), icon: Navigation, desc: 'Mapa' },
-    { id: '#quiz', label: t('nav', 'quiz'), icon: HelpCircle, desc: 'Joc' },
-    { id: '#galeria', label: t('nav', 'galeria'), icon: ImageIcon, desc: 'Fotos' },
-    { id: '#contacte', label: t('nav', 'contacte'), icon: HeartHandshake, desc: 'Uneix-te' },
+    { id: '#videos', label: t('nav', 'videos'), icon: Film, desc: t('nav', 'descVideos') },
+    { id: '#musica', label: t('nav', 'musica'), icon: Music, desc: t('nav', 'descMusica') },
+    { id: '#grallers', label: t('nav', 'grallers'), icon: Drum, desc: t('nav', 'descGrallers') },
+    { id: '#historia', label: t('nav', 'historia'), icon: History, desc: t('nav', 'descHistoria') },
+    { id: '#recorregut', label: t('nav', 'recorregut'), icon: Navigation, desc: t('nav', 'descRecorregut') },
+    { id: '#quiz', label: t('nav', 'quiz'), icon: HelpCircle, desc: t('nav', 'descQuiz') },
+    { id: '#galeria', label: t('nav', 'galeria'), icon: ImageIcon, desc: t('nav', 'descGaleria') },
+    { id: '#contacte', label: t('nav', 'contacte'), icon: HeartHandshake, desc: t('nav', 'descContacte') },
   ];
 
   const handleNavClick = (id) => {
@@ -288,7 +288,7 @@ export default function MobileBottomNav() {
               <div className="flex items-center justify-between bg-black/30 p-2 rounded-2xl border border-white/10">
                 <div className="flex items-center gap-2 pl-2">
                   <Globe className="w-4 h-4 text-cardona-gold" />
-                  <span className="text-xs font-semibold text-amber-100">Idioma</span>
+                  <span className="text-xs font-semibold text-amber-100">{t('nav', 'language')}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   {languages.map((l) => (
@@ -316,7 +316,7 @@ export default function MobileBottomNav() {
                 className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-[#833ab4]/30 via-[#fd1d1d]/30 to-[#fcb045]/30 hover:from-[#833ab4]/50 hover:via-[#fd1d1d]/50 hover:to-[#fcb045]/50 border border-pink-500/30 text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"
               >
                 <Instagram className="w-4 h-4 text-[#fd1d1d]" />
-                <span>Instagram Oficial @gegantscardona</span>
+                <span>{t('nav', 'officialInstagram')}</span>
               </a>
 
               {/* Join CTA */}

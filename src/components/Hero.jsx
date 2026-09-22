@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Calendar, Users, ShieldCheck, ShoppingBag } from 
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, loc } = useLanguage();
 
   return (
     <section id="inici" className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-cardona-burgundyDark text-white">
@@ -29,11 +29,19 @@ export default function Hero() {
             {/* Medalló heràldic amb vidre fumat i rivets d'or */}
             <div 
               className="relative px-3.5 py-3 sm:px-5 sm:py-4 rounded-3xl bg-cardona-burgundyDark/70 backdrop-blur-md border border-cardona-gold/35 shadow-[0_16px_40px_rgba(0,0,0,0.6)] transition-all duration-300 group-hover:scale-105 group-hover:border-cardona-gold flex items-center justify-center"
-              title="Escut Històric de Cardona: Senatvs Popvliqve Cardonensis Insignia"
+              title={loc({
+                ca: 'Escut Històric de Cardona: Senatvs Popvliqve Cardonensis Insignia',
+                es: 'Escudo Histórico de Cardona: Senatvs Popvliqve Cardonensis Insignia',
+                en: 'Historic Coat of Arms of Cardona: Senatvs Popvliqve Cardonensis Insignia'
+              })}
             >
               <img
                 src="./images/escut-cardona.png"
-                alt="Escut Històric de Cardona - Senatvs Popvliqve Cardonensis Insignia"
+                alt={loc({
+                  ca: 'Escut Històric de Cardona - Senatvs Popvliqve Cardonensis Insignia',
+                  es: 'Escudo Histórico de Cardona - Senatvs Popvliqve Cardonensis Insignia',
+                  en: 'Historic Coat of Arms of Cardona - Senatvs Popvliqve Cardonensis Insignia'
+                })}
                 className="w-20 h-28 sm:w-24 sm:h-32 md:w-28 md:h-36 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)]"
               />
             </div>

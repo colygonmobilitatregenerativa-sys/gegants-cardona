@@ -8,9 +8,17 @@ export default function FigureModal({ figure, onClose }) {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleShare = async () => {
+    const rawTitle = t('catalog', 'shareTitle') || '{name} - Gegants de Cardona';
+    const rawText = t('catalog', 'shareText') || 'Mira la fitxa de {name} dels Gegants de Cardona ({height}, {weight})!';
+    const titleText = rawTitle.replace('{name}', figure.name);
+    const bodyText = rawText
+      .replace('{name}', figure.name)
+      .replace('{height}', figure.height)
+      .replace('{weight}', figure.weight);
+
     const shareData = {
-      title: `${figure.name} - Gegants de Cardona`,
-      text: `Mira la fitxa de ${figure.name} dels Gegants de Cardona (${figure.height}, ${figure.weight})!`,
+      title: titleText,
+      text: bodyText,
       url: window.location.href.split('#')[0] + '#figures'
     };
 
@@ -23,9 +31,7 @@ export default function FigureModal({ figure, onClose }) {
       }
     }
 
-    const waText = encodeURIComponent(
-      `👋 Mira la fitxa de *${figure.name}* dels Gegants de Cardona (${figure.height}, ${figure.weight})!\n${shareData.url}`
-    );
+    const waText = encodeURIComponent(`👋 *${titleText}*\n${bodyText}\n${shareData.url}`);
     window.open(`https://wa.me/?text=${waText}`, '_blank');
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 3000);
@@ -89,17 +95,17 @@ export default function FigureModal({ figure, onClose }) {
           <button
             onClick={() => setIsFullView(!isFullView)}
             className="absolute bottom-3 right-3 z-20 flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-black/60 hover:bg-black text-white hover:text-cardona-gold text-[11px] font-medium backdrop-blur-sm shadow-md transition-all border border-white/20"
-            title={isFullView ? 'Primer pla' : 'Veure figura sencera'}
+            title={isFullView ? t('catalog', 'viewCloseUp') : t('catalog', 'viewFullFigure')}
           >
             {isFullView ? (
               <>
                 <Minimize2 className="w-3.5 h-3.5" />
-                <span>Zoom</span>
+                <span>{t('catalog', 'viewCloseUp')}</span>
               </>
             ) : (
               <>
                 <Maximize2 className="w-3.5 h-3.5" />
-                <span>Figura sencera</span>
+                <span>{t('catalog', 'viewFullFigure')}</span>
               </>
             )}
           </button>

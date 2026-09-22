@@ -173,52 +173,94 @@ export default function GlobalSearch() {
     // 3. Music & Spotify Tracks
     const musicTracks = [
       {
-        title: 'Ball de Gegants de Cardona',
-        subtitle: 'Dansa de gala solemne a la plaça · Banda de Música de Cardona',
+        title: {
+          ca: 'Ball de Gegants de Cardona',
+          es: 'Baile de Gigantes de Cardona',
+          en: 'Cardona Giants Dance'
+        },
+        subtitle: {
+          ca: 'Dansa de gala solemne a la plaça · Banda de Música de Cardona',
+          es: 'Danza de gala solemne en la plaza · Banda de Música de Cardona',
+          en: 'Solemn gala dance in the town square · Cardona Music Band'
+        },
         badge: 'Spotify',
         badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
-        terms: ['ball de gegants', 'banda', 'spotify', 'ballada', 'solemne', 'musica']
+        terms: ['ball de gegants', 'baile de gigantes', 'banda', 'spotify', 'ballada', 'solemne', 'musica', 'music']
       },
       {
-        title: 'Ball Pla de Cardona',
-        subtitle: 'Dansa tradicional històrica del seguici geganter',
+        title: {
+          ca: 'Ball Pla de Cardona',
+          es: 'Ball Pla de Cardona',
+          en: 'Ball Pla of Cardona'
+        },
+        subtitle: {
+          ca: 'Dansa tradicional històrica del seguici geganter',
+          es: 'Danza tradicional histórica del cortejo de gigantes',
+          en: 'Historic traditional dance of the giant cortege'
+        },
         badge: 'Spotify',
         badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
-        terms: ['ball pla', 'dansa', 'compassos', 'coreografia', 'tradicio', 'musica']
+        terms: ['ball pla', 'dansa', 'danza', 'compassos', 'coreografia', 'tradicio', 'musica', 'dance']
       },
       {
-        title: 'Pasdoble dels Gegants de la Fira',
-        subtitle: 'Melodia alegre de Romeu i Julieta pels carrers',
+        title: {
+          ca: 'Pasdoble dels Gegants de la Fira',
+          es: 'Pasodoble de los Gigantes de la Fira',
+          en: 'Fira Giants Pasodoble'
+        },
+        subtitle: {
+          ca: 'Melodia alegre de Romeu i Julieta pels carrers',
+          es: 'Melodía alegre de Romeu y Julieta por las calles',
+          en: 'Joyous melody of Romeu & Julieta through town streets'
+        },
         badge: 'Spotify',
         badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
-        terms: ['pasdoble', 'fira', 'romeu', 'julieta', 'cercavila']
+        terms: ['pasdoble', 'pasodoble', 'fira', 'romeu', 'julieta', 'cercavila', 'pasacalles']
       },
       {
-        title: 'Ball de l\'Àliga de Cardona',
-        subtitle: 'Dansa senyorial del bestiari històric al davant de les autoritats',
+        title: {
+          ca: 'Ball de l\'Àliga de Cardona',
+          es: 'Baile del Águila de Cardona',
+          en: 'Cardona Eagle Dance'
+        },
+        subtitle: {
+          ca: 'Dansa senyorial del bestiari històric al davant de les autoritats',
+          es: 'Danza señorial del bestiario histórico ante las autoridades',
+          en: 'Stately dance of the historic bestiary before civic authorities'
+        },
         badge: 'Spotify',
         badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
-        terms: ['aliga', 'bestiari', 'dansa senyorial', 'autoritats']
+        terms: ['aliga', 'aguila', 'eagle', 'bestiari', 'bestiario', 'dansa senyorial', 'autoritats']
       },
       {
-        title: 'Grallers i Tabalers de Cardona',
-        subtitle: 'El so viu que acompanya els gegants a totes les places',
-        badge: 'Músics',
+        title: {
+          ca: 'Grallers i Tabalers de Cardona',
+          es: 'Grallers y Tamborileros de Cardona',
+          en: 'Cardona Traditional Pipers and Drummers'
+        },
+        subtitle: {
+          ca: 'El so viu que acompanya els gegants a totes les places',
+          es: 'El sonido vivo que acompaña a los gigantes en todas las plazas',
+          en: 'The vibrant sound accompanying the giants across all town squares'
+        },
+        badge: t('nav', 'descGrallers') || 'Músics',
         badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
-        terms: ['grallers', 'gralla', 'tabal', 'percussio', 'musics', 'toc']
+        terms: ['grallers', 'gralla', 'tabal', 'tambor', 'drum', 'piper', 'percussio', 'musics', 'musicos', 'toc']
       }
     ];
 
     musicTracks.forEach((track, i) => {
+      const titleStr = loc(track.title);
+      const subStr = loc(track.subtitle);
       items.push({
         id: `music-${i}`,
         category: 'music',
-        title: track.title,
-        subtitle: track.subtitle,
+        title: titleStr,
+        subtitle: subStr,
         badge: track.badge,
         badgeColor: track.badgeColor,
         icon: Music,
-        searchTerms: [track.title, track.subtitle, ...track.terms],
+        searchTerms: [titleStr, subStr, ...track.terms],
         action: () => scrollTo('#musica')
       });
     });
@@ -278,57 +320,76 @@ export default function GlobalSearch() {
     // 6. Videos
     const videoItems = [
       {
-        title: 'Increïble Cercavila dels Gegants de Cardona (Festa Major 2025)',
-        subtitle: 'Vídeo en acció de tots els gegants, nans i el seguici popular',
-        terms: ['video', 'cercavila', '2025', 'festa major', 'youtube']
+        title: {
+          ca: 'Increïble Cercavila dels Gegants de Cardona (Festa Major 2025)',
+          es: 'Increíble Pasacalles de los Gigantes de Cardona (Fiesta Mayor 2025)',
+          en: 'Incredible Cardona Giants Parade (Major Festival 2025)'
+        },
+        subtitle: {
+          ca: 'Vídeo en acció de tots els gegants, nans i el seguici popular',
+          es: 'Vídeo en acción de todos los gigantes, cabezudos y el cortejo popular',
+          en: 'Action video of all giants, dwarfs, and the festive procession'
+        },
+        terms: ['video', 'cercavila', 'pasacalles', 'parade', '2025', 'festa major', 'fiesta mayor', 'youtube']
       },
       {
-        title: 'La Casa dels Gegants de Cardona - Secrets i construcció',
-        subtitle: 'Reportatge sobre com es van fer i es conserven les figures',
-        terms: ['casa dels gegants', 'reportatge', 'taller', 'patrimoni', 'video']
+        title: {
+          ca: 'La Casa dels Gegants de Cardona - Secrets i construcció',
+          es: 'La Casa de los Gigantes de Cardona - Secretos y construcción',
+          en: 'The House of Cardona Giants - Secrets & Craftsmanship'
+        },
+        subtitle: {
+          ca: 'Reportatge sobre com es van fer i es conserven les figures',
+          es: 'Reportaje sobre cómo se hicieron y se conservan las figuras',
+          en: 'Feature on how the giants were sculpted and preserved'
+        },
+        terms: ['casa dels gegants', 'reportatge', 'reportaje', 'taller', 'patrimoni', 'patrimonio', 'heritage', 'video']
       }
     ];
 
     videoItems.forEach((v, i) => {
+      const titleStr = loc(v.title);
+      const subStr = loc(v.subtitle);
       items.push({
         id: `video-${i}`,
         category: 'videos',
-        title: v.title,
-        subtitle: v.subtitle,
+        title: titleStr,
+        subtitle: subStr,
         badge: 'YouTube',
         badgeColor: 'bg-red-100 text-red-900 border-red-200',
         icon: Film,
-        searchTerms: [v.title, v.subtitle, ...v.terms],
+        searchTerms: [titleStr, subStr, ...v.terms],
         action: () => scrollTo('#videos')
       });
     });
 
     // 7. Sections & Quick Navigation
     const sectionLinks = [
-      { href: '#inici', title: t('nav', 'inici'), subtitle: 'Portada i presentació de la colla' },
-      { href: '#figures', title: t('nav', 'figures'), subtitle: 'Catàleg complet dels 8 barris' },
-      { href: '#videos', title: t('nav', 'videos'), subtitle: 'Vídeos dels cercaviles i la festa' },
-      { href: '#botiga', title: t('nav', 'botiga'), subtitle: 'Samarretes, figures de goma, llibres i pins' },
-      { href: '#calendari', title: t('nav', 'calendari'), subtitle: 'Festa Major, dates i exportació a calendari' },
-      { href: '#musica', title: t('nav', 'musica'), subtitle: 'Àlbum oficial a Spotify i balls' },
-      { href: '#grallers', title: t('nav', 'grallers'), subtitle: 'La formació musical tradicional' },
-      { href: '#historia', title: t('nav', 'historia'), subtitle: 'Línia de temps des de 986 fins avui' },
-      { href: '#recorregut', title: t('nav', 'recorregut'), subtitle: 'Mapa interactiu del cercavila pel nucli antic' },
-      { href: '#quiz', title: t('nav', 'quiz'), subtitle: 'Test cultural de coneixements geganters' },
-      { href: '#galeria', title: t('nav', 'galeria'), subtitle: 'Recull fotogràfic històric' },
-      { href: '#contacte', title: t('nav', 'contacte'), subtitle: 'Formulari per formar part de la colla' },
+      { href: '#inici', title: t('nav', 'inici'), subtitle: { ca: 'Portada i presentació de la colla', es: 'Portada y presentación de la colla', en: 'Home and troupe presentation' } },
+      { href: '#figures', title: t('nav', 'figures'), subtitle: { ca: 'Catàleg complet dels 8 barris', es: 'Catálogo completo de los 8 barrios', en: 'Complete catalog of the 8 quarters' } },
+      { href: '#videos', title: t('nav', 'videos'), subtitle: { ca: 'Vídeos dels cercaviles i la festa', es: 'Vídeos de los pasacalles y la fiesta', en: 'Videos of parades and festivities' } },
+      { href: '#botiga', title: t('nav', 'botiga'), subtitle: { ca: 'Samarretes, figures de goma, llibres i pins', es: 'Camisetas, figuras de goma, libros y pines', en: 'T-shirts, rubber figures, books and pins' } },
+      { href: '#calendari', title: t('nav', 'calendari'), subtitle: { ca: 'Festa Major, dates i exportació a calendari', es: 'Fiesta Mayor, fechas y exportación a calendario', en: 'Major Festival, dates and calendar export' } },
+      { href: '#musica', title: t('nav', 'musica'), subtitle: { ca: 'Àlbum oficial a Spotify i balls', es: 'Álbum oficial en Spotify y bailes', en: 'Official Spotify album and dances' } },
+      { href: '#grallers', title: t('nav', 'grallers'), subtitle: { ca: 'La formació musical tradicional', es: 'La formación musical tradicional', en: 'The traditional music ensemble' } },
+      { href: '#historia', title: t('nav', 'historia'), subtitle: { ca: 'Línia de temps des de 986 fins avui', es: 'Línea de tiempo desde 986 hasta hoy', en: 'Timeline from 986 to the present' } },
+      { href: '#recorregut', title: t('nav', 'recorregut'), subtitle: { ca: 'Mapa interactiu del cercavila pel nucli antic', es: 'Mapa interactivo del pasacalles por el casco antiguo', en: 'Interactive parade route map through historic center' } },
+      { href: '#quiz', title: t('nav', 'quiz'), subtitle: { ca: 'Test cultural de coneixements geganters', es: 'Test cultural de conocimientos giganteros', en: 'Cultural trivia quiz about Cardona giants' } },
+      { href: '#galeria', title: t('nav', 'galeria'), subtitle: { ca: 'Recull fotogràfic històric', es: 'Colección fotográfica histórica', en: 'Historical photo gallery' } },
+      { href: '#contacte', title: t('nav', 'contacte'), subtitle: { ca: 'Formulari per formar part de la colla', es: 'Formulario para unirse a la colla', en: 'Application form to join the troupe' } },
     ];
 
     sectionLinks.forEach((sec, i) => {
+      const subStr = loc(sec.subtitle);
       items.push({
         id: `sec-${i}`,
         category: 'sections',
         title: sec.title,
-        subtitle: sec.subtitle,
+        subtitle: subStr,
         badge: t('search', 'badgeSection') || 'Secció',
         badgeColor: 'bg-gray-100 text-gray-800 border-gray-200',
         icon: Navigation,
-        searchTerms: [sec.title, sec.subtitle, 'seccio', 'anar a', 'menu'],
+        searchTerms: [sec.title, subStr, 'seccio', 'seccion', 'section', 'menu'],
         action: () => scrollTo(sec.href)
       });
     });
@@ -423,17 +484,15 @@ export default function GlobalSearch() {
     { id: 'sections', label: t('search', 'filterSections') || 'Seccions' }
   ];
 
-  const quickPills = [
-    'Borrell II',
-    'Adalés',
-    'Samarreta',
-    'Goma',
-    'Pins',
-    'Ball Pla',
-    'Festa Major',
-    'Toni Mujal',
-    '1834'
-  ];
+  const quickPills = useMemo(() => {
+    if (lang === 'es') {
+      return ['Borrell II', 'Adalés', 'Camiseta', 'Goma', 'Pines', 'Ball Pla', 'Fiesta Mayor', 'Toni Mujal', '1834'];
+    }
+    if (lang === 'en') {
+      return ['Borrell II', 'Adalés', 'T-Shirt', 'Rubber Figures', 'Pins', 'Ball Pla', 'Major Festival', 'Toni Mujal', '1834'];
+    }
+    return ['Borrell II', 'Adalés', 'Samarreta', 'Goma', 'Pins', 'Ball Pla', 'Festa Major', 'Toni Mujal', '1834'];
+  }, [lang]);
 
   if (!isOpen) return null;
 
@@ -469,7 +528,7 @@ export default function GlobalSearch() {
               <button
                 onClick={() => setQuery('')}
                 className="p-1.5 rounded-full hover:bg-white/15 text-amber-200 hover:text-white transition-colors"
-                title="Esborrar text"
+                title={t('search', 'clearText') || 'Esborrar text'}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -478,7 +537,7 @@ export default function GlobalSearch() {
             <button
               onClick={() => setIsOpen(false)}
               className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors ml-1"
-              title="Tancar (Esc)"
+              title={t('search', 'closeModal') || 'Tancar (Esc)'}
             >
               <X className="w-5 h-5" />
             </button>
@@ -615,7 +674,7 @@ export default function GlobalSearch() {
           </div>
 
           <span className="text-amber-800/80 font-medium">
-            {filteredResults.length} {filteredResults.length === 1 ? 'element' : 'elements'}
+            {filteredResults.length} {filteredResults.length === 1 ? (t('search', 'singleItem') || 'element') : (t('search', 'multipleItems') || 'elements')}
           </span>
         </div>
       </div>
