@@ -144,7 +144,11 @@ export const translations = {
       collaBannerTag: 'Intercanvis i Trobades',
       collaBannerTitle: 'Sou una colla gegantera? Coordinem sortides per a l\'any que ve!',
       collaBannerText: 'Voleu convidar els Gegants de Cardona a la vostra vila o participar en les nostres cercaviles i a la Festa Major? Ja estem coordinant el calendari d\'actuacions i intercanvis de la propera temporada.',
-      collaBannerBtn: 'Proposar un Intercanvi o Sortida'
+      collaBannerBtn: 'Proposar un Intercanvi o Sortida',
+      liveSyncBadge: 'Sincronitzat en directe',
+      subscribeCollaCal: 'Subscriure\'s al calendari',
+      collaCalendarDesc: 'Afegeix les sortides de la colla al teu mòbil per no perdre\'t cap ballada',
+      adminNotice: 'Administrat per la colla amb Google Calendar'
     },
     shop: {
       tag: 'Marxandatge Oficial',
@@ -411,7 +415,11 @@ export const translations = {
       collaBannerTag: 'Intercambios y Encuentros',
       collaBannerTitle: '¿Sois una colla gegantera? ¡Coordinemos salidas para el año que viene!',
       collaBannerText: '¿Queréis invitar a los Gigantes de Cardona a vuestro pueblo o participar en nuestros pasacalles y en la Fiesta Mayor? Ya estamos coordinando el calendario de actuaciones e intercambios de la próxima temporada.',
-      collaBannerBtn: 'Proponer un Intercambio o Salida'
+      collaBannerBtn: 'Proponer un Intercambio o Salida',
+      liveSyncBadge: 'Sincronizado en directo',
+      subscribeCollaCal: 'Suscribirse al calendario',
+      collaCalendarDesc: 'Añade las salidas de la colla a tu móvil para no perderte ningún baile',
+      adminNotice: 'Administrado por la colla con Google Calendar'
     },
     shop: {
       tag: 'Tienda Oficial',
@@ -678,7 +686,11 @@ export const translations = {
       collaBannerTag: 'Troupe Exchanges & Tours',
       collaBannerTitle: 'Are you a giant troupe? Let\'s coordinate joint outings for next year!',
       collaBannerText: 'Would you like to invite the Giants of Cardona to your town or take part in our parades and the Festa Major? We are already organizing our schedule and troupe exchanges for the upcoming season.',
-      collaBannerBtn: 'Propose an Exchange or Outing'
+      collaBannerBtn: 'Propose an Exchange or Outing',
+      liveSyncBadge: 'Live synced',
+      subscribeCollaCal: 'Subscribe to calendar',
+      collaCalendarDesc: 'Add troupe events to your mobile calendar and never miss a dance',
+      adminNotice: 'Managed by the troupe with Google Calendar'
     },
     shop: {
       tag: 'Official Troupe Shop',

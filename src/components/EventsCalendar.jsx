@@ -1,12 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { eventsData } from '../data/events';
-import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight, Users2, Mail, CalendarPlus } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, Filter, ChevronRight, Users2, Mail, CalendarPlus, CheckCircle2, RefreshCw, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { downloadIcsFile, openGoogleCalendar } from '../utils/calendar';
+import { loadCalendarEvents } from '../services/calendarService';
+import { CALENDAR_CONFIG } from '../config/calendarConfig';
 
 export default function EventsCalendar() {
   const { t, loc } = useLanguage();
+  const [events, setEvents] = useState(eventsData);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [isLive, setIsLive] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    loadCalendarEvents()
+      .then((res) => {
+        if (isMounted) {
+          setEvents(res.events);
+          setIsLive(res.isLive);
+          setIsLoading(false);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const filters = [
     { id: 'all', label: t('calendar', 'filterAll') },
@@ -16,24 +42,48 @@ export default function EventsCalendar() {
   ];
 
   const filteredEvents = activeFilter === 'all'
-    ? eventsData
-    : eventsData.filter(e => e.category === activeFilter);
+    ? events
+    : events.filter(e => e.category === activeFilter);
 
   return (
     <section id="calendari" className="py-24 bg-cardona-sand relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block mb-2">
-            {t('calendar', 'tag')}
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+            <span className="text-xs font-bold tracking-widest uppercase text-cardona-burgundy inline-block">
+              {t('calendar', 'tag')}
+            </span>
+            {isLive ? (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                {t('calendar', 'liveSyncBadge')}
+              </span>
+            ) : null}
+          </div>
+
           <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-cardona-burgundyDark mb-4">
             {t('calendar', 'title')}
           </h2>
           <div className="w-20 h-1 bg-cardona-gold mx-auto mb-6 rounded-full" />
-          <p className="text-gray-600 text-base sm:text-lg">
+          <p className="text-gray-600 text-base sm:text-lg mb-6">
             {t('calendar', 'subtitle')}
           </p>
+
+          {/* Subscribe to Google Calendar button */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={CALENDAR_CONFIG.subscribeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-cardona-gold/15 text-cardona-burgundy border border-cardona-gold/40 text-xs font-bold shadow-xs hover:shadow-sm transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              title={t('calendar', 'collaCalendarDesc')}
+            >
+              <Calendar className="w-4 h-4 text-cardona-gold" />
+              <span>{t('calendar', 'subscribeCollaCal')}</span>
+              <ExternalLink className="w-3 h-3 opacity-60" />
+            </a>
+          </div>
         </div>
 
         {/* Big Festa Major Banner */}
@@ -158,8 +208,8 @@ export default function EventsCalendar() {
                     title: loc(evt.title),
                     description: loc(evt.description),
                     location: loc(evt.location),
-                    startDate: '20260912T100000Z',
-                    endDate: '20260912T200000Z'
+                    startDate: evt.startDate || '20260912T100000Z',
+                    endDate: evt.endDate || '20260912T200000Z'
                   })}
                   className="inline-flex items-center gap-1 text-[11px] font-bold text-cardona-burgundy hover:text-cardona-burgundyDark transition-colors active:scale-95 cursor-pointer"
                   title={t('calendar', 'appleCal')}
@@ -172,8 +222,8 @@ export default function EventsCalendar() {
                     title: loc(evt.title),
                     description: loc(evt.description),
                     location: loc(evt.location),
-                    startDate: '20260912T100000Z',
-                    endDate: '20260912T200000Z'
+                    startDate: evt.startDate || '20260912T100000Z',
+                    endDate: evt.endDate || '20260912T200000Z'
                   })}
                   className="text-[11px] text-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
                 >
@@ -182,6 +232,17 @@ export default function EventsCalendar() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Google Calendar sync status footer */}
+        <div className="mt-2 mb-14 text-center">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/80 border border-cardona-gold/30 text-xs text-gray-600 shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+            <span>{t('calendar', 'adminNotice')}:</span>
+            <code className="font-mono text-[11px] text-cardona-burgundy font-semibold bg-cardona-gold/10 px-2 py-0.5 rounded border border-cardona-gold/20">
+              {CALENDAR_CONFIG.calendarId}
+            </code>
+          </div>
         </div>
 
         {/* Colla Exchange Callout Banner */}
