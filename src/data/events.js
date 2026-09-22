@@ -173,5 +173,43 @@ export const eventsData = [
       en: 'Participation in the medieval market and festivities of the ducal town with street dances and music.'
     },
     category: 'sortides'
+  },
+  {
+    id: 6,
+    title: {
+      ca: 'Test de Sortida Gegants',
+      es: 'Test de Sortida Gegants',
+      en: 'Giants Outing Test'
+    },
+    date: {
+      ca: '26 de Setembre de 2026',
+      es: '26 de Septiembre de 2026',
+      en: 'September 26, 2026'
+    },
+    time: {
+      ca: '13:00 h - 15:00 h',
+      es: '13:00 h - 15:00 h',
+      en: '1:00 PM - 3:00 PM'
+    },
+    location: {
+      ca: 'Cardona, 08261 Cardona, Barcelona, Espanya',
+      es: 'Cardona, 08261 Cardona, Barcelona, España',
+      en: 'Cardona, 08261 Cardona, Barcelona, Spain'
+    },
+    type: {
+      ca: 'Google Calendar en Viu',
+      es: 'Google Calendar en Vivo',
+      en: 'Live Google Calendar'
+    },
+    highlight: true,
+    description: {
+      ca: 'Sortida sincronitzada des del calendari oficial «Sortides Gegants Cardona».',
+      es: 'Salida sincronizada desde el calendario oficial «Sortides Gegants Cardona».',
+      en: 'Outing synchronized from the official «Sortides Gegants Cardona» calendar.'
+    },
+    category: 'sortides',
+    startDate: '20260926T110000Z',
+    endDate: '20260926T130000Z',
+    isFromGoogle: true
   }
 ];

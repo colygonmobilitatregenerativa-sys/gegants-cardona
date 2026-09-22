@@ -7,9 +7,10 @@ import { loadCalendarEvents } from '../services/calendarService';
 import { CALENDAR_CONFIG } from '../config/calendarConfig';
 
 export default function EventsCalendar() {
-  const { t, loc } = useLanguage();
+  const { t, loc, lang } = useLanguage();
   const [events, setEvents] = useState(eventsData);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [viewMode, setViewMode] = useState('cards');
   const [isLive, setIsLive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -140,110 +141,188 @@ export default function EventsCalendar() {
           </div>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {filters.map((f) => (
-            <button
-              key={f.id}
-              onClick={() => setActiveFilter(f.id)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-                activeFilter === f.id
-                  ? 'bg-cardona-burgundy text-white shadow-md'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
+        {/* View Mode Switcher: Targetes vs Google Calendar en Viu */}
+        <div className="flex items-center justify-center gap-2.5 sm:gap-3 mb-10">
+          <button
+            onClick={() => setViewMode('cards')}
+            className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+              viewMode === 'cards'
+                ? 'bg-cardona-burgundy text-cardona-goldLight shadow-md scale-105 ring-2 ring-cardona-gold/40'
+                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+            }`}
+          >
+            {t('calendar', 'viewCards') || 'Targetes d\'Actuacions'}
+          </button>
+          <button
+            onClick={() => setViewMode('googleCalendar')}
+            className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 flex items-center gap-2 cursor-pointer ${
+              viewMode === 'googleCalendar'
+                ? 'bg-cardona-burgundy text-cardona-goldLight shadow-md scale-105 ring-2 ring-cardona-gold/40'
+                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+            }`}
+          >
+            <Calendar className="w-4 h-4 text-cardona-gold" />
+            <span>{t('calendar', 'viewGoogleCal') || 'Google Calendar en Viu'}</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          </button>
         </div>
 
-        {/* Events List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
-          {filteredEvents.map((evt) => (
-            <div
-              key={evt.id}
-              className={`p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border flex flex-col justify-between ${
-                evt.highlight ? 'border-cardona-gold ring-1 ring-cardona-gold/50' : 'border-gray-200'
-              }`}
-            >
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                    evt.highlight 
-                      ? 'bg-cardona-gold/20 text-cardona-goldDark'
-                      : 'bg-gray-100 text-gray-700'
-                  }`}>
-                    {loc(evt.type)}
-                  </span>
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-cardona-burgundy">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{loc(evt.date)}</span>
+        {viewMode === 'googleCalendar' ? (
+          /* Official Google Calendar Live Embed */
+          <div className="max-w-5xl mx-auto mb-16 animate-fadeIn">
+            <div className="p-4 sm:p-5 bg-gradient-to-r from-cardona-burgundy to-cardona-burgundyDark text-white rounded-t-3xl border border-cardona-gold/30 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-cardona-gold/20 text-cardona-goldLight">
+                  <Calendar className="w-6 h-6 text-cardona-gold" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-serif font-bold text-base sm:text-lg text-cardona-goldLight">
+                      {CALENDAR_CONFIG.calendarName}
+                    </h4>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      LIVE
+                    </span>
+                  </div>
+                  <p className="text-xs text-amber-200/80">
+                    {t('calendar', 'collaCalendarDesc')}
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={CALENDAR_CONFIG.subscribeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-full bg-cardona-gold hover:bg-cardona-goldLight text-cardona-burgundyDark font-bold text-xs transition-all shadow-md active:scale-95 flex items-center gap-1.5 shrink-0 cursor-pointer"
+              >
+                <span>{t('calendar', 'subscribeCollaCal')}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            <div className="relative w-full rounded-b-3xl overflow-hidden bg-white shadow-2xl border-x border-b border-cardona-gold/30" style={{ height: '640px' }}>
+              <iframe
+                src={`https://calendar.google.com/calendar/embed?src=${encodeURIComponent(CALENDAR_CONFIG.calendarId)}&ctz=Europe%2FMadrid&hl=${lang === 'en' ? 'en' : lang === 'es' ? 'es' : 'ca'}&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0`}
+                style={{ border: 0 }}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+                title="Google Calendar - Sortides Gegants Cardona"
+              />
+            </div>
+          </div>
+        ) : (
+          /* Cards View */
+          <>
+            {/* Filter buttons */}
+            <div className="flex flex-wrap justify-center gap-2 mb-10">
+              {filters.map((f) => (
+                <button
+                  key={f.id}
+                  onClick={() => setActiveFilter(f.id)}
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+                    activeFilter === f.id
+                      ? 'bg-cardona-burgundy text-white shadow-md'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Events List */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
+              {filteredEvents.map((evt) => (
+                <div
+                  key={evt.id}
+                  className={`p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 border flex flex-col justify-between ${
+                    evt.highlight ? 'border-cardona-gold ring-1 ring-cardona-gold/50' : 'border-gray-200'
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                        evt.highlight 
+                          ? 'bg-cardona-gold/20 text-cardona-goldDark'
+                          : 'bg-gray-100 text-gray-700'
+                      }`}>
+                        {loc(evt.type)}
+                      </span>
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-cardona-burgundy">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{loc(evt.date)}</span>
+                      </div>
+                    </div>
+
+                    <h4 className="font-serif text-xl font-bold text-cardona-burgundyDark mb-2">
+                      {loc(evt.title)}
+                    </h4>
+
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                      {loc(evt.description)}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500">
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-cardona-goldDark" />
+                      <span>{loc(evt.time)}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 font-medium text-gray-700">
+                      <MapPin className="w-3.5 h-3.5 text-cardona-burgundy" />
+                      <span>{loc(evt.location)}</span>
+                    </div>
+                  </div>
+
+                  {/* Event Calendar Export Action */}
+                  <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => downloadIcsFile({
+                        title: loc(evt.title),
+                        description: loc(evt.description),
+                        location: loc(evt.location),
+                        startDate: evt.startDate || '20260912T100000Z',
+                        endDate: evt.endDate || '20260912T200000Z'
+                      })}
+                      className="inline-flex items-center gap-1 text-[11px] font-bold text-cardona-burgundy hover:text-cardona-burgundyDark transition-colors active:scale-95 cursor-pointer"
+                      title={t('calendar', 'appleCal')}
+                    >
+                      <CalendarPlus className="w-3.5 h-3.5 text-cardona-gold" />
+                      <span>{t('calendar', 'addToCalendar')}</span>
+                    </button>
+                    <button
+                      onClick={() => openGoogleCalendar({
+                        title: loc(evt.title),
+                        description: loc(evt.description),
+                        location: loc(evt.location),
+                        startDate: evt.startDate || '20260912T100000Z',
+                        endDate: evt.endDate || '20260912T200000Z'
+                      })}
+                      className="text-[11px] text-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
+                    >
+                      Google Cal ↗
+                    </button>
                   </div>
                 </div>
+              ))}
+            </div>
 
-                <h4 className="font-serif text-xl font-bold text-cardona-burgundyDark mb-2">
-                  {loc(evt.title)}
-                </h4>
-
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  {loc(evt.description)}
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-cardona-goldDark" />
-                  <span>{loc(evt.time)}</span>
-                </div>
-                <div className="flex items-center gap-1.5 font-medium text-gray-700">
-                  <MapPin className="w-3.5 h-3.5 text-cardona-burgundy" />
-                  <span>{loc(evt.location)}</span>
-                </div>
-              </div>
-
-              {/* Event Calendar Export Action */}
-              <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between gap-2">
-                <button
-                  onClick={() => downloadIcsFile({
-                    title: loc(evt.title),
-                    description: loc(evt.description),
-                    location: loc(evt.location),
-                    startDate: evt.startDate || '20260912T100000Z',
-                    endDate: evt.endDate || '20260912T200000Z'
-                  })}
-                  className="inline-flex items-center gap-1 text-[11px] font-bold text-cardona-burgundy hover:text-cardona-burgundyDark transition-colors active:scale-95 cursor-pointer"
-                  title={t('calendar', 'appleCal')}
-                >
-                  <CalendarPlus className="w-3.5 h-3.5 text-cardona-gold" />
-                  <span>{t('calendar', 'addToCalendar')}</span>
-                </button>
-                <button
-                  onClick={() => openGoogleCalendar({
-                    title: loc(evt.title),
-                    description: loc(evt.description),
-                    location: loc(evt.location),
-                    startDate: evt.startDate || '20260912T100000Z',
-                    endDate: evt.endDate || '20260912T200000Z'
-                  })}
-                  className="text-[11px] text-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
-                >
-                  Google Cal ↗
-                </button>
+            {/* Google Calendar sync status footer */}
+            <div className="mt-2 mb-14 text-center">
+              <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/80 border border-cardona-gold/30 text-xs text-gray-600 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                <span>{t('calendar', 'adminNotice')}:</span>
+                <code className="font-mono text-[11px] text-cardona-burgundy font-semibold bg-cardona-gold/10 px-2 py-0.5 rounded border border-cardona-gold/20">
+                  {CALENDAR_CONFIG.calendarId}
+                </code>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Google Calendar sync status footer */}
-        <div className="mt-2 mb-14 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/80 border border-cardona-gold/30 text-xs text-gray-600 shadow-2xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
-            <span>{t('calendar', 'adminNotice')}:</span>
-            <code className="font-mono text-[11px] text-cardona-burgundy font-semibold bg-cardona-gold/10 px-2 py-0.5 rounded border border-cardona-gold/20">
-              {CALENDAR_CONFIG.calendarId}
-            </code>
-          </div>
-        </div>
+          </>
+        )}
 
         {/* Colla Exchange Callout Banner */}
         <div className="max-w-5xl mx-auto p-8 sm:p-10 rounded-3xl bg-white border-2 border-cardona-gold/50 shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">

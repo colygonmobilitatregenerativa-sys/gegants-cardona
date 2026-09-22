@@ -12,7 +12,7 @@
 
 export const CALENDAR_CONFIG = {
   // Correu o ID del Google Calendar públic
-  calendarId: 'demarco169@gmail.com',
+  calendarId: '1dee0b200a711fdff96cf021892fceb3ba29ccd8c80fa18f2716c5c5851de623@group.calendar.google.com',
 
   // Clau d'API de Google Cloud (opcional, per a connexió directa v3 sense servidors proxy)
   apiKey: import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY || '',
@@ -21,7 +21,7 @@ export const CALENDAR_CONFIG = {
   syncEnabled: true,
 
   // Nom oficial del calendari
-  calendarName: 'Sortides i Actes - Gegants de Cardona',
+  calendarName: 'Sortides Gegants Cardona',
 
   // Enllaç directe per subscriure's o afegir-lo a Google Calendar personal
   get subscribeUrl() {

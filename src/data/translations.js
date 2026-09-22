@@ -148,7 +148,9 @@ export const translations = {
       liveSyncBadge: 'Sincronitzat en directe',
       subscribeCollaCal: 'Subscriure\'s al calendari',
       collaCalendarDesc: 'Afegeix les sortides de la colla al teu mòbil per no perdre\'t cap ballada',
-      adminNotice: 'Administrat per la colla amb Google Calendar'
+      adminNotice: 'Administrat per la colla amb Google Calendar',
+      viewCards: 'Targetes d\'Actuacions',
+      viewGoogleCal: 'Google Calendar en Viu'
     },
     shop: {
       tag: 'Marxandatge Oficial',
@@ -419,7 +421,9 @@ export const translations = {
       liveSyncBadge: 'Sincronizado en directo',
       subscribeCollaCal: 'Suscribirse al calendario',
       collaCalendarDesc: 'Añade las salidas de la colla a tu móvil para no perderte ningún baile',
-      adminNotice: 'Administrado por la colla con Google Calendar'
+      adminNotice: 'Administrado por la colla con Google Calendar',
+      viewCards: 'Tarjetas de Actuaciones',
+      viewGoogleCal: 'Google Calendar en Vivo'
     },
     shop: {
       tag: 'Tienda Oficial',
@@ -690,7 +694,9 @@ export const translations = {
       liveSyncBadge: 'Live synced',
       subscribeCollaCal: 'Subscribe to calendar',
       collaCalendarDesc: 'Add troupe events to your mobile calendar and never miss a dance',
-      adminNotice: 'Managed by the troupe with Google Calendar'
+      adminNotice: 'Managed by the troupe with Google Calendar',
+      viewCards: 'Event Cards',
+      viewGoogleCal: 'Live Google Calendar'
     },
     shop: {
       tag: 'Official Troupe Shop',
