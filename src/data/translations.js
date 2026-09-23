@@ -236,7 +236,24 @@ export const translations = {
       instagramLink: 'Instagram @gegantscardona ↗',
       madeWith: 'Fet amb orgull per a la cultura popular de Cardona',
       rights: 'Colla de Geganters de Cardona',
+      legalBtn: 'Avís Legal i Privacitat',
       backToTop: 'Tornar a dalt'
+    },
+    legal: {
+      title: 'Avís Legal i Política de Privacitat',
+      subtitle: 'Informació legal, protecció de dades i ús de cookies de la Colla de Geganters de Cardona',
+      tag: 'Transparència i Compromís',
+      closeBtn: 'Tancar',
+      section1Title: '1. Responsable del Lloc Web',
+      section1Text: 'En compliment de la Llei 34/2002 (LSSI-CE) i el Reglament General de Protecció de Dades (RGPD 2016/679), s\'informa que aquest lloc web és titularitat de l\'Associació Colla de Geganters de Cardona, entitat cultural sense ànim de lucre amb seu a la Vila de Cardona (08261 Bages, Catalunya). Contacte oficial: gegantscardona@culturapopular.cat o a través de l\'Instagram oficial @gegantscardona.',
+      section2Title: '2. Finalitat Cultural i Divulgativa',
+      section2Text: 'Aquest espai digital té com a objectiu exclusiu la divulgació del patrimoni històric, les figures centenàries, la música de gralla i timbal, les danses tradicionals i el calendari de sortides de la colla per a la ciutadania de Cardona i tots els amants de la cultura popular catalana.',
+      section3Title: '3. Protecció de Dades Personals (RGPD)',
+      section3Text: 'Les dades facilitades voluntàriament mitjançant formularis de contacte, peticions per formar part de la colla o comandes de marxandatge (com nom, telèfon o correu electrònic) són tractades amb estricta confidencialitat per la junta de la colla amb l\'única finalitat de gestionar la comunicació i atendre les sol·licituds. Aquestes dades mai no seran venudes, cedides ni compartides amb tercers. Podeu sol·licitar la rectificació o eliminació de les vostres dades en qualsevol moment.',
+      section4Title: '4. Política de Cookies i Privadesa Digital',
+      section4Text: 'Aquest lloc web NO utilitza cookies de rastreig publicitari, perfilat comercial ni xarxes d\'anuncis. Únicament s\'empra l\'emmagatzematge local tècnic del navegador (localStorage) per recordar l\'idioma triat per l\'usuari (català, castellà o anglès). Els elements incrustats (com vídeos de YouTube mitjançant el domini de privadesa youtube-nocookie.com o el reproductor de la Banda de Cardona a Spotify) s\'ofereixen exclusivament per a la difusió cultural.',
+      section5Title: '5. Propietat Intel·lectual i Patrimoni',
+      section5Text: 'Els continguts gràfics, textos i arxius històrics d\'aquesta web pertanyen a la Colla de Geganters de Cardona o han estat cedits per veïns i fotògrafs locals per a la preservació de la memòria de la festa. Les figures dels Gegants, Nans i el Bestiari són patrimoni cultural viu de la Vila de Cardona.'
     },
     search: {
       btnLabel: 'Cercar...',
@@ -509,7 +526,24 @@ export const translations = {
       instagramLink: 'Instagram @gegantscardona ↗',
       madeWith: 'Hecho con orgullo para la cultura popular de Cardona',
       rights: 'Colla de Geganters de Cardona',
+      legalBtn: 'Aviso Legal y Privacidad',
       backToTop: 'Volver arriba'
+    },
+    legal: {
+      title: 'Aviso Legal y Política de Privacidad',
+      subtitle: 'Información legal, protección de datos y uso de cookies de la Colla de Geganters de Cardona',
+      tag: 'Transparencia y Compromiso',
+      closeBtn: 'Cerrar',
+      section1Title: '1. Responsable del Sitio Web',
+      section1Text: 'En cumplimiento de la Ley 34/2002 (LSSI-CE) y el Reglamento General de Protección de Datos (RGPD 2016/679), se informa que este sitio web es titularidad de la Asociación Colla de Geganters de Cardona, entidad cultural sin ánimo de lucro con sede en la Vila de Cardona (08261 Bages, Cataluña). Contacto oficial: gegantscardona@culturapopular.cat o mediante el Instagram oficial @gegantscardona.',
+      section2Title: '2. Finalidad Cultural y Divulgativa',
+      section2Text: 'Este espacio digital tiene como objetivo exclusivo la divulgación del patrimonio histórico, las figuras centenarias, la música tradicional, las danzas populares y el calendario de salidas de la colla para la ciudadanía de Cardona y los amantes de la cultura popular catalana.',
+      section3Title: '3. Protección de Datos Personales (RGPD)',
+      section3Text: 'Los datos facilitados voluntariamente mediante formularios de contacto, solicitudes para unirse a la colla o pedidos de merchandising (como nombre, teléfono o correo electrónico) son tratados con estricta confidencialidad por la junta con el único fin de gestionar la comunicación y atender las solicitudes. Dichos datos nunca serán vendidos, cedidos ni compartidos con terceros. Puede solicitar la rectificación o eliminación de sus datos en cualquier momento.',
+      section4Title: '4. Política de Cookies y Privacidad Digital',
+      section4Text: 'Este sitio web NO utiliza cookies de seguimiento publicitario, perfilado comercial ni redes de anuncios. Únicamente se emplea el almacenamiento local técnico del navegador (localStorage) para recordar el idioma elegido por el usuario (catalán, castellano o inglés). Los elementos incrustados (como vídeos de YouTube mediante el dominio de privacidad youtube-nocookie.com o el reproductor de Spotify) se ofrecen exclusivamente para la difusión cultural.',
+      section5Title: '5. Propiedad Intelectual y Patrimonio',
+      section5Text: 'Los contenidos gráficos, textos y archivos históricos de esta web pertenecen a la Colla de Geganters de Cardona o han sido cedidos por vecinos y fotógrafos locales para la preservación de la memoria festiva. Las figuras de los Gigantes, Cabezudos y el Bestiario forman parte del patrimonio cultural vivo de la Vila de Cardona.'
     },
     search: {
       btnLabel: 'Buscar...',
@@ -782,7 +816,24 @@ export const translations = {
       instagramLink: 'Instagram @gegantscardona ↗',
       madeWith: 'Crafted with pride for Cardona cultural heritage',
       rights: 'Cardona Giants Troupe',
+      legalBtn: 'Legal Notice & Privacy',
       backToTop: 'Back to top'
+    },
+    legal: {
+      title: 'Legal Notice & Privacy Policy',
+      subtitle: 'Legal information, data protection and cookie policy of the Cardona Giants Association',
+      tag: 'Transparency & Commitment',
+      closeBtn: 'Close',
+      section1Title: '1. Website Ownership',
+      section1Text: 'In compliance with European and Spanish data protection regulations (GDPR 2016/679 and LSSI-CE 34/2002), this website is owned and operated by the Colla de Geganters de Cardona, a non-profit cultural association based in Cardona (08261 Bages, Catalonia). Official contact: gegantscardona@culturapopular.cat or via official Instagram @gegantscardona.',
+      section2Title: '2. Cultural & Informative Purpose',
+      section2Text: 'This digital platform is exclusively dedicated to promoting the historical heritage, century-old giant figures, traditional music, folk dances, and event schedule of Cardona for local residents and traditional culture enthusiasts worldwide.',
+      section3Title: '3. Personal Data Protection (GDPR)',
+      section3Text: 'Any personal data voluntarily submitted through contact forms, membership inquiries, or merchandising requests (such as name, phone number, or email address) is treated with strict confidentiality by the association board solely to respond to inquiries and coordinate activities. This data is never sold, shared, or transferred to third parties. You may request access, rectification, or deletion of your data at any time.',
+      section4Title: '4. Cookie Policy & Digital Privacy',
+      section4Text: 'This website does NOT use advertising cookies, marketing tracking, or third-party behavioral profiling. It only uses standard browser local storage (localStorage) to remember your chosen language preference (Catalan, Spanish, or English). Embedded media (such as YouTube videos via youtube-nocookie.com enhanced privacy mode or Spotify audio players) are provided solely for cultural dissemination.',
+      section5Title: '5. Intellectual Property & Cultural Heritage',
+      section5Text: 'All texts, historical photographs, illustrations, and digital designs on this website are the property of the Colla de Geganters de Cardona or have been contributed by local archives and photographers. The giant figures and festive beasts form part of the living intangible cultural heritage of Cardona.'
     },
     search: {
       btnLabel: 'Search...',

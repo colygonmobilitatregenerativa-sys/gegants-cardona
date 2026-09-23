@@ -88,6 +88,15 @@ export default function Footer() {
                   <span>{t('footer', 'instagramLink')}</span>
                 </a>
               </li>
+              <li className="pt-2 border-t border-cardona-gold/10">
+                <button
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-legal-modal'))}
+                  className="hover:text-cardona-gold transition-colors text-left flex items-center gap-1.5 text-amber-200/90 hover:underline cursor-pointer"
+                >
+                  <Shield className="w-3.5 h-3.5 text-cardona-gold shrink-0" />
+                  <span>{t('footer', 'legalBtn')}</span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -99,7 +108,14 @@ export default function Footer() {
             <Heart className="w-3.5 h-3.5 text-cardona-gold fill-cardona-gold inline" />
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4">
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-legal-modal'))}
+              className="hover:text-cardona-gold transition-colors underline underline-offset-4 cursor-pointer"
+            >
+              {t('footer', 'legalBtn')}
+            </button>
+            <span className="hidden sm:inline">•</span>
             <span>© {new Date().getFullYear()} {t('footer', 'rights')}</span>
             <button
               onClick={scrollToTop}

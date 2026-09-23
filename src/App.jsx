@@ -17,6 +17,7 @@ import JoinUsForm from './components/JoinUsForm';
 import Footer from './components/Footer';
 import MobileBottomNav from './components/MobileBottomNav';
 import GlobalSearch from './components/GlobalSearch';
+import LegalModal from './components/LegalModal';
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
           <Footer />
           <MobileBottomNav />
           <GlobalSearch />
+          <LegalModal />
         </div>
       </CartProvider>
     </LanguageProvider>
